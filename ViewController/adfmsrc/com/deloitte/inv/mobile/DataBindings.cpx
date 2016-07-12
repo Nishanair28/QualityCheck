@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.1.20" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.deloitte.inv.mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/QualitySummaryPG.amx" usageId="com_deloitte_inv_mobile_QualitySummaryPGPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_deloitte_inv_mobile_QualitySummaryPGPageDef"
+          path="com.deloitte.inv.mobile.pageDefs.QualitySummaryPGPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="QualityPlandetailsOutputService" path="com.deloitte.inv.application.QualityPlandetailsOutputService"/>
+    <dc id="QualityResultsDBOutputService" path="com.deloitte.inv.application.QualityResultsDBOutputService"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="QualityResultsTF">
+    <default-activity>view1</default-activity>
+    <managed-bean id="__1">
+      <managed-bean-name>qualityBean</managed-bean-name>
+      <managed-bean-class>com.deloitte.inv.mobile.qualityResults</managed-bean-class>
+      <managed-bean-scope>application</managed-bean-scope>
+    </managed-bean>
+    <view id="view1">
+      <page>/QualitySummaryPG.amx</page>
+    </view>
+    <page-flow-scope-behavior>
+      <push-new/>
+    </page-flow-scope-behavior>
+  </task-flow-definition>
+</adfc-mobile-config>
