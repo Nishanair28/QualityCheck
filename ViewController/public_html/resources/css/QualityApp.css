@@ -2,13 +2,13 @@
 @import url('../font-awesome-4.6.3/css/font-awesome.css');
 
 .amx-panelPage-header{
-    border-bottom-color: #52ff52; 
+    border-bottom-color: #86BC25; 
     background-color:#000000;
     border-bottom-width: thick; 
 }
 
 .amx-panelPage-header .amx-outputText  {
-    color: #52ff52;
+    color: #86BC25;
     font-size: x-large; 
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
