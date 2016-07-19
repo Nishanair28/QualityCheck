@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
           xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
-  <amx:panelPage id="pp1">
+  <amx:panelPage id="pp1" inlineStyle="background-color:#f6f6f6;">
     <amx:facet name="header">
-      <amx:outputText value="Quality Summary" id="ot1"/>
+      <amx:tableLayout id="tl2" width="100%" halign="center">
+        <amx:rowLayout id="rl2">
+          <amx:cellFormat id="cf3" width="10%" halign="end" valign="middle">
+            <amx:commandLink id="cl1">
+              <amx:outputHtml id="oh1" styleClass="fa fa-reorder fa-2x" inlineStyle="color:#52ff52;"/>
+            </amx:commandLink>
+          </amx:cellFormat>
+          <amx:cellFormat id="cf5" width="40%" halign="end" valign="middle">
+            <amx:outputText value="Quality" id="ot7"/>
+          </amx:cellFormat>
+          <amx:cellFormat id="cf4" width="40%" valign="middle">
+            <amx:outputText value="Summary" id="ot6" styleClass="headertextwhite"
+                            inlineStyle="font-stretch:normal;"/>
+          </amx:cellFormat>
+          <amx:cellFormat id="cf6" width="10%" halign="end" valign="middle">
+            <amx:commandLink id="cl2">
+              <amx:outputHtml id="oh2" styleClass="fa fa-edit fa-2x" inlineStyle="color:#52ff52;"/>
+            </amx:commandLink>
+          </amx:cellFormat>
+        </amx:rowLayout>
+      </amx:tableLayout>
     </amx:facet>
     <amx:panelStretchLayout id="psl1">
       <amx:facet name="top"/>
@@ -19,7 +39,8 @@
                       selectionListener="#{bindings.qualityResultsDBOutput.collectionModel.makeCurrent}"
                       showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1"
                       rendered="#{pageFlowScope.selectedLov!=null}">
-          <amx:listItem id="li1">
+          <amx:listItem id="li1"
+                        inlineStyle="border-bottom-color:Grey;#{((row.rowKey)%2)==0?'':'background-color:#FFFFFF;'}">
             <amx:tableLayout id="tl1" width="100%">
               <amx:rowLayout id="rl1">
                 <amx:cellFormat id="cf1" width="10px"/>
@@ -28,16 +49,16 @@
                     <amx:spacer id="s1" height="10"/>
                     <amx:panelGroupLayout id="pgl2" layout="horizontal">
                       <amx:spacer id="s2" width="25"/>
-                      <amx:outputText value="Entry Date : #{row.qaCreationDate}" id="ot3"/>
+                      <amx:outputText value="Entry Date : #{row.qaCreationDate}" id="ot3" styleClass="resulttext"/>
                       <amx:spacer id="s3" width="10"/>
-                      <amx:outputText value="Created By : #{row.qaCreatedByName}" id="ot2"/>
+                      <amx:outputText value="Created By : #{row.qaCreatedByName}" id="ot2" styleClass="resulttext"/>
                     </amx:panelGroupLayout>
                     <amx:spacer id="s4" height="7"/>
                     <amx:panelGroupLayout id="pgl3" layout="horizontal">
                       <amx:spacer id="s5" height="25"/>
-                      <amx:outputText value="Collection : #{row.collectionId}" id="ot4"/>
+                      <amx:outputText value="Collection : #{row.collectionId}" id="ot4" styleClass="resulttext"/>
                       <amx:spacer id="s6" width="10"/>
-                      <amx:outputText value="Occurence : #{row.occurrence}" id="ot5"/>
+                      <amx:outputText value="Occurence : #{row.occurrence}" id="ot5" styleClass="resulttext"/>
                     </amx:panelGroupLayout>
                   </amx:panelGroupLayout>
                 </amx:cellFormat>
