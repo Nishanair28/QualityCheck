@@ -5,18 +5,43 @@
    <View
       id="View2">
       <property
-         name="activityId">view1</property>
+         name="activityId">QualitySummary</property>
       <property
          name="x">895.0</property>
       <property
          name="start">true</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>QualitySummary&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">328.59766</property>
+         name="y">327.5459</property>
       <property
          name="page">/QualitySummaryPG.amx</property>
       <property
          name="exceptionHandler">false</property>
    </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">QualityDetails</property>
+      <property
+         name="x">1080.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>QualityDetails&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">322.59766</property>
+      <property
+         name="page">/QualityDetailsPG.amx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">getDetails</property>
+      <property
+         name="sdm:polyPoints">R50,936.0,327.1953,1039.0,322.24707,L50</property>
+   </ControlFlowCase>
 </SDM>
