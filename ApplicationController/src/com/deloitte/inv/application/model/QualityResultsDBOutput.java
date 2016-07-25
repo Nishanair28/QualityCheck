@@ -291,8 +291,8 @@ public class QualityResultsDBOutput extends Entity {
     }
 
     public String getQaCreationDate() {
-        return this.qaCreationDate;
-    }
+            String qaDate = this.qaCreationDate.replace('T',' ');               return qaDate;
+        } 
 
     public void setQaCreationDate(String qaCreationDate) {
         this.qaCreationDate = qaCreationDate;
