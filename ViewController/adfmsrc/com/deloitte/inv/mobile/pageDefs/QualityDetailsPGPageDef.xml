@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.20" id="QualityDetailsPGPageDef"
+                Package="com.deloitte.inv.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="QualityResultsDBOutputService"
+              id="QualityResultsDBOutputServiceIterator"/>
+    <accessorIterator MasterBinding="QualityResultsDBOutputServiceIterator" Binds="qualityResultsDBOutput"
+                      RangeSize="25" DataControl="QualityResultsDBOutputService"
+                      BeanClass="com.deloitte.inv.application.model.QualityResultsDBOutput"
+                      id="qualityResultsDBOutputIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="planName">
+      <AttrNames>
+        <Item Value="planName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="itemNumber">
+      <AttrNames>
+        <Item Value="itemNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="character1">
+      <AttrNames>
+        <Item Value="character1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt1">
+      <AttrNames>
+        <Item Value="prompt1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt10">
+      <AttrNames>
+        <Item Value="prompt10"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="character10">
+      <AttrNames>
+        <Item Value="character10"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>
