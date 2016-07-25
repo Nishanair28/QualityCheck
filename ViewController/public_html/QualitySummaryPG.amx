@@ -42,18 +42,35 @@
                       showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1"
                       rendered="#{pageFlowScope.selectedLov!=null}">
           <amx:listItem id="li1"
-                        inlineStyle="border-bottom-color:Grey;#{((row.rowKey)%2)==0?'':'background-color:#FFFFFF;'}">
+                        inlineStyle="border-bottom-color:Grey;#{((row.rowKey)%2)==0?'':'background-color:#FFFFFF;'}"
+                        action="getDetails" showLinkIcon="true">
             <amx:tableLayout id="tl1" width="100%">
               <amx:rowLayout id="rl1">
                 <amx:cellFormat id="cf1" width="10px"/>
                 <amx:cellFormat id="cf2" width="90%">
                   <amx:panelGroupLayout id="pgl1" layout="vertical">
                     <amx:spacer id="s1" height="10"/>
-                    <amx:panelGroupLayout id="pgl2" layout="horizontal">
-                      <amx:spacer id="s2" width="25"/>
-                      <amx:outputText value="Entry Date : #{row.qaCreationDate}" id="ot3" styleClass="resulttext"/>
-                      <amx:spacer id="s3" width="10"/>
-                      <amx:outputText value="Created By : #{row.qaCreatedByName}" id="ot2" styleClass="resulttext"/>
+                    <amx:panelGroupLayout id="pgl2" layout="vertical">
+                      <amx:tableLayout id="tl3">
+                        <amx:rowLayout id="rl3">
+                          <amx:cellFormat id="cf8" width="100%">
+                            <amx:panelGroupLayout id="pgl3" layout="horizontal">
+                              <amx:outputText value="Entry Date:   " id="ot36" inlineStyle="font-weight:bold;"/>
+                              <amx:outputText value="#{row.qaCreationDate}" id="ot3" styleClass="resulttext">
+                                <amx:convertDateTime id="cdt1" dateStyle="medium" timeStyle="short" type="both"/>
+                              </amx:outputText>
+                            </amx:panelGroupLayout>
+                          </amx:cellFormat>
+                           </amx:rowLayout>
+                          <amx:rowLayout id="rl41">
+                          <amx:cellFormat id="cf9" width="100%">
+                            <amx:panelGroupLayout id="pgl4" layout="horizontal">
+                              <amx:outputText value="Created By:   " id="ot46" inlineStyle="font-weight:bold;"/>
+                              <amx:outputText value="#{row.qaCreatedByName}" id="ot2" styleClass="resulttext"/>
+                            </amx:panelGroupLayout>
+                          </amx:cellFormat>
+                        </amx:rowLayout>
+                      </amx:tableLayout>
                     </amx:panelGroupLayout>
                   </amx:panelGroupLayout>
                 </amx:cellFormat>
