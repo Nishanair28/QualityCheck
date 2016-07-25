@@ -4,7 +4,7 @@
 .amx-panelPage-header{
     border-bottom-color: #86BC25; 
     background-color:#000000;
-    border-bottom-width: thick; 
+    border-bottom-width: thick;  
 }
 
 .amx-panelPage-header .amx-outputText  {
@@ -29,3 +29,21 @@
 
 /* Android Title bar styling end */
 
+/* Android Submit button styling */
+.amx-commandButton{   
+    border: 0;  
+    display: inline-block;
+    outline: 0;   
+    border-radius: 4px;
+    background: #86BC25;
+    width: 150px;
+    background-image: none;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #ffffff;  
+    height:30px;
+    min-height:21px;
+    font-size: larger; 
+    margin-top: 10px; 
+    text-align: center; 
+    font-stretch: expanded; 
+}
