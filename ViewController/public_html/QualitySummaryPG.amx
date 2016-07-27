@@ -10,12 +10,12 @@
               <amx:outputHtml id="oh1" styleClass="fa fa-reorder fa-2x" inlineStyle="color:#86BC25;"/>
             </amx:commandLink>
           </amx:cellFormat>
-          <amx:cellFormat id="cf5" width="39%" halign="end" valign="middle">
+          <amx:cellFormat id="cf5" width="39.5%" halign="end" valign="middle">
             <amx:outputText value="Results" id="ot7"/>
           </amx:cellFormat>
           <amx:cellFormat id="cf7">
           </amx:cellFormat>
-          <amx:cellFormat id="cf4" width="39%" valign="middle">
+          <amx:cellFormat id="cf4" width="39.5%" valign="middle">
             <amx:outputText value="Summary" id="ot6" styleClass="headertextwhite"
                             inlineStyle="font-stretch:normal;"/>
           </amx:cellFormat>
@@ -31,7 +31,7 @@
       <amx:facet name="top"/>
       <amx:facet name="center">
         <amx:selectOneChoice value="#{pageFlowScope.selectedLov}" id="soc2"
-                             valueChangeListener="#{qualityBean.lovSelected}">                          
+                             valueChangeListener="#{qualityBean.lovSelected}" simple="true">                          
           <amx:selectItems value="#{bindings.planId.items}" id="si2"/>
         </amx:selectOneChoice>
         <amx:listView var="row" value="#{bindings.qualityResultsDBOutput.collectionModel}"
