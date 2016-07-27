@@ -4,7 +4,7 @@
     <RefAddresses>
       <XmlRefAddr addrType="QualityService">
         <Contents>
-          <restconnection name="QualityService" url="http://ussltcsnl3432.solutions.glbsnet.com:7004"/>
+          <restconnection name="QualityService" url="http://app101111.glbsnet.com"/>
         </Contents>
       </XmlRefAddr>
     </RefAddresses>
@@ -14,7 +14,7 @@
     <RefAddresses>
       <XmlRefAddr addrType="OrgService">
         <Contents>
-          <restconnection name="OrgService" url="http://ussltcsnl3432.solutions.glbsnet.com:7004"/>
+          <restconnection name="OrgService" url="http://app101111.glbsnet.com"/>
         </Contents>
       </XmlRefAddr>
     </RefAddresses>
