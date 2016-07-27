@@ -22,7 +22,7 @@
 .resulttext{
 	width:auto;
 	color: #000000;
-	font-size:large;
+	font-size:small;
 	font-weight:bold;
     font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -32,18 +32,14 @@
 /* Android Submit button styling */
 .amx-commandButton{   
     border: 0;  
-    display: inline-block;
-    outline: 0;   
-    border-radius: 4px;
     background: #86BC25;
-    width: 150px;
+    width: 250px;
     background-image: none;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #ffffff;  
     height:30px;
     min-height:21px;
     font-size: larger; 
-    margin-top: 10px; 
     text-align: center; 
     font-stretch: expanded; 
 }
