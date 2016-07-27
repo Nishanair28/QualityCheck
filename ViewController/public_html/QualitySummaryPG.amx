@@ -56,6 +56,7 @@
                           <amx:cellFormat id="cf8" width="100%">
                             <amx:panelGroupLayout id="pgl3" layout="horizontal">
                               <amx:outputText value="Entry Date:   " id="ot36" inlineStyle="font-weight:bold;"/>
+                              <amx:spacer id="s2" width="10"/>
                               <amx:outputText value="#{row.qaCreationDate}" id="ot3" styleClass="resulttext">
                                 <amx:convertDateTime id="cdt1" dateStyle="medium" timeStyle="short" type="both"/>
                               </amx:outputText>
@@ -63,11 +64,15 @@
                           </amx:cellFormat>
                            </amx:rowLayout>
                           <amx:rowLayout id="rl41">
-                          <amx:cellFormat id="cf9" width="100%">
-                            <amx:panelGroupLayout id="pgl4" layout="horizontal">
+                          <amx:cellFormat id="cf9" width="90%">
+                            <amx:panelGroupLayout id="pgl4" layout="horizontal" inlineStyle="font-family:Arial;">
                               <amx:outputText value="Created By:   " id="ot46" inlineStyle="font-weight:bold;"/>
+                              <amx:spacer id="s3" width="10"/>
                               <amx:outputText value="#{row.qaCreatedByName}" id="ot2" styleClass="resulttext"/>
                             </amx:panelGroupLayout>
+                          </amx:cellFormat>
+                          <amx:cellFormat id="cf10" width="10%" halign="end" valign="top">                            
+                              <amx:outputHtml id="oh3" styleClass="fa fa-angle-right"/>
                           </amx:cellFormat>
                         </amx:rowLayout>
                       </amx:tableLayout>
