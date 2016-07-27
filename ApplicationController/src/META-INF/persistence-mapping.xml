@@ -65,8 +65,8 @@
          <directMapping attributeName="planId" payloadAttributeName="plan_id" columnName="PLAN_ID" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="true"/>
       </attributeMappings>
       <methods>
-         <findAllMethod uri="/XXgetQualityPlanResults/XXgetQualityPlanResultsRS/{orgCode}" connectionName="OrgService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="true" payloadElementName="getQualityPlandetailsOutput">
-            <headerParameter name="Content-Type" value="application/json"/>
+         <findAllMethod uri="/XXgetQualityPlanResults/XXgetQualityPlanResultsRS/{userName}/{orgCode}" connectionName="OrgService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="false" payloadElementName="getQualityPlandetailsOutput">
+            <parameter name="userName" value="#{securityContext.userName}" valueProvider="ELExpression" pathParam="true"/>
             <parameter name="orgCode" value="M1" valueProvider="LiteralValue" pathParam="true"/>
          </findAllMethod>
       </methods>

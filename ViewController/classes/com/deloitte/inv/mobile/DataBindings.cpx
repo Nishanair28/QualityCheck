@@ -3,10 +3,13 @@
              SeparateXMLFiles="false" Package="com.deloitte.inv.mobile" ClientType="Generic">
   <pageMap>
     <page path="/QualitySummaryPG.amx" usageId="com_deloitte_inv_mobile_QualitySummaryPGPageDef"/>
+    <page path="/QualityDetailsPG.amx" usageId="com_deloitte_inv_mobile_QualityDetailsPGPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="com_deloitte_inv_mobile_QualitySummaryPGPageDef"
           path="com.deloitte.inv.mobile.pageDefs.QualitySummaryPGPageDef"/>
+    <page id="com_deloitte_inv_mobile_QualityDetailsPGPageDef"
+          path="com.deloitte.inv.mobile.pageDefs.QualityDetailsPGPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="QualityPlandetailsOutputService" path="com.deloitte.inv.application.QualityPlandetailsOutputService"/>
