@@ -4,7 +4,8 @@
 .amx-panelPage-header{
     border-bottom-color: #86BC25; 
     background-color:#000000;
-    border-bottom-width: thick;  
+    border-bottom-width: thin;
+    border-bottom-style:solid;
 }
 
 .amx-panelPage-header .amx-outputText  {
