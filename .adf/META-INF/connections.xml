@@ -38,8 +38,10 @@
           <rememberCredentials>
             <enableRememberUserName value="true"/>
             <rememberUserNameDefault value="true"/>
-            <enableRememberPassword value="false"/>
-            <enableStayLoggedIn value="false"/>
+            <enableRememberPassword value="true"/>
+            <rememberPasswordDefault value="true"/>
+            <enableStayLoggedIn value="true"/>
+            <stayLoggedInDefault value="true"/>
           </rememberCredentials>
           <accessControl/>
           <userObjectFilter/>
