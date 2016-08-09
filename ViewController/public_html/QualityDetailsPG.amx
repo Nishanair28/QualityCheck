@@ -30,7 +30,8 @@
     <amx:panelGroupLayout id="pgl1" layout="vertical">
       <amx:tableLayout id="tl1" width="100%">
         <amx:rowLayout id="rl1" >
-          <amx:cellFormat id="cf1" width="100%" inlineStyle="background-color:#CCCCC0;">
+          <amx:cellFormat id="cf1" width="100%"
+                          inlineStyle="background-color:#CCCCC0; padding-bottom:10px; padding-top:10px;">
            <amx:panelGroupLayout layout="vertical" id="pgl21" halign="center">
               <amx:outputText value="Plan Name : #{bindings.planName.inputValue}" id="ot2"
                               inlineStyle="font-weight:bold; font-family:Helvetica; flex-align:center;"/>
@@ -42,7 +43,7 @@
             <amx:panelGroupLayout id="pgl2" layout="horizontal">
               <amx:tableLayout id="tl31" width="100%">
                 <amx:rowLayout id="rl4">
-                  <amx:cellFormat id="cf21" width="40%" halign="start">
+                  <amx:cellFormat id="cf21" width="40%" halign="start" inlineStyle="padding-left:10px;">
                      <amx:outputText value="Item Number" id="ot1" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf8" width="60%" halign="start">
@@ -58,7 +59,7 @@
             <amx:panelGroupLayout id="pgl22" layout="horizontal">
               <amx:tableLayout id="tl311" width="100%">
                 <amx:rowLayout id="rl41">
-                  <amx:cellFormat id="cf211" width="40%" halign="start">
+                  <amx:cellFormat id="cf211" width="40%" halign="start" inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt1.inputValue}" id="ot11" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf81" width="60%" halign="start">
@@ -74,7 +75,8 @@
             <amx:panelGroupLayout id="pgl23" layout="horizontal">
               <amx:tableLayout id="tl312" width="100%">
                 <amx:rowLayout id="rl42">
-                  <amx:cellFormat id="cf1212" width="40%" halign="start">
+                  <amx:cellFormat id="cf1212" width="40%" halign="start"
+                                  inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt10.inputValue}" id="ot12" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf82" width="60%" halign="start">
@@ -90,7 +92,8 @@
             <amx:panelGroupLayout id="pgl232" layout="horizontal">
               <amx:tableLayout id="tl3122" width="100%">
                 <amx:rowLayout id="rl422">
-                  <amx:cellFormat id="cf12122" width="40%" halign="start">
+                  <amx:cellFormat id="cf12122" width="40%" halign="start"
+                                  inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt2.inputValue}" id="ot122" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf822" width="60%" halign="start">
@@ -106,7 +109,8 @@
             <amx:panelGroupLayout id="pgl233" layout="horizontal">
               <amx:tableLayout id="tl3123" width="100%">
                 <amx:rowLayout id="rl423">
-                  <amx:cellFormat id="cf12123" width="40%" halign="start">
+                  <amx:cellFormat id="cf12123" width="40%" halign="start"
+                                  inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt3.inputValue}" id="ot123" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf823" width="60%" halign="start">
@@ -122,7 +126,8 @@
             <amx:panelGroupLayout id="pgl234" layout="horizontal">
               <amx:tableLayout id="tl3124" width="100%">
                 <amx:rowLayout id="rl424">
-                  <amx:cellFormat id="cf12124" width="40%" halign="start">
+                  <amx:cellFormat id="cf12124" width="40%" halign="start"
+                                  inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt4.inputValue}" id="ot124" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf824" width="60%" halign="start">
@@ -138,7 +143,8 @@
             <amx:panelGroupLayout id="pgl235" layout="horizontal">
               <amx:tableLayout id="tl3125" width="100%">
                 <amx:rowLayout id="rl425">
-                  <amx:cellFormat id="cf12125" width="40%" halign="start">
+                  <amx:cellFormat id="cf12125" width="40%" halign="start"
+                                  inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt5.inputValue}" id="ot125" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf825" width="60%" halign="start">
@@ -154,7 +160,7 @@
             <amx:panelGroupLayout id="pgl2311" layout="horizontal">
               <amx:tableLayout id="tl31211" width="100%">
                 <amx:rowLayout id="rl4211">
-                  <amx:cellFormat id="cf121211" width="40%" halign="start">
+                  <amx:cellFormat id="cf121211" width="40%" halign="start" inlineStyle="padding-left:10px;">
                      <amx:outputText value="Customer Account No." id="ot1211" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf8211" width="60%" halign="start">
@@ -170,7 +176,7 @@
             <amx:panelGroupLayout id="pgl236" layout="horizontal">
               <amx:tableLayout id="tl3126" width="100%">
                 <amx:rowLayout id="rl426">
-                  <amx:cellFormat id="cf12126" width="40%" halign="start">
+                  <amx:cellFormat id="cf12126" width="40%" halign="start" inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt6.inputValue}" id="ot126" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf826" width="60%" halign="start">
@@ -186,7 +192,7 @@
             <amx:panelGroupLayout id="pgl237" layout="horizontal">
               <amx:tableLayout id="tl3127" width="100%">
                 <amx:rowLayout id="rl427">
-                  <amx:cellFormat id="cf12127" width="40%" halign="start">
+                  <amx:cellFormat id="cf12127" width="40%" halign="start" inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt7.inputValue}" id="ot127" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf827" width="60%" halign="start">
@@ -202,7 +208,7 @@
             <amx:panelGroupLayout id="pgl238" layout="horizontal">
               <amx:tableLayout id="tl3128" width="100%">
                 <amx:rowLayout id="rl428">
-                  <amx:cellFormat id="cf12128" width="40%" halign="start">
+                  <amx:cellFormat id="cf12128" width="40%" halign="start" inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt8.inputValue}" id="ot128" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf828" width="60%" halign="start">
@@ -218,7 +224,7 @@
             <amx:panelGroupLayout id="pgl239" layout="horizontal">
               <amx:tableLayout id="tl319" width="100%">
                 <amx:rowLayout id="rl429">
-                  <amx:cellFormat id="cf1219" width="40%" halign="start">
+                  <amx:cellFormat id="cf1219" width="40%" halign="start" inlineStyle="padding-left:10px;">
                      <amx:outputText value="#{bindings.prompt9.inputValue}" id="ot129" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf829" width="60%" halign="start">
@@ -234,7 +240,7 @@
             <amx:panelGroupLayout id="pgl2312" layout="horizontal">
               <amx:tableLayout id="tl31212" width="100%">
                 <amx:rowLayout id="rl4212">
-                  <amx:cellFormat id="cf121212" width="40%" halign="start">
+                  <amx:cellFormat id="cf121212" width="40%" halign="start" inlineStyle="padding-left:10px;">
                      <amx:outputText value="Quantity" id="ot1212" inlineStyle="font-weight:bold;" />
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf8212" width="60%" halign="start">
