@@ -27,7 +27,7 @@
         </amx:rowLayout>
       </amx:tableLayout>
     </amx:facet>
-    <amx:panelStretchLayout id="psl1">
+    <amx:panelStretchLayout id="psl1" styleClass="ordAppStretchLyt">
       <amx:facet name="top"/>
       <amx:facet name="center">
         <amx:selectOneChoice value="#{pageFlowScope.selectedLov}" id="soc2"
@@ -51,7 +51,7 @@
                   <amx:panelGroupLayout id="pgl1" layout="vertical">
                     <amx:spacer id="s1" height="10"/>
                     <amx:panelGroupLayout id="pgl2" layout="vertical">
-                      <amx:tableLayout id="tl3">
+                      <amx:tableLayout id="tl3" width="100%">
                         <amx:rowLayout id="rl3">
                           <amx:cellFormat id="cf8" width="100%">
                             <amx:panelGroupLayout id="pgl3" layout="horizontal">

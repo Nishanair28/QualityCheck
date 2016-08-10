@@ -3,7 +3,7 @@
    <classMappingDescriptor className="com.deloitte.inv.application.model.QualityResultsDBOutput" persisted="true">
       <crudServiceClass className="com.deloitte.inv.application.model.service.QualityResultsDBOutputService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.maf.api.cdm.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.maf.api.cdm.persistence.manager.RestJSONPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="true" autoQuery="true" enableOfflineTransactions="true"/>
       <table name="QUALITY_RESULTS_DBOUTPUT">
-         <primaryKeyColumn name="PLAN_ID"/>
+         <primaryKeyColumn name="COLLECTION_ID"/>
       </table>
       <attributeMappings>
          <directMapping attributeName="planName" payloadAttributeName="PLAN_NAME" columnName="PLAN_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
@@ -25,13 +25,13 @@
          <directMapping attributeName="character8" payloadAttributeName="CHARACTER8" columnName="CHARACTER8" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="character9" payloadAttributeName="CHARACTER9" columnName="CHARACTER9" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="character10" payloadAttributeName="CHARACTER10" columnName="CHARACTER10" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="collectionId" payloadAttributeName="Collection_id" columnName="COLLECTION_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="collectionId" payloadAttributeName="Collection_id" columnName="COLLECTION_ID" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="true"/>
          <directMapping attributeName="occurrence" payloadAttributeName="Occurrence" columnName="OCCURRENCE" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
          <directMapping attributeName="lastUpdateDate" payloadAttributeName="last_update_date" columnName="LAST_UPDATE_DATE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="qaLastUpdateDate" payloadAttributeName="qa_last_update_date" columnName="QA_LAST_UPDATE_DATE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="txnHeaderId" payloadAttributeName="txn_header_id" columnName="TXN_HEADER_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
          <directMapping attributeName="organizationId" payloadAttributeName="organization_id" columnName="ORGANIZATION_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
-         <directMapping attributeName="planId" payloadAttributeName="plan_id" columnName="PLAN_ID" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="true"/>
+         <directMapping attributeName="planId" payloadAttributeName="plan_id" columnName="PLAN_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
          <directMapping attributeName="specId" payloadAttributeName="spec_id" columnName="SPEC_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
          <directMapping attributeName="itemId" payloadAttributeName="Item_id" columnName="ITEM_ID" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
          <directMapping attributeName="qaLastUpdatedByName" payloadAttributeName="QA_LAST_UPDATED_BY_NAME" columnName="QA_LAST_UPDATED_BY_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>

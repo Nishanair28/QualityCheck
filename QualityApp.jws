@@ -164,6 +164,10 @@
             <value n="profileName" v="Android3"/>
          </hash>
          <hash n="Android4">
+            <hash n="android_options">
+               <value n="android_deploy_debug_mode" v="false"/>
+               <value n="application_archive_name" v="QualityCheck"/>
+            </hash>
             <hash n="archiveOptions">
                <value n="hasManifest" v="true"/>
             </hash>
@@ -207,37 +211,37 @@
             <hash n="mnfImageOptions">
                <list n="deviceTypes">
                   <hash>
-                     <value n="appIconPath" v="resources/android/Logo.png"/>
+                     <value n="appIconPath" v="resources/android/QualityCheck.png"/>
                      <value n="deviceTypeName" v="Low Density"/>
                      <value n="landscapeSplashScreenPath" v="resources/android/Low Density landscape.png"/>
                      <value n="portraitSplashScreenPath" v="resources/android/Low density portrait.png"/>
                   </hash>
                   <hash>
-                     <value n="appIconPath" v="resources/android/Logo.png"/>
+                     <value n="appIconPath" v="resources/android/QualityCheck.png"/>
                      <value n="deviceTypeName" v="Medium Density"/>
                      <value n="landscapeSplashScreenPath" v="resources/android/Medium density landscape.png"/>
                      <value n="portraitSplashScreenPath" v="resources/android/Meduin Density portrait.png"/>
                   </hash>
                   <hash>
-                     <value n="appIconPath" v="resources/android/Logo.png"/>
+                     <value n="appIconPath" v="resources/android/QualityCheck.png"/>
                      <value n="deviceTypeName" v="High Density"/>
                      <value n="landscapeSplashScreenPath" v="resources/android/High Density landscape.png"/>
                      <value n="portraitSplashScreenPath" v="resources/android/High Density portrait.png"/>
                   </hash>
                   <hash>
-                     <value n="appIconPath" v="resources/android/Logo.png"/>
+                     <value n="appIconPath" v="resources/android/QualityCheck.png"/>
                      <value n="deviceTypeName" v="Extra-Extra-High Density"/>
                      <value n="landscapeSplashScreenPath" v="resources/android/Extra high density landscape.png"/>
                      <value n="portraitSplashScreenPath" v="resources/android/Extra High Density portrait.png"/>
                   </hash>
                   <hash>
-                     <value n="appIconPath" v="resources/android/Logo.png"/>
+                     <value n="appIconPath" v="resources/android/QualityCheck.png"/>
                      <value n="deviceTypeName" v="Extra-High Density"/>
                      <value n="landscapeSplashScreenPath" v="resources/android/Extra high density landscape.png"/>
                      <value n="portraitSplashScreenPath" v="resources/android/Extra High Density portrait.png"/>
                   </hash>
                   <hash>
-                     <value n="appIconPath" v="resources/android/Logo.png"/>
+                     <value n="appIconPath" v="resources/android/QualityCheck.png"/>
                      <value n="deviceTypeName" v="Extra-Extra-Extra-High Density"/>
                   </hash>
                </list>
@@ -393,7 +397,9 @@
             </hash>
             <hash/>
          </list>
-         <list n="url-path"/>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
       </hash>
    </hash>
    <hash n="ResourceBundleOptions">

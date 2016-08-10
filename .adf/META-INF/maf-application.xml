@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
-                   version="1.0" name="QualityApp" id="com.company.QualityApp"
+                   version="1.0" name="QualityCheck" id="com.company.QualityApp"
                    appControllerFolder="ApplicationController"
                    listener-class="oracle.maf.impl.cdm.lifecycle.InitDBLifeCycleListener">
   <adfmf:featureReference refId="com.deloitte.inv.QualitySummary" id="fr1"/>

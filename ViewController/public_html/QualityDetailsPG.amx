@@ -75,9 +75,9 @@
             <amx:panelGroupLayout id="pgl23" layout="horizontal">
               <amx:tableLayout id="tl312" width="100%">
                 <amx:rowLayout id="rl42">
-                  <amx:cellFormat id="cf1212" width="40%" halign="start"
-                                  inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt10.inputValue}" id="ot12" inlineStyle="font-weight:bold;" />
+                  <amx:cellFormat id="cf1212" width="40%" halign="start" inlineStyle="padding-left:10px;">
+                     <amx:outputText value="Inspection Result" id="ot4" inlineStyle="font-weight:bold;" />
+                     <!--<amx:outputText value="#{bindings.prompt10.inputValue}" id="ot12" inlineStyle="font-weight:bold;" />-->
                  </amx:cellFormat> 
                   <amx:cellFormat id="cf82" width="60%" halign="start">
                     <amx:outputText value=": #{bindings.character10.inputValue}" id="ot32"/>
@@ -104,7 +104,7 @@
             </amx:panelGroupLayout>
           </amx:cellFormat>   
       </amx:rowLayout>
-<amx:rowLayout id="rl32" rendered="#{bindings.character3.inputValue != '0'}">
+<amx:rowLayout id="rl5" rendered="#{bindings.character3.inputValue != '0'}">
           <amx:cellFormat id="cf223" width="100%">
             <amx:panelGroupLayout id="pgl233" layout="horizontal">
               <amx:tableLayout id="tl3123" width="100%">
