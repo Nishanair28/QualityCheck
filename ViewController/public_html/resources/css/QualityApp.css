@@ -11,13 +11,13 @@
 .amx-panelPage-header .amx-outputText  {
     color: #86BC25;
     font-size: x-large; 
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'RobotoMedium';
 }
 
 .headertextwhite{
     color: #ffffff !important;
     font-size: x-large; 
-    font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family:  'RobotoMedium';
 }
 
 .resulttext{
@@ -25,7 +25,7 @@
 	color: #000000;
 	font-size:small;
 	font-weight:bold;
-    font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family:  'RobotoLight';
 }
 .ordAppStretchLyt .amx-panelStretchLayout_center {
     overflow: auto;
@@ -38,11 +38,23 @@
     background: #86BC25;
     width: 250px;
     background-image: none;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'RobotoMedium';
     color: #ffffff;  
     height:30px;
     min-height:21px;
     font-size: larger; 
     text-align: center; 
     font-stretch: expanded; 
+}
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('../fontRoboto/Roboto-Light.ttf?v=1.100141') format('truetype');
+  font-weight: normal;
+  font-style: normal;    
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('../fontRoboto/Roboto-Medium.ttf?v=1.100141') format('truetype');
+  font-weight: normal;
+  font-style: normal;    
 }
