@@ -12,6 +12,7 @@
           path="com.deloitte.inv.mobile.pageDefs.QualityDetailsPGPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
+    <dc id="InventoryDetailBSOutputService" path="com.deloitte.inv.application.InventoryDetailBSOutputService"/>
     <dc id="QualityPlandetailsOutputService" path="com.deloitte.inv.application.QualityPlandetailsOutputService"/>
     <dc id="QualityResultsDBOutputService" path="com.deloitte.inv.application.QualityResultsDBOutputService"/>
   </dataControlUsages>

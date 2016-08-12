@@ -18,6 +18,12 @@
                       RangeSize="-1" DataControl="QualityPlandetailsOutputService"
                       BeanClass="com.deloitte.inv.application.model.QualityPlandetailsOutput"
                       id="qualityPlandetailsOutputIterator"/>
+    <iterator Binds="root" RangeSize="25" DataControl="InventoryDetailBSOutputService"
+              id="InventoryDetailBSOutputServiceIterator"/>
+    <accessorIterator MasterBinding="InventoryDetailBSOutputServiceIterator" Binds="inventoryDetailBSOutput"
+                      RangeSize="25" DataControl="InventoryDetailBSOutputService"
+                      BeanClass="com.deloitte.inv.application.model.InventoryDetailBSOutput"
+                      id="inventoryDetailBSOutputIterator"/>
   </executables>
   <bindings>
     <tree IterBinding="qualityResultsDBOutputIterator" id="qualityResultsDBOutput">
@@ -51,6 +57,13 @@
       <ListDisplayAttrNames>
         <Item Value="planName"/>
       </ListDisplayAttrNames>
+    </list>
+    <list IterBinding="inventoryDetailBSOutputIterator" ListOperMode="navigation"
+          ListIter="inventoryDetailBSOutputIterator" id="inventoryDetailBSOutput" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject">
+      <AttrNames>
+        <Item Value="organizationCode"/>
+      </AttrNames>
     </list>
   </bindings>
 </pageDefinition>

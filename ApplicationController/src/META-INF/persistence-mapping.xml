@@ -66,8 +66,25 @@
       </attributeMappings>
       <methods>
          <findAllMethod uri="/XXgetQualityPlanResults/XXgetQualityPlanResultsRS/{userName}/{orgCode}" connectionName="OrgService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="false" payloadElementName="getQualityPlandetailsOutput">
-            <parameter name="userName" value="#{securityContext.userName}" valueProvider="ELExpression" pathParam="true"/>
+            <headerParameter name="Content-Type" value="application/json"/>
             <parameter name="orgCode" value="M1" valueProvider="LiteralValue" pathParam="true"/>
+            <parameter name="userName" value="#{securityContext.userName}" valueProvider="ELExpression" pathParam="true"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="com.deloitte.inv.application.model.InventoryDetailBSOutput" persisted="true">
+      <crudServiceClass className="com.deloitte.inv.application.model.service.InventoryDetailBSOutputService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.maf.api.cdm.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.maf.api.cdm.persistence.manager.RestJSONPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="true" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="INVENTORY_DETAIL_BSOUTPUT">
+         <primaryKeyColumn name="ORGANIZATION_ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="organizationId" payloadAttributeName="ORGANIZATION_ID" columnName="ORGANIZATION_ID" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="true"/>
+         <directMapping attributeName="organizationCode" payloadAttributeName="ORGANIZATION_CODE" columnName="ORGANIZATION_CODE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod uri="/XXgetInventoryDetail/getInventoryDetailRS/{orgId}" connectionName="OrgLovService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="true" payloadElementName="getInventoryDetailBSOutput">
+            <headerParameter name="Content-Type" value="application/json"/>
+            <parameter name="orgId" value="1" valueProvider="LiteralValue" pathParam="true"/>
          </findAllMethod>
       </methods>
    </classMappingDescriptor>
