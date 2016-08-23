@@ -67,7 +67,7 @@
       <methods>
          <findAllMethod uri="/XXgetQualityPlanResults/XXgetQualityPlanResultsRS/{userName}/{orgCode}" connectionName="OrgService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="false" payloadElementName="getQualityPlandetailsOutput">
             <headerParameter name="Content-Type" value="application/json"/>
-            <parameter name="orgCode" value="M1" valueProvider="LiteralValue" pathParam="true"/>
+            <parameter name="orgCode" value="#{pageFlowScope.selectedOrg}" valueProvider="ELExpression" pathParam="true"/>
             <parameter name="userName" value="#{securityContext.userName}" valueProvider="ELExpression" pathParam="true"/>
          </findAllMethod>
       </methods>

@@ -35,7 +35,8 @@
           <amx:selectItems value="#{bindings.inventoryDetailBSOutput.items}" id="si1"/>
         </amx:selectOneChoice>
         <amx:selectOneChoice value="#{pageFlowScope.selectedLov}" id="soc2"
-                             valueChangeListener="#{qualityBean.lovSelected}" simple="true">                          
+                             valueChangeListener="#{qualityBean.lovSelected}" simple="true"
+                             rendered="#{pageFlowScope.selectedOrg!=null}">                          
           <amx:selectItems value="#{bindings.planId.items}" id="si2"/>
         </amx:selectOneChoice>
         <amx:listView var="row" value="#{bindings.qualityResultsDBOutput.collectionModel}"
