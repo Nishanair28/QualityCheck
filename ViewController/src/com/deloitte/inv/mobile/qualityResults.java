@@ -26,6 +26,7 @@ public class qualityResults {
         } catch (Exception e) {
                     e.getMessage();
                 }
+        System.out.println("Org passed : "+valueChangeEvent.getNewValue());
     }
     public void lovSelected(ValueChangeEvent valueChangeEvent) {
         // Add event code here...

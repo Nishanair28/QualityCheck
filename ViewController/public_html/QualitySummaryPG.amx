@@ -30,10 +30,14 @@
     <amx:panelStretchLayout id="psl1" styleClass="ordAppStretchLyt">
       <amx:facet name="top"/>
       <amx:facet name="center">
-        <amx:selectOneChoice value="#{pageFlowScope.selectedOrg}" id="soc1" simple="true"
+        <amx:selectOneChoice value="#{pageFlowScope.selectedOrg}"
+                             id="soc3" valueChangeListener="#{qualityBean.orgSelected}" simple="true">
+          <amx:selectItems value="#{bindings.organizationId.items}" id="si3"/>
+        </amx:selectOneChoice>
+        <!--<amx:selectOneChoice value="#{pageFlowScope.selectedOrg}" id="soc1" simple="true"
                              valueChangeListener="#{qualityBean.orgSelected}">
           <amx:selectItems value="#{bindings.inventoryDetailBSOutput.items}" id="si1"/>
-        </amx:selectOneChoice>
+        </amx:selectOneChoice>-->
         <amx:selectOneChoice value="#{pageFlowScope.selectedLov}" id="soc2"
                              valueChangeListener="#{qualityBean.lovSelected}" simple="true"
                              rendered="#{pageFlowScope.selectedOrg!=null}">                          
