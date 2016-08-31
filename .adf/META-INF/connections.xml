@@ -1,5 +1,6 @@
 <References xmlns="http://xmlns.oracle.com/adf/jndi">
-  <Reference name="QualityService" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+  <Reference name="QualityService" className="oracle.adf.model.connection.rest.RestConnection" xmlns=""
+             adfCredentialStoreKey="">
     <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
     <RefAddresses>
       <XmlRefAddr addrType="QualityService">
@@ -9,7 +10,8 @@
       </XmlRefAddr>
     </RefAddresses>
   </Reference>
-  <Reference name="OrgService" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+  <Reference name="OrgService" className="oracle.adf.model.connection.rest.RestConnection" xmlns=""
+             adfCredentialStoreKey="">
     <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
     <RefAddresses>
       <XmlRefAddr addrType="OrgService">
@@ -49,7 +51,8 @@
       </XmlRefAddr>
     </RefAddresses>
   </Reference>
-  <Reference name="OrgLovService" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+  <Reference name="OrgLovService" className="oracle.adf.model.connection.rest.RestConnection" xmlns=""
+             adfCredentialStoreKey="">
     <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
     <RefAddresses>
       <XmlRefAddr addrType="OrgLovService">
