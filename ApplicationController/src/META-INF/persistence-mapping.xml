@@ -49,9 +49,11 @@
          <directMapping attributeName="prompt10" payloadAttributeName="PROMPT10" columnName="PROMPT10" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
       </attributeMappings>
       <methods>
-         <findAllMethod uri="/XXgetQualityResults/getQualityResultsRS/{planId}" connectionName="QualityService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="true" payloadElementName="getQualityResultsDBOutput">
-            <headerParameter name="Content-Type" value="application/json"/>
+         <findAllMethod uri="/XXgetQualityResults/getQualityResultsRS/{userName}/{planId}/{creationDate}/{orgCode}" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="false" payloadElementName="getQualityResultsDBOutput">
+            <parameter name="userName" value="#{securityContext.userName}" valueProvider="ELExpression" pathParam="true"/>
             <parameter name="planId" value="#{pageFlowScope.selectedLov}" valueProvider="ELExpression" pathParam="true"/>
+            <parameter name="creationDate" value="26-AUG-2016" valueProvider="LiteralValue" pathParam="true"/>
+            <parameter name="orgCode" value="#{pageFlowScope.selectedOrg}" valueProvider="ELExpression" pathParam="true"/>
          </findAllMethod>
       </methods>
    </classMappingDescriptor>
