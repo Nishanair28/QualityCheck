@@ -48,7 +48,79 @@ public class QualityResultsDBOutput extends Entity {
     private String prompt8;
     private String prompt9;
     private String prompt10;
+    private String mf1prompt;
+    private String mf2prompt;
+    private String mf3prompt;
+    private String mf4prompt;
+    private String mf1value;
+    private String mf2value;
+    private String mf3value;
+    private String mf4value;
+    
 
+    public void setMf2prompt(String mf2prompt) {
+        this.mf2prompt = mf2prompt;
+    }
+
+    public String getMf2prompt() {
+        return mf2prompt;
+    }
+
+    public void setMf3prompt(String mf3prompt) {
+        this.mf3prompt = mf3prompt;
+    }
+
+    public String getMf3prompt() {
+        return mf3prompt;
+    }
+
+    public void setMf4prompt(String mf4prompt) {
+        this.mf4prompt = mf4prompt;
+    }
+
+    public String getMf4prompt() {
+        return mf4prompt;
+    }
+
+    public void setMf1value(String mf1value) {
+        this.mf1value = mf1value;
+    }
+
+    public String getMf1value() {
+        return mf1value;
+    }
+
+    public void setMf2value(String mf2value) {
+        this.mf2value = mf2value;
+    }
+
+    public String getMf2value() {
+        return mf2value;
+    }
+
+    public void setMf3value(String mf3value) {
+        this.mf3value = mf3value;
+    }
+
+    public String getMf3value() {
+        return mf3value;
+    }
+
+    public void setMf4value(String mf4value) {
+        this.mf4value = mf4value;
+    }
+
+    public String getMf4value() {
+        return mf4value;
+    }
+    
+    public void setMf1prompt(String mf1prompt) {
+        this.mf1prompt = mf1prompt;
+    }
+
+    public String getMf1prompt() {
+        return mf1prompt;
+    }
 
     public String getPlanName() {
         return this.planName;

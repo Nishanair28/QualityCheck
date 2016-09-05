@@ -1,286 +1,235 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
           xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
-  <amx:panelPage id="pp1">
-    <amx:facet name="header">
+    <amx:panelPage id="pp1">
+        <amx:facet name="header">
             <amx:tableLayout id="tl2" width="100%" halign="center">
-        <amx:rowLayout id="rl2">
-          <amx:cellFormat id="cf3" width="10%" halign="end" valign="middle">
-            <amx:commandLink id="cl1">
-              <amx:outputHtml id="oh1" styleClass="fa fa-reorder fa-2x" inlineStyle="color:#86BC25;"/>
-            </amx:commandLink>
-          </amx:cellFormat>
-          <amx:cellFormat id="cf5" width="39%" halign="end" valign="middle">
-            <amx:outputText value="Result" id="ot7"/>
-          </amx:cellFormat>
-          <amx:cellFormat id="cf7">
-          </amx:cellFormat>
-          <amx:cellFormat id="cf4" width="39%" valign="middle">
-            <amx:outputText value="Details" id="ot6" styleClass="headertextwhite"
-                            inlineStyle="font-stretch:normal;"/>
-          </amx:cellFormat>
-          <amx:cellFormat id="cf6" width="10%" halign="end" valign="middle">
-            <amx:commandLink id="cl2" action="__back">
-              <amx:outputHtml id="oh2" styleClass="fa fa-arrow-left fa-2x" inlineStyle="color:#86BC25;"/>
-            </amx:commandLink>
-          </amx:cellFormat>
-        </amx:rowLayout>
-      </amx:tableLayout>
-    </amx:facet>
-    <amx:panelGroupLayout id="pgl1" layout="vertical">
-      <amx:tableLayout id="tl1" width="100%">
-        <amx:rowLayout id="rl1" >
-          <amx:cellFormat id="cf1" width="100%"
-                          inlineStyle="background-color:#CCCCC0; padding-bottom:10px; padding-top:10px;">
-           <amx:panelGroupLayout layout="vertical" id="pgl21" halign="center">
-              <amx:outputText value="Plan Name : #{bindings.planName.inputValue}" id="ot2"
-                              inlineStyle="font-weight:bold; font-family:Helvetica; flex-align:center;"/>
-           </amx:panelGroupLayout>
-          </amx:cellFormat>
-        </amx:rowLayout>
-        <amx:rowLayout id="rl3" rendered="#{bindings.itemNumber.inputValue != '0'}">
-          <amx:cellFormat id="cf2" width="100%">
-            <amx:panelGroupLayout id="pgl2" layout="horizontal">
-              <amx:tableLayout id="tl31" width="100%">
+                <amx:rowLayout id="rl2">
+                    <amx:cellFormat id="cf3" width="10%" halign="end" valign="middle">
+                        <amx:commandLink id="cl1">
+                            <amx:outputHtml id="oh1" styleClass="fa fa-reorder fa-2x" inlineStyle="color:#86BC25;"/>
+                        </amx:commandLink>
+                    </amx:cellFormat>
+                    <amx:cellFormat id="cf5" width="39%" halign="end" valign="middle">
+                        <amx:outputText value="Result" id="ot7"/>
+                    </amx:cellFormat>
+                    <amx:cellFormat id="cf7"></amx:cellFormat>
+                    <amx:cellFormat id="cf4" width="39%" valign="middle">
+                        <amx:outputText value="Details" id="ot6" styleClass="headertextwhite"
+                                        inlineStyle="font-stretch:normal;"/>
+                    </amx:cellFormat>
+                    <amx:cellFormat id="cf6" width="10%" halign="end" valign="middle">
+                        <amx:commandLink id="cl2" action="__back">
+                            <amx:outputHtml id="oh2" styleClass="fa fa-arrow-left fa-2x" inlineStyle="color:#86BC25;"/>
+                        </amx:commandLink>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+            </amx:tableLayout>
+        </amx:facet>
+        <amx:panelGroupLayout id="pgl1" layout="vertical">
+            <amx:tableLayout id="tl1" width="100%">
+                <amx:rowLayout id="rl1">
+                    <amx:cellFormat id="cf1" width="100%"
+                                    inlineStyle="background-color:#CCCCC0; padding-bottom:10px; padding-top:10px;">
+                        <amx:panelGroupLayout layout="vertical" id="pgl21" halign="center">
+                            <amx:outputText value="Plan Name : #{bindings.planName.inputValue}" id="ot2"
+                                            inlineStyle="font-weight:bold; font-family:Helvetica; flex-align:center;"/>
+                        </amx:panelGroupLayout>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+            </amx:tableLayout>
+            <amx:tableLayout id="t12" width="100%">
+                <amx:rowLayout id="rl3">
+                    <amx:cellFormat id="cf37" width="5%"/>
+                    <amx:cellFormat id="cf64" width="90%">
+                        <amx:outputText value="Item Number" id="ot1" inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
                 <amx:rowLayout id="rl4">
-                  <amx:cellFormat id="cf21" width="40%" halign="start" inlineStyle="padding-left:10px;">
-                     <amx:outputText value="Item Number" id="ot1" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf8" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.itemNumber.inputValue}" id="ot3"/>
-                  </amx:cellFormat>                 
+                <amx:cellFormat id="cf63" width="5%"/>
+                    <amx:cellFormat id="cf8" width="90%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.itemNumber.inputValue}" id="it1" readOnly="true"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>
-        </amx:rowLayout>
-        <amx:rowLayout id="rl31" rendered="#{bindings.character1.inputValue != '0'}">
-          <amx:cellFormat id="cf212" width="100%">
-            <amx:panelGroupLayout id="pgl22" layout="horizontal">
-              <amx:tableLayout id="tl311" width="100%">
-                <amx:rowLayout id="rl41">
-                  <amx:cellFormat id="cf211" width="40%" halign="start" inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt1.inputValue}" id="ot11" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf81" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character1.inputValue}" id="ot31"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl5">
+                  <amx:cellFormat id="cf62" width="5%"/>
+                    <amx:cellFormat id="cf9" width="100%">
+                        <amx:outputText value="Lot Number" id="ot3" inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>
-        </amx:rowLayout>
-        <amx:rowLayout id="rl32" rendered="#{bindings.character10.inputValue != '0'}">
-          <amx:cellFormat id="cf22" width="100%">
-            <amx:panelGroupLayout id="pgl23" layout="horizontal">
-              <amx:tableLayout id="tl312" width="100%">
-                <amx:rowLayout id="rl42">
-                  <amx:cellFormat id="cf1212" width="40%" halign="start" inlineStyle="padding-left:10px;">
-                     <amx:outputText value="Inspection Result" id="ot4" inlineStyle="font-weight:bold;" />
-                     <!--<amx:outputText value="#{bindings.prompt10.inputValue}" id="ot12" inlineStyle="font-weight:bold;" />-->
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf82" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character10.inputValue}" id="ot32"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl6">
+                <amx:cellFormat id="cf61" width="5%"/>
+                    <amx:cellFormat id="cf10" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.lotNumber.inputValue}" id="it2" readOnly="true"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>
-        <amx:rowLayout id="rl322" rendered="#{bindings.character2.inputValue != '0'}">
-          <amx:cellFormat id="cf222" width="100%">
-            <amx:panelGroupLayout id="pgl232" layout="horizontal">
-              <amx:tableLayout id="tl3122" width="100%">
-                <amx:rowLayout id="rl422">
-                  <amx:cellFormat id="cf12122" width="40%" halign="start"
-                                  inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt2.inputValue}" id="ot122" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf822" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character2.inputValue}" id="ot322"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl7">
+                   <amx:cellFormat id="cf60" width="5%"/>
+                    <amx:cellFormat id="cf11" width="100%">
+                        <amx:outputText value="PO Number" id="ot4" inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>
-<amx:rowLayout id="rl5" rendered="#{bindings.character3.inputValue != '0'}">
-          <amx:cellFormat id="cf223" width="100%">
-            <amx:panelGroupLayout id="pgl233" layout="horizontal">
-              <amx:tableLayout id="tl3123" width="100%">
-                <amx:rowLayout id="rl423">
-                  <amx:cellFormat id="cf12123" width="40%" halign="start"
-                                  inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt3.inputValue}" id="ot123" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf823" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character3.inputValue}" id="ot323"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl8">
+                <amx:cellFormat id="cf59" width="5%"/>
+                    <amx:cellFormat id="cf12" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.poNumber.inputValue}" id="it3" readOnly="true"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>   
-<amx:rowLayout id="rl324" rendered="#{bindings.character4.inputValue != '0'}">
-          <amx:cellFormat id="cf224" width="100%">
-            <amx:panelGroupLayout id="pgl234" layout="horizontal">
-              <amx:tableLayout id="tl3124" width="100%">
-                <amx:rowLayout id="rl424">
-                  <amx:cellFormat id="cf12124" width="40%" halign="start"
-                                  inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt4.inputValue}" id="ot124" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf824" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character4.inputValue}" id="ot324"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl9">
+                   <amx:cellFormat id="cf58" width="5%"/>
+                    <amx:cellFormat id="cf13" width="100%">
+                        <amx:outputText value="SO Number" id="ot5" inlineStyle="font-weight:bold;" />
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>
-<amx:rowLayout id="rl325" rendered="#{bindings.character5.inputValue != '0'}">
-          <amx:cellFormat id="cf225" width="100%">
-            <amx:panelGroupLayout id="pgl235" layout="horizontal">
-              <amx:tableLayout id="tl3125" width="100%">
-                <amx:rowLayout id="rl425">
-                  <amx:cellFormat id="cf12125" width="40%" halign="start"
-                                  inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt5.inputValue}" id="ot125" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf825" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character5.inputValue}" id="ot325"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl10">
+                <amx:cellFormat id="cf57" width="5%"/>
+                    <amx:cellFormat id="cf14" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.soNumber.inputValue}" id="it4" readOnly="true"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>	  
-<amx:rowLayout id="rl3211" rendered="#{bindings.custAccountNumber.inputValue != '0'}">
-          <amx:cellFormat id="cf2211" width="100%">
-            <amx:panelGroupLayout id="pgl2311" layout="horizontal">
-              <amx:tableLayout id="tl31211" width="100%">
-                <amx:rowLayout id="rl4211">
-                  <amx:cellFormat id="cf121211" width="40%" halign="start" inlineStyle="padding-left:10px;">
-                     <amx:outputText value="Customer Account No." id="ot1211" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf8211" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.custAccountNumber.inputValue}" id="ot32"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl11">
+                    <amx:cellFormat id="cf56" width="5%"/>
+                    <amx:cellFormat id="cf15" width="100%">
+                        <amx:outputText value="Quantity" id="ot8" inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>	  
-	  <amx:rowLayout id="rl326" rendered="#{bindings.character6.inputValue != '0'}">
-          <amx:cellFormat id="cf226" width="100%">
-            <amx:panelGroupLayout id="pgl236" layout="horizontal">
-              <amx:tableLayout id="tl3126" width="100%">
-                <amx:rowLayout id="rl426">
-                  <amx:cellFormat id="cf12126" width="40%" halign="start" inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt6.inputValue}" id="ot126" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf826" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character6.inputValue}" id="ot326"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl12">
+                <amx:cellFormat id="cf55" width="5%"/>
+                    <amx:cellFormat id="cf16" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.quantity.inputValue}" id="it5" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>	  
-	  <amx:rowLayout id="rl327" rendered="#{bindings.character7.inputValue != '0'}">
-          <amx:cellFormat id="cf227" width="100%">
-            <amx:panelGroupLayout id="pgl237" layout="horizontal">
-              <amx:tableLayout id="tl3127" width="100%">
-                <amx:rowLayout id="rl427">
-                  <amx:cellFormat id="cf12127" width="40%" halign="start" inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt7.inputValue}" id="ot127" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf827" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character7.inputValue}" id="ot327"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl13" rendered="#{bindings.prompt1.inputValue !=null}" >
+                    <amx:cellFormat id="cf54" width="5%"/>
+                    <amx:cellFormat id="cf17" width="100%">
+                        <amx:outputText value="#{bindings.prompt1.inputValue}" id="ot9"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>	
-	  <amx:rowLayout id="rl328" rendered="#{bindings.character8.inputValue != '0'}">
-          <amx:cellFormat id="cf228" width="100%">
-            <amx:panelGroupLayout id="pgl238" layout="horizontal">
-              <amx:tableLayout id="tl3128" width="100%">
-                <amx:rowLayout id="rl428">
-                  <amx:cellFormat id="cf12128" width="40%" halign="start" inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt8.inputValue}" id="ot128" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf828" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character8.inputValue}" id="ot328"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl14" rendered="#{bindings.prompt1.inputValue !=null}" >
+                    <amx:cellFormat id="cf53" width="5%"/>
+                    <amx:cellFormat id="cf18" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.character1.inputValue}" id="it6" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>	
-	  	  <amx:rowLayout id="rl329" rendered="#{bindings.character9.inputValue != '0'}">
-          <amx:cellFormat id="cf229" width="100%">
-            <amx:panelGroupLayout id="pgl239" layout="horizontal">
-              <amx:tableLayout id="tl319" width="100%">
-                <amx:rowLayout id="rl429">
-                  <amx:cellFormat id="cf1219" width="40%" halign="start" inlineStyle="padding-left:10px;">
-                     <amx:outputText value="#{bindings.prompt9.inputValue}" id="ot129" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf829" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.character9.inputValue}" id="ot329"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl15" rendered="#{bindings.prompt2.inputValue !=null}" >
+                    <amx:cellFormat id="cf52" width="5%"/>
+                    <amx:cellFormat id="cf19" width="100%">
+                        <amx:outputText value="#{bindings.prompt2.inputValue}" id="ot10"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
-            </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>
-	  	  <amx:rowLayout id="rl3212" rendered="#{bindings.quantity.inputValue != '0'}">
-          <amx:cellFormat id="cf2212" width="100%">
-            <amx:panelGroupLayout id="pgl2312" layout="horizontal">
-              <amx:tableLayout id="tl31212" width="100%">
-                <amx:rowLayout id="rl4212">
-                  <amx:cellFormat id="cf121212" width="40%" halign="start" inlineStyle="padding-left:10px;">
-                     <amx:outputText value="Quantity" id="ot1212" inlineStyle="font-weight:bold;" />
-                 </amx:cellFormat> 
-                  <amx:cellFormat id="cf8212" width="60%" halign="start">
-                    <amx:outputText value=": #{bindings.quantity.inputValue}" id="ot3212"/>
-                  </amx:cellFormat>                 
+                <amx:rowLayout id="rl16" rendered="#{bindings.prompt2.inputValue !=null}" >
+                   <amx:cellFormat id="cf51" width="5%"/>
+                    <amx:cellFormat id="cf20" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.character2.inputValue}" id="it7" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
                 </amx:rowLayout>
-              </amx:tableLayout>
+                <amx:rowLayout id="rl17" rendered="#{bindings.prompt3.inputValue !=null}" >
+                    <amx:cellFormat id="cf50" width="5%"/>
+                    <amx:cellFormat id="cf21" width="100%">
+                        <amx:outputText value="#{bindings.prompt3.inputValue}" id="ot11"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl18" rendered="#{bindings.prompt3.inputValue !=null}" >
+                   <amx:cellFormat id="cf49" width="5%"/>
+                    <amx:cellFormat id="cf22" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.character3.inputValue}" id="it8" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl19" rendered="#{bindings.prompt4.inputValue !=null}" >
+                    <amx:cellFormat id="cf48" width="5%"/>
+                    <amx:cellFormat id="cf23" width="100%">
+                        <amx:outputText value="#{bindings.prompt4.inputValue}" id="ot12"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl20" rendered="#{bindings.prompt4.inputValue !=null}" >
+                   <amx:cellFormat id="cf47" width="5%"/>
+                    <amx:cellFormat id="cf24" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.character4.inputValue}" id="it9" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl21" rendered="#{bindings.prompt5.inputValue !=null}" >
+                    <amx:cellFormat id="cf46" width="5%"/>
+                    <amx:cellFormat id="cf25" width="100%">
+                        <amx:outputText value="#{bindings.prompt5.inputValue}" id="ot13"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl22" rendered="#{bindings.prompt5.inputValue !=null}" >
+                   <amx:cellFormat id="cf45" width="5%"/>
+                    <amx:cellFormat id="cf26" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.character5.inputValue}" id="it10" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl23" rendered="#{bindings.prompt6.inputValue !=null}" >
+                   <amx:cellFormat id="cf44" width="5%"/> 
+                    <amx:cellFormat id="cf27" width="100%">
+                        <amx:outputText value="#{bindings.prompt6.inputValue}" id="ot14"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl24" rendered="#{bindings.prompt6.inputValue !=null}" >
+                   <amx:cellFormat id="cf43" width="5%"/>
+                    <amx:cellFormat id="cf28" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.character6.inputValue}" id="it11" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl25" rendered="#{bindings.prompt7.inputValue !=null}" >
+                   <amx:cellFormat id="cf42" width="5%"/> 
+                    <amx:cellFormat id="cf29" width="100%">
+                        <amx:outputText value="#{bindings.prompt7.inputValue}" id="ot15"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl26" rendered="#{bindings.prompt7.inputValue !=null}" >
+                 <amx:cellFormat id="cf41" width="5%"/>
+                    <amx:cellFormat id="cf30" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.character7.inputValue}" id="it12" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl27" rendered="#{bindings.prompt8.inputValue !=null}" >
+                  <amx:cellFormat id="cf40" width="5%"/>  
+                    <amx:cellFormat id="cf31" width="100%">
+                        <amx:outputText value="#{bindings.prompt8.inputValue}" id="ot16"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl28" rendered="#{bindings.prompt8.inputValue !=null}" >
+                  <amx:cellFormat id="cf39" width="5%"/>
+                    <amx:cellFormat id="cf32" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.character8.inputValue}" id="it13" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl29" rendered="#{bindings.prompt9.inputValue !=null}" >
+                   <amx:cellFormat id="cf38" width="5%"/> 
+                    <amx:cellFormat id="cf33" width="100%">
+                        <amx:outputText value="#{bindings.prompt9.inputValue}" id="ot17"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl30" rendered="#{bindings.prompt9.inputValue !=null}" >
+                  <amx:cellFormat id="cf36" width="5%"/>
+                    <amx:cellFormat id="cf34" width="100%" halign="start" columnSpan="2">
+                        <amx:inputText value="#{bindings.character9.inputValue}" id="it14" inlineStyle="border-radius:1px 1px 1px 1px / 1px 1px 1px 1px ; border-color:Black;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl31" rendered="#{bindings.prompt10.inputValue !=null}">
+                   <amx:cellFormat id="cf2" width="5%"/> 
+                    <amx:cellFormat id="cf35" width="100%">
+                        <amx:outputText value="#{bindings.prompt10.inputValue}" id="ot18"
+                                        inlineStyle="font-weight:bold;"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                
+            </amx:tableLayout>
+        </amx:panelGroupLayout>
+        <amx:facet name="footer">
+            <amx:panelGroupLayout layout="horizontal" id="pgl211" halign="end" inlineStyle="text-align:center;">
+                <amx:commandButton text="Update" id="cb111" inlineStyle="text-align:center;"/>
             </amx:panelGroupLayout>
-          </amx:cellFormat>   
-      </amx:rowLayout>      
-      </amx:tableLayout>
-      <!--<amx:outputText value="#{bindings.character2.inputValue}" id="ot4"/>
-      <amx:outputText value="#{bindings.character3.inputValue}" id="ot5"/>
-      <amx:outputText value="#{bindings.character4.inputValue}" id="ot8"/>
-      <amx:outputText value="#{bindings.character5.inputValue}" id="ot9"/>
-      <amx:outputText value="#{bindings.character6.inputValue}" id="ot10"/>
-      <amx:outputText value="#{bindings.character7.inputValue}" id="ot13"/>
-      <amx:outputText value="#{bindings.character8.inputValue}" id="ot14"/>
-      <amx:outputText value="#{bindings.character9.inputValue}" id="ot15"/>
-      <amx:outputText value="#{bindings.custAccountNumber.inputValue}" id="ot16"/>
-      <amx:outputText value="#{bindings.description.inputValue}" id="ot17"/>
-      <amx:outputText value="#{bindings.lotNumber.inputValue}" id="ot18"/>
-      <amx:outputText value="#{bindings.poNumber.inputValue}" id="ot19"/>
-      <amx:outputText value="#{bindings.prompt2.inputValue}" id="ot20"/>
-      <amx:outputText value="#{bindings.prompt3.inputValue}" id="ot21"/>
-      <amx:outputText value="#{bindings.prompt4.inputValue}" id="ot22"/>
-      <amx:outputText value="#{bindings.prompt5.inputValue}" id="ot23"/>
-      <amx:outputText value="#{bindings.prompt6.inputValue}" id="ot24"/>
-      <amx:outputText value="#{bindings.prompt7.inputValue}" id="ot25"/>
-      <amx:outputText value="#{bindings.prompt8.inputValue}" id="ot26"/>
-      <amx:outputText value="#{bindings.prompt9.inputValue}" id="ot27"/>
-      <amx:outputText value="#{bindings.qaCreatedByName.inputValue}" id="ot28"/>
-      <amx:outputText value="#{bindings.qaCreationDate.inputValue}" id="ot29"/>
-      <amx:outputText value="#{bindings.quantity.inputValue}" id="ot33"/>
-      <amx:outputText value="#{bindings.soNumber.inputValue}" id="ot34"/> -->
-    </amx:panelGroupLayout>
-    <amx:facet name="footer">
-      <amx:panelGroupLayout layout="horizontal" id="pgl211" halign="end" inlineStyle="text-align:center;">
-        <amx:commandButton text="Update" id="cb111" inlineStyle="text-align:center;"/>
-      </amx:panelGroupLayout>
-    </amx:facet>
-  </amx:panelPage>
+        </amx:facet>
+    </amx:panelPage>
 </amx:view>

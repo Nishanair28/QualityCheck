@@ -47,13 +47,22 @@
          <directMapping attributeName="prompt8" payloadAttributeName="prompt8" columnName="PROMPT8" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt9" payloadAttributeName="prompt9" columnName="PROMPT9" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt10" payloadAttributeName="PROMPT10" columnName="PROMPT10" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf1prompt" payloadAttributeName="mf1_prompt" columnName="MF1_PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf2prompt" payloadAttributeName="mf2_prompt" columnName="MF2_PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf3prompt" payloadAttributeName="mf3_prompt" columnName="MF3_PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf4prompt" payloadAttributeName="mf4_prompt" columnName="MF4_PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf1value" payloadAttributeName="mf1_value" columnName="MF1_VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf2value" payloadAttributeName="mf2_value" columnName="MF2_VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf3value" payloadAttributeName="mf3_value" columnName="MF3_VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf4value" payloadAttributeName="MF4_VALUE" columnName="MF4_VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
       </attributeMappings>
       <methods>
-         <findAllMethod uri="/XXgetQualityResults/getQualityResultsRS/{userName1}/{planId}/26-AUG-2016/{orgCode1}" connectionName="QualityService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="false" payloadElementName="getQualityResultsDBOutput">
+         <findAllMethod uri="/XXgetQualityResults/getQualityResultsRS/{userName1}/{planId}/{sdate}/{orgCode1}" connectionName="QualityService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="true" payloadElementName="getQualityResultsDBOutput">
             <headerParameter name="Content-Type" value="application/json"/>
             <parameter name="userName1" value="#{securityContext.userName}" valueProvider="ELExpression" pathParam="true"/>
             <parameter name="planId" value="#{pageFlowScope.selectedLov}" valueProvider="ELExpression" pathParam="true"/>
             <parameter name="orgCode1" value="#{pageFlowScope.selectedOrg}" valueProvider="ELExpression" pathParam="true"/>
+            <parameter name="sdate" value="#{pageFlowScope.selectedDate}" valueProvider="ELExpression" pathParam="true"/>
          </findAllMethod>
       </methods>
    </classMappingDescriptor>
