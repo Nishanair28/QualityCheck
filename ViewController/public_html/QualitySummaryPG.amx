@@ -63,15 +63,15 @@
                         <amx:cellFormat id="cf13" width="2%"/>
                         <amx:cellFormat id="cf19" width="88%">
                             <amx:inputDate id="id1" valueChangeListener="#{qualityBean.dateSelected}"
-                                           value="#{pageFlowScope.selectedDate}"/>
+                                           value="#{pageFlowScope.selectedDate}" simple="true"/>
                         </amx:cellFormat>
                     </amx:rowLayout>
                     <amx:rowLayout id="rl3"
                                    rendered="#{pageFlowScope.selectedOrg!=null &amp;&amp; pageFlowScope.selectedLov!=null}">
                         <amx:cellFormat id="cf20" width="10%" halign="end"></amx:cellFormat>
                         <amx:cellFormat id="cf21" width="2%" halign="end"></amx:cellFormat>
-                        <amx:cellFormat id="cf22" width="88%">
-                            <amx:commandButton text="Go" id="cb1" actionListener="#{qualityBean.buttonClicked}"/>
+                        <amx:cellFormat id="cf22" width="88%" halign="center">
+                            <amx:commandButton text="Go" id="cb1" actionListener="#{qualityBean.buttonClicked}" inlineStyle="text-align:center;"/>
                         </amx:cellFormat>
                     </amx:rowLayout>
                 </amx:tableLayout>
