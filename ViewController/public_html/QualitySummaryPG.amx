@@ -80,7 +80,7 @@
                     </amx:rowLayout>
                 </amx:tableLayout>
                 <amx:tableLayout id="tl6" width="100%" halign="center"
-                                 inlineStyle="color:Menu; background-color:#eaeaea;">
+                                 inlineStyle="color:Menu; background-color:#eaeaea;border-bottom-color:#86BC25;border-bottom-width:thin;border-bottom-style:solid ">
                     <amx:rowLayout id="r14"
                                    rendered="#{pageFlowScope.selectedOrg!=null &amp;&amp; pageFlowScope.selectedLov!=null}">
                         <amx:cellFormat id="cf10" width="100%" halign="center" valign="top" columnSpan="3">
@@ -101,8 +101,8 @@
                               showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1"
                               rendered="#{pageFlowScope.goClicked!=null}">
                     <amx:listItem id="li1" action="getDetails" showLinkIcon="true"
-                                  inlineStyle="#{((row.rowKey)%2)==0?'background-color:#FFFFFF;':'background-color:#eaeaea;'};border-top-color:#86BC25;border-top-width:thin;border-top-style:solid;border-bottom-color:#86BC25;border-bottom-width:thin;border-bottom-style:solid">
-                        <amx:tableLayout id="tl1" width="100%" inlineStyle="padding-bottom:10px; padding-top:10px;">
+                                  inlineStyle="#{((row.rowKey)%2)==0?'background-color:#FFFFFF;':'background-color:#eaeaea;'};border-bottom-color:#86BC25;border-bottom-width:thin;border-bottom-style:solid">
+                        <amx:tableLayout id="tl1" width="100%" inlineStyle="padding-bottom:10px;">
                             <amx:rowLayout id="r1l2">
                                 <amx:cellFormat id="cf011" width="5%"/>
                                 <amx:cellFormat id="cf012" width="45%" height="20" valign="top">

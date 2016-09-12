@@ -30,7 +30,7 @@
                             <amx:rowLayout id="rl33">
                                 <amx:cellFormat id="cf68" width="20%" halign="end">
                                     <amx:outputText value="Plan :" id="ot2"
-                                                    inlineStyle="font-family:RobotoLight; font-size:large; color:Gray;"/>
+                                                    inlineStyle="font-family:RobotoLight; font-size:large;"/>
                                 </amx:cellFormat>
                                 <amx:cellFormat id="cf67" halign="start">
                                     <amx:outputText value=" #{bindings.planName.inputValue}" id="ot21"
