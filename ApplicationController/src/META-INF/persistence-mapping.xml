@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mobileObjectPersistence xmlns="http://xmlns.oracle.com/adf/mf/amx/cdm/persistenceMapping" logWebServiceCalls="true">
    <classMappingDescriptor className="com.deloitte.inv.application.model.QualityResultsDBOutput" persisted="true">
-      <crudServiceClass className="com.deloitte.inv.application.model.service.QualityResultsDBOutputService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.maf.api.cdm.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.maf.api.cdm.persistence.manager.RestJSONPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="true" autoQuery="true" enableOfflineTransactions="true"/>
+      <crudServiceClass className="com.deloitte.inv.application.model.service.QualityResultsDBOutputService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.maf.api.cdm.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.maf.api.cdm.persistence.manager.RestJSONPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="true" autoQuery="false" enableOfflineTransactions="true"/>
       <table name="QUALITY_RESULTS_DBOUTPUT">
          <primaryKeyColumn name="OCCURRENCE"/>
       </table>
@@ -47,14 +47,54 @@
          <directMapping attributeName="prompt8" payloadAttributeName="prompt8" columnName="PROMPT8" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt9" payloadAttributeName="prompt9" columnName="PROMPT9" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt10" payloadAttributeName="PROMPT10" columnName="PROMPT10" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="mf1prompt" payloadAttributeName="mf1_prompt" columnName="MF1_PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="mf2prompt" payloadAttributeName="mf2_prompt" columnName="MF2_PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="mf3prompt" payloadAttributeName="mf3_prompt" columnName="MF3_PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="mf4prompt" payloadAttributeName="mf4_prompt" columnName="MF4_PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="mf1value" payloadAttributeName="mf1_value" columnName="MF1_VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="mf2value" payloadAttributeName="mf2_value" columnName="MF2_VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="mf3value" payloadAttributeName="mf3_value" columnName="MF3_VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="mf4value" payloadAttributeName="MF4_VALUE" columnName="MF4_VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf1prompt" payloadAttributeName="mf1_prompt" columnName="MF1PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf2prompt" payloadAttributeName="mf2_prompt" columnName="MF2PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf3prompt" payloadAttributeName="mf3_prompt" columnName="MF3PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf4prompt" payloadAttributeName="mf4_prompt" columnName="MF4PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf1value" payloadAttributeName="mf1_value" columnName="MF1VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf2value" payloadAttributeName="mf2_value" columnName="MF2VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf3value" payloadAttributeName="mf3_value" columnName="MF3VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf4value" payloadAttributeName="MF4_VALUE" columnName="MF4VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt11" payloadAttributeName="prompt11" columnName="PROMPT11" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt12" payloadAttributeName="prompt12" columnName="PROMPT12" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt13" payloadAttributeName="prompt13" columnName="PROMPT13" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt14" payloadAttributeName="prompt14" columnName="PROMPT14" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt15" payloadAttributeName="prompt15" columnName="PROMPT15" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt16" payloadAttributeName="prompt16" columnName="PROMPT16" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt17" payloadAttributeName="prompt17" columnName="PROMPT17" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt18" payloadAttributeName="prompt18" columnName="PROMPT18" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt19" payloadAttributeName="prompt19" columnName="PROMPT19" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt20" payloadAttributeName="prompt20" columnName="PROMPT20" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt21" payloadAttributeName="prompt21" columnName="PROMPT21" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt22" payloadAttributeName="prompt22" columnName="PROMPT22" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt23" payloadAttributeName="prompt23" columnName="PROMPT23" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt24" payloadAttributeName="prompt24" columnName="PROMPT24" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt25" payloadAttributeName="prompt25" columnName="PROMPT25" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt26" payloadAttributeName="prompt26" columnName="PROMPT26" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt27" payloadAttributeName="prompt27" columnName="PROMPT27" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt28" payloadAttributeName="prompt28" columnName="PROMPT28" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt29" payloadAttributeName="prompt29" columnName="PROMPT29" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt30" payloadAttributeName="prompt30" columnName="PROMPT30" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character11" payloadAttributeName="CHARACTER11" columnName="CHARACTER11" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character12" payloadAttributeName="CHARACTER12" columnName="CHARACTER12" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character13" payloadAttributeName="CHARACTER13" columnName="CHARACTER13" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character14" payloadAttributeName="CHARACTER14" columnName="CHARACTER14" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character15" payloadAttributeName="CHARACTER15" columnName="CHARACTER15" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character16" payloadAttributeName="CHARACTER16" columnName="CHARACTER16" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character17" payloadAttributeName="CHARACTER17" columnName="CHARACTER17" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character18" payloadAttributeName="CHARACTER18" columnName="CHARACTER18" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character19" payloadAttributeName="CHARACTER19" columnName="CHARACTER19" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character20" payloadAttributeName="CHARACTER20" columnName="CHARACTER20" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character21" payloadAttributeName="CHARACTER21" columnName="CHARACTER21" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character22" payloadAttributeName="CHARACTER22" columnName="CHARACTER22" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character23" payloadAttributeName="CHARACTER23" columnName="CHARACTER23" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character24" payloadAttributeName="CHARACTER24" columnName="CHARACTER24" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character25" payloadAttributeName="CHARACTER25" columnName="CHARACTER25" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character26" payloadAttributeName="CHARACTER26" columnName="CHARACTER26" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character27" payloadAttributeName="CHARACTER27" columnName="CHARACTER27" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character28" payloadAttributeName="CHARACTER28" columnName="CHARACTER28" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character29" payloadAttributeName="CHARACTER29" columnName="CHARACTER29" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="character30" payloadAttributeName="CHARACTER30" columnName="CHARACTER30" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
       </attributeMappings>
       <methods>
          <findAllMethod uri="/XXgetQualityResults/getQualityResultsRS/{userName1}/{planId}/{sdate}/{orgCode1}" connectionName="QualityService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="true" payloadElementName="getQualityResultsDBOutput">
@@ -76,7 +116,7 @@
          <directMapping attributeName="planId" payloadAttributeName="plan_id" columnName="PLAN_ID" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="true"/>
       </attributeMappings>
       <methods>
-         <findAllMethod uri="/XXgetQualityPlanResults/XXgetQualityPlanResultsRS/{userName}/{orgCode}" connectionName="OrgService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="false" payloadElementName="getQualityPlandetailsOutput">
+         <findAllMethod uri="/XXgetQualityPlanResults/XXgetQualityPlanResultsRS/{userName}/{orgCode}" connectionName="OrgService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="true" payloadElementName="getQualityPlandetailsOutput">
             <headerParameter name="Content-Type" value="application/json"/>
             <parameter name="orgCode" value="#{pageFlowScope.selectedOrg}" valueProvider="ELExpression" pathParam="true"/>
             <parameter name="userName" value="#{securityContext.userName}" valueProvider="ELExpression" pathParam="true"/>
@@ -93,8 +133,8 @@
          <directMapping attributeName="organizationCode" payloadAttributeName="ORGANIZATION_CODE" columnName="ORGANIZATION_CODE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
       </attributeMappings>
       <methods>
-         <findAllMethod uri="/XXgetInventoryDetail/getInventoryDetailRS/{orgId}" connectionName="OrgLovService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="true" payloadElementName="getInventoryDetailBSOutput">
-            <headerParameter name="Content-Type" value="application/json"/>
+         <findAllMethod uri="/XXgetInventoryDetail/getInventoryDetailRS/{orgId}" connectionName="OrgLovService" requestType="GET" sendDataObjectAsPayload="false" deleteLocalRows="false" payloadElementName="getInventoryDetailBSOutput">
+           <headerParameter name="Content-Type" value="application/json"/>
             <parameter name="orgId" value="1" valueProvider="LiteralValue" pathParam="true"/>
          </findAllMethod>
       </methods>

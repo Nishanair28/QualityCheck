@@ -167,5 +167,205 @@
         <Item Value="soNumber"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt11">
+      <AttrNames>
+        <Item Value="prompt11"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt12">
+      <AttrNames>
+        <Item Value="prompt12"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt13">
+      <AttrNames>
+        <Item Value="prompt13"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt14">
+      <AttrNames>
+        <Item Value="prompt14"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt15">
+      <AttrNames>
+        <Item Value="prompt15"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt16">
+      <AttrNames>
+        <Item Value="prompt16"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt17">
+      <AttrNames>
+        <Item Value="prompt17"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt18">
+      <AttrNames>
+        <Item Value="prompt18"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt19">
+      <AttrNames>
+        <Item Value="prompt19"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt20">
+      <AttrNames>
+        <Item Value="prompt20"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt21">
+      <AttrNames>
+        <Item Value="prompt21"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt22">
+      <AttrNames>
+        <Item Value="prompt22"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt23">
+      <AttrNames>
+        <Item Value="prompt23"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt24">
+      <AttrNames>
+        <Item Value="prompt24"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt25">
+      <AttrNames>
+        <Item Value="prompt25"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt26">
+      <AttrNames>
+        <Item Value="prompt26"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt27">
+      <AttrNames>
+        <Item Value="prompt27"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt28">
+      <AttrNames>
+        <Item Value="prompt28"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt29">
+      <AttrNames>
+        <Item Value="prompt29"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="prompt30">
+      <AttrNames>
+        <Item Value="prompt30"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character11">
+      <AttrNames>
+        <Item Value="character11"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character12">
+      <AttrNames>
+        <Item Value="character12"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character13">
+      <AttrNames>
+        <Item Value="character13"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character14">
+      <AttrNames>
+        <Item Value="character14"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character15">
+      <AttrNames>
+        <Item Value="character15"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character16">
+      <AttrNames>
+        <Item Value="character16"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character17">
+      <AttrNames>
+        <Item Value="character17"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character18">
+      <AttrNames>
+        <Item Value="character18"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character19">
+      <AttrNames>
+        <Item Value="character19"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character20">
+      <AttrNames>
+        <Item Value="character20"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character21">
+      <AttrNames>
+        <Item Value="character21"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character22">
+      <AttrNames>
+        <Item Value="character22"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character23">
+      <AttrNames>
+        <Item Value="character23"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character24">
+      <AttrNames>
+        <Item Value="character24"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character25">
+      <AttrNames>
+        <Item Value="character25"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character26">
+      <AttrNames>
+        <Item Value="character26"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character27">
+      <AttrNames>
+        <Item Value="character27"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character28">
+      <AttrNames>
+        <Item Value="character28"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character29">
+      <AttrNames>
+        <Item Value="character29"/>
+      </AttrNames>
+    </attributeValues>
+	<attributeValues IterBinding="qualityResultsDBOutputIterator" id="character30">
+      <AttrNames>
+        <Item Value="character30"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

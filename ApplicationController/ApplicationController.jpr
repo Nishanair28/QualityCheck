@@ -3,7 +3,7 @@
    <value n="cdmDataObjectPackage" v="com.deloitte.inv.application.model"/>
    <value n="cdmGeneratorProject" v="ApplicationController"/>
    <value n="cdmOverwriteDataObjects" v="true"/>
-   <value n="cdmOverwriteServices" v="false"/>
+   <value n="cdmOverwriteServices" v="true"/>
    <value n="cdmServicePackage" v="com.deloitte.inv.application.model.service"/>
    <hash n="component-versions">
       <value n="oracle.adfdt.controller.adfc.source.migration.AdfControllerSchemaMigrator" v="11.1.1.1.0"/>

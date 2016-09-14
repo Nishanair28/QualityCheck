@@ -4,21 +4,39 @@
 
 @font-face {
     font-family: RobotoMedium;
-    src: url("../fontRoboto/Roboto.Medium.ttf")format("truetype");
+    src: url("../fontRoboto/Roboto-Medium.ttf")format("truetype");
 }
 
 @font-face {
     font-family: RobotoLight;
-    src: url("../fontRoboto/Roboto.Light.ttf")format("truetype");
+    src: url("../fontRoboto/Roboto-Light.ttf")format("truetype");
 }
+
 @font-face {
     font-family: RobotoRegular;
     src: url("../fontRoboto/Roboto-Regular.ttf")format("truetype");
 }
+
 @font-face {
     font-family: RobotoThin;
     src: url("../fontRoboto/Roboto-Thin.ttf")format("truetype");
 }
+
+/*
+@font-face {
+    font-family: RobotoLight;
+    src: url('../fontRoboto/Roboto-Light.ttf?v=1.100141')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url('../fontRoboto/Roboto-Medium.ttf?v=1.100141')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
 .amx-panelPage-header {
     border-bottom-color: #86BC25;
     background-color: #000000;
@@ -38,12 +56,76 @@
     font-family: RobotoLight;
 }
 
+.promptlightSmall {
+    font-family: RobotoLight;
+    font-size: small;
+}
+
 .resulttext {
     width: auto;
     color: grey;
     font-size: 5px;
     font-family: RobotoLight;
     font-weight: bold;
+}
+
+.xxRobotoMedium14 {
+    font-family: RobotoMedium;
+    font-size: 14px;
+}
+
+.xxRobotoLight14 {
+    font-family: RobotoLight;
+    font-size: 14px;
+}
+
+.xxRobotoHeaderBlueText {
+    font-family: RobotoMedium;
+    color: #1C75BC;
+    font-size: large;
+    text-align: center;
+}
+
+.xxRobotoSubHeader {
+    font-family: RobotoMedium;
+    font-size: large;
+    color: #ffffff;
+}
+
+.xxRobotoFieldTitle {
+    font-family: RobotoMedium !important;
+    font-size: small !important;
+    color: #999999 !important;
+}
+
+.xxRobotoGroupHeader {
+    font-family: RobotoMedium !important;
+    font-size: x-large !important;
+    color: #000000 !important;
+}
+
+.xxRobotoFieldValue {
+    font-family: RobotoRegular !important;
+    font-size: large !important;
+    color: #000000 !important;
+}
+
+.xxRobotoMediumL {
+    font-family: RobotoMedium;
+    font-size: large;
+    vertical-align: middle;
+}
+
+.xxRobotoMediumM {
+    font-family: RobotoMedium;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.xxRobotoLightM {
+    font-family: RobotoLight;
+    font-size: medium;
+    vertical-align: middle;
 }
 
 .ordAppStretchLyt .amx-panelStretchLayout_center {
@@ -64,19 +146,6 @@
     text-align: center;
     font-stretch: expanded;
 }
-@font-face {
-    font-family: RobotoLight;
-    src: url('../fontRoboto/Roboto-Light.ttf?v=1.100141')format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: RobotoMedium;
-    src: url('../fontRoboto/Roboto-Medium.ttf?v=1.100141')format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 html[dir=ltr] .amx-selectOneChoice .selectItemsContainer {
     border-width: 2px;
@@ -91,11 +160,13 @@ html[dir=ltr] .amx-selectOneChoice .selectItemsContainer {
     background-position: 98%;
     font-family: RobotoMedium;
     background-color: White;
+    vertical-align: middle;
+    position: relative;        
 }
 
 html[dir="ltr"] .amx-inputDate-trigger-dateTime {
-    border-width: 2px;
-    border: rgb(169,169,169);
+    border-width: 1px;
+    border: rgb(169, 169, 169);
     border-radius: 1px;
     border-style: solid;
     -webkit-border-image: none;
@@ -133,34 +204,22 @@ html[dir="ltr"] .amx-inputDate-text {
     background-color: #1C75BC;
 }
 
-html[dir=ltr] .amx-inputText {
-    border-width: 2px;
-    border-radius: 5px;
+html[dir=ltr] .amx-inputText-content {
+    border-width: 1px;
+    border-radius: 2px;
     border-style: solid;
-    border: grey;
+    border: rgb(169, 169, 169) !important;
     -webkit-border-image: none;
     border-image: none;
     position: static;
-    border-color: #1C75BC;
+    height: 40px;
+    vertical-align: middle;
 }
-
-.xxRobotoMedium14 {
+html[dir=ltr] .amx-inputText{
+    padding-bottom: 1px  !important;
+    padding-left: 1px  !important;
+    padding-right: 1px  !important;
+    padding-top: 1px  !important;
     font-family: RobotoMedium;
-    font-size: 14px;
-}
-
-.xxRobotoLight14 {
-    font-family: RobotoLight;
-    font-size: 14px;
-}
-
-.xxRobotoMediumL {
-    font-family: RobotoMedium;
-    font-size: large;
-}
-
-.xxRobotoMediumM {
-    font-family: RobotoMedium;
-    font-weight: bold;
-    font-size: medium;
+    
 }

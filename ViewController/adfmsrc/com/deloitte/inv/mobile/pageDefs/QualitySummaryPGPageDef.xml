@@ -89,6 +89,46 @@
           <Item Value="mf4prompt"/>
           <Item Value="mf4value"/>
           <Item Value="mf4value"/>
+          <Item Value="character11"/>
+          <Item Value="character12"/>
+          <Item Value="character13"/>
+          <Item Value="character14"/>
+          <Item Value="character15"/>
+          <Item Value="character16"/>
+          <Item Value="character17"/>
+          <Item Value="character18"/>
+          <Item Value="character19"/>
+          <Item Value="character20"/>
+          <Item Value="character21"/>
+          <Item Value="character22"/>
+          <Item Value="character23"/>
+          <Item Value="character24"/>
+          <Item Value="character25"/>
+          <Item Value="character26"/>
+          <Item Value="character27"/>
+          <Item Value="character28"/>
+          <Item Value="character29"/>
+          <Item Value="character30"/>
+          <Item Value="prompt11"/>
+          <Item Value="prompt12"/>
+          <Item Value="prompt13"/>
+          <Item Value="prompt14"/>
+          <Item Value="prompt15"/>
+          <Item Value="prompt16"/>
+          <Item Value="prompt17"/>
+          <Item Value="prompt18"/>
+          <Item Value="prompt19"/>
+          <Item Value="prompt20"/>
+          <Item Value="prompt21"/>
+          <Item Value="prompt22"/>
+          <Item Value="prompt23"/>
+          <Item Value="prompt24"/>
+          <Item Value="prompt25"/>
+          <Item Value="prompt26"/>
+          <Item Value="prompt27"/>
+          <Item Value="prompt28"/>
+          <Item Value="prompt29"/>
+          <Item Value="prompt30"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
