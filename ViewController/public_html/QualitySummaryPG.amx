@@ -65,7 +65,7 @@
                             <amx:cellFormat id="cf13" width="2%"/>
                             <amx:cellFormat id="cf19" width="60%">
                                 <amx:inputDate id="id1" valueChangeListener="#{qualityBean.dateSelected}"
-                                               value="#{pageFlowScope.selectedDate}" simple="true"/>
+                                               value="#{pageFlowScope.selectedDateDisplay}" simple="true"/>
                             </amx:cellFormat>
                             <amx:cellFormat id="cf27" width="5%"/>
                         </amx:rowLayout>

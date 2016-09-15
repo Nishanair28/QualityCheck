@@ -30,7 +30,7 @@ public class qualityResults {
         try {
             AdfmfJavaUtilities.invokeDataControlMethod("QualityPlandetailsOutputService", null,
                                                        "findAllQualityPlandetailsOutputRemote", pnames, params, ptypes);
-             AdfmfJavaUtilities.flushDataChangeEvent();
+            AdfmfJavaUtilities.flushDataChangeEvent();
             //providerChangeSupport.fireProviderRefresh("qualityResultsDBOutput");
         } catch (Exception e) {
             e.getMessage();
@@ -58,18 +58,29 @@ public class qualityResults {
 
     public void buttonClicked(ActionEvent actionEvent) {
 
-        if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}") == null ) {
+        if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDateDisplay}") == null) {
             System.out.println("Date : is null");
             AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedDate}", "-999");
-            System.out.println("Date :"+AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}").toString());
+            System.out.println("Date :" + AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}").toString());
+        } else {
+            SimpleDateFormat sourceFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+            SimpleDateFormat destinationFormat = new SimpleDateFormat("dd-MMM-yyyy");
+            Date date = null;
+            try {
+                date =
+                    sourceFormat.parse(AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDateDisplay}").toString());
+                System.out.println(date);
+                System.out.println(destinationFormat.format(date));
+
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedDate}", destinationFormat.format(date));
+                System.out.println("Date : " + destinationFormat.format(date));
+            } catch (Exception ex) {
+                System.out.println("Error " + ex.getLocalizedMessage());
+            }
         }
-        
 
         List pnames = new ArrayList();
-       
         List params = new ArrayList();
-     
-        
         List ptypes = new ArrayList();
         try {
             AdfmfJavaUtilities.invokeDataControlMethod("QualityResultsDBOutputService", null,
@@ -81,29 +92,27 @@ public class qualityResults {
             e.getMessage();
         }
         AdfmfJavaUtilities.setELValue("#{pageFlowScope.goClicked}", "true");
-      /*  if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}") != null &&
-            AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}").toString().equals("-999")) {
-            System.out.println("Date : setting to null");
-            AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedDate}", null);
-        }
-*/
+
     }
 
     public void dateSelected(ValueChangeEvent valueChangeEvent) {
         valueChangeEvent.getNewValue();
-        SimpleDateFormat sourceFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+        AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedDateDisplay}", valueChangeEvent.getNewValue());
+
+        /*SimpleDateFormat sourceFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
         SimpleDateFormat destinationFormat = new SimpleDateFormat("dd-MMM-yyyy");
         Date date = null;
         try {
             date = sourceFormat.parse(valueChangeEvent.getNewValue().toString());
             System.out.println(date);
             System.out.println(destinationFormat.format(date));
-            AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedDate}", destinationFormat.format(date));
 
+            AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedDateDisplay}", destinationFormat.format(date));
             System.out.println("Date : " + destinationFormat.format(date));
         } catch (Exception ex) {
             System.out.println("Error " + ex.getLocalizedMessage());
         }
+        */
         AdfmfJavaUtilities.setELValue("#{pageFlowScope.goClicked}", "false");
 
     }
