@@ -74,21 +74,22 @@
                                      inlineStyle="color:Menu; background-color:#eaeaea;">
                         <amx:rowLayout id="rl3"
                                        rendered="#{pageFlowScope.selectedOrg!=null &amp;&amp; pageFlowScope.selectedLov!=null &amp;&amp; (pageFlowScope.linkShow =='up' || pageFlowScope.linkShow ==null)}">
-                            <amx:cellFormat id="cf22" width="100%" halign="center">
+                            <amx:cellFormat id="cf22" width="100%" halign="center" inlineStyle="flex-wrap:wrap;">
                                 <amx:commandButton text="Go" id="cb1" actionListener="#{qualityBean.buttonClicked}"
                                                    inlineStyle="text-align:center;width:20%" iconPosition="trailing"/>
                             </amx:cellFormat>
                         </amx:rowLayout>
                     </amx:tableLayout>
                     <amx:tableLayout id="tl6" width="100%" halign="center"
-                                     inlineStyle="color:Menu; background-color:#eaeaea;border-bottom-color:#86BC25;border-bottom-width:thin;border-bottom-style:solid ">
+                                     inlineStyle="color:Menu; background-color:#eaeaea;border-bottom-color:#86BC25;border-bottom-width:thin;border-bottom-style:solid;padding-bottom:10px; padding-top:10px; ">
                         <amx:rowLayout id="r14"
                                        rendered="#{pageFlowScope.selectedOrg!=null &amp;&amp; pageFlowScope.selectedLov!=null}">
-                            <amx:cellFormat id="cf10" width="100%" halign="center" valign="top" columnSpan="3">
-                                <amx:commandLink id="cl3" styleClass="fa fa-angle-down"
+                            <amx:cellFormat id="cf10" width="100%" halign="center" valign="middle" columnSpan="3">
+                                <amx:commandLink id="cl3" valign="middle" styleClass="fa fa-angle-down"
                                                  rendered="#{pageFlowScope.linkShow =='down'}"
-                                                 actionListener="#{qualityBean.downLinkClicked}"/>
-                                <amx:commandLink id="cl4" styleClass="fa fa-angle-up"
+                                                 actionListener="#{qualityBean.downLinkClicked}"
+                                                 />
+                                <amx:commandLink id="cl4" valign="middle" styleClass="fa fa-angle-up"
                                                  actionListener="#{qualityBean.upLinkClicked}"
                                                  rendered="#{pageFlowScope.linkShow =='up' || pageFlowScope.linkShow ==null}"/>
                             </amx:cellFormat>
@@ -105,74 +106,74 @@
                                   rendered="#{pageFlowScope.goClicked!=null}">
                         <amx:listItem id="li1" action="getDetails" showLinkIcon="true"
                                       inlineStyle="#{((row.rowKey)%2)==0?'background-color:#FFFFFF;':'background-color:#eaeaea;'};border-bottom-color:#86BC25;border-bottom-width:thin;border-bottom-style:solid">
-                            <amx:tableLayout id="tl1" width="100%"
-                                             inlineStyle="padding-bottom:10px; padding-top:10px;">
+                            <amx:tableLayout id="tl1" width="100%" inlineStyle="padding-bottom:10px; padding-top:10px;">
                                 <amx:rowLayout id="r1l2">
-                                    <amx:cellFormat id="cf15" width="3%" />
-                                    <amx:cellFormat id="cf012" width="93%">
+                                    <amx:cellFormat id="cf15" width="3%"/>
+                                    <amx:cellFormat id="cf012" width="auto" >
                                         <amx:outputText value="Item# #{row.itemNumber}" id="ot36"
-                                                        styleClass="xxRobotoGroupHeader"/>                                        
-                                    </amx:cellFormat>                                    
+                                                        styleClass="xxRobotoGroupHeader"/>
+                                    </amx:cellFormat>
                                 </amx:rowLayout>
-                                </amx:tableLayout>
-                                <amx:tableLayout id="t12" width="100%" inlineStyle="padding-bottom:10px; ">
+                            </amx:tableLayout>
+                            <amx:tableLayout id="t12" width="100%"
+                                             inlineStyle="padding-bottom:10px; table-layout:fixed;" >
                                 <amx:rowLayout id="r1l4">
-                                    <amx:cellFormat id="cf15" width="3%" inlineStyle="padding-top:10px;"/>
+                                    <amx:cellFormat id="cf026" width="3%" inlineStyle="padding-top:10px;"/>
                                     <amx:cellFormat id="cf16" width="45%" height="10" inlineStyle="padding-top:10px;">
                                         <amx:outputText value="Entry Date" id="ot1" styleClass="xxRobotoFieldTitle"/>
-                                    </amx:cellFormat>   
+                                    </amx:cellFormat>
                                     <amx:cellFormat id="cf021" width="3%"/>
                                     <amx:cellFormat id="cf18" width="45%" inlineStyle="padding-top:10px;">
                                         <amx:outputText value="Last Update" id="ot5" styleClass="xxRobotoFieldTitle"/>
                                     </amx:cellFormat>
-                                    <amx:cellFormat id="cf15" width="4%" inlineStyle="padding-top:10px;"/>
+                                    <amx:cellFormat id="cf04" width="4%" inlineStyle="padding-top:10px;"/>
                                 </amx:rowLayout>
                                 <amx:rowLayout id="r1l5">
                                     <amx:cellFormat id="cf019" width="3%"/>
                                     <amx:cellFormat id="cf020" width="45%">
                                         <amx:outputText value="#{row.qaCreationDate}" id="ot2"
-                                                       styleClass="xxRobotoFieldValue">
-                                            <amx:convertDateTime id="cdt1" dateStyle="medium" timeStyle="short"
-                                                                 type="date" pattern="dd-MMM-yyyy"/>
-                                        </amx:outputText>
-                                    </amx:cellFormat>
-                                    <amx:cellFormat id="cf021" width="3%"/>
-                                    <amx:cellFormat id="cf022" width="45%">
-                                        <amx:outputText value="#{row.lastUpdateDate}" id="ot8"
                                                         styleClass="xxRobotoFieldValue">
                                             <amx:convertDateTime id="cdt1" dateStyle="medium" timeStyle="short"
                                                                  type="date" pattern="dd-MMM-yyyy"/>
                                         </amx:outputText>
                                     </amx:cellFormat>
-                                    <amx:cellFormat id="cf15" width="4%"/>
+                                    <amx:cellFormat id="cf07" width="3%"/>
+                                    <amx:cellFormat id="cf022" width="45%">
+                                        <amx:outputText value="#{row.lastUpdateDate}" id="ot8"
+                                                        styleClass="xxRobotoFieldValue">
+                                            <amx:convertDateTime id="cdt3" dateStyle="medium" timeStyle="short"
+                                                                 type="date" pattern="dd-MMM-yyyy"/>
+                                        </amx:outputText>
+                                    </amx:cellFormat>
+                                    <amx:cellFormat id="cf021" width="4%"/>
                                 </amx:rowLayout>
-                                <amx:rowLayout id="r1l4">
-                                    <amx:cellFormat id="cf15" width="3%" inlineStyle="padding-top:10px;"/>
-                                    <amx:cellFormat id="cf16" width="45%" height="10" inlineStyle="padding-top:10px;">
-                                        <amx:outputText value="#{row.mf1prompt}" id="ot1"
+                                <amx:rowLayout id="r0l5">
+                                    <amx:cellFormat id="cf025" width="3%" inlineStyle="padding-top:10px;"/>
+                                    <amx:cellFormat id="cf031" width="45%" height="10" inlineStyle="padding-top:10px;">
+                                        <amx:outputText value="#{row.mf1prompt}" id="ot4"
                                                         styleClass="xxRobotoFieldTitle"/>
                                     </amx:cellFormat>
                                     <amx:cellFormat id="cf17" width="3%" inlineStyle=" padding-top:10px;"/>
-                                    <amx:cellFormat id="cf18" width="45%" inlineStyle="padding-top:10px;">
-                                        <amx:outputText value="#{row.mf2prompt}" id="ot5"
-                                                       styleClass="xxRobotoFieldTitle"/>
+                                    <amx:cellFormat id="cf032" width="45%" inlineStyle="padding-top:10px;">
+                                        <amx:outputText value="#{row.mf2prompt}" id="ot6"
+                                                        styleClass="xxRobotoFieldTitle"/>
                                     </amx:cellFormat>
                                     <amx:cellFormat id="cf23" width="4%" halign="start" valign="top">
                                         <amx:outputHtml id="oh5" styleClass="fa fa-angle-right"/>
                                     </amx:cellFormat>
                                 </amx:rowLayout>
-                                <amx:rowLayout id="r1l5">
-                                    <amx:cellFormat id="cf019" width="3%"/>
-                                    <amx:cellFormat id="cf020" width="45%">
-                                        <amx:outputText value="#{row.mf1value}" id="ot2"
+                                <amx:rowLayout id="r0l7">
+                                    <amx:cellFormat id="cf033" width="3%"/>
+                                    <amx:cellFormat id="cf039" width="45%">
+                                        <amx:outputText value="#{row.mf1value}" id="ot017"
                                                         styleClass="xxRobotoFieldValue"/>
                                     </amx:cellFormat>
-                                    <amx:cellFormat id="cf021" width="3%"/>
-                                    <amx:cellFormat id="cf022" width="45%">
-                                        <amx:outputText value="#{row.mf2value}" id="ot8"
+                                    <amx:cellFormat id="cf038" width="3%"/>
+                                    <amx:cellFormat id="cf037" width="45%">
+                                        <amx:outputText value="#{row.mf2value}" id="ot016"
                                                         styleClass="xxRobotoFieldValue"/>
                                     </amx:cellFormat>
-                                    <amx:cellFormat id="cf15" width="4%"/>
+                                    <amx:cellFormat id="cf036" width="4%"/>
                                 </amx:rowLayout>
                                 <amx:rowLayout id="rl16">
                                     <amx:cellFormat id="cf023" width="3%" inlineStyle=" padding-top:10px;"/>
@@ -185,7 +186,7 @@
                                         <amx:outputText value="#{row.mf4prompt}" id="ot10"
                                                         styleClass="xxRobotoFieldTitle"/>
                                     </amx:cellFormat>
-                                    <amx:cellFormat id="cf15" width="4%"/>
+                                    <amx:cellFormat id="cf035" width="4%"/>
                                 </amx:rowLayout>
                                 <amx:rowLayout id="r1l7">
                                     <amx:cellFormat id="cf027" width="3%" inlineStyle="padding-bottom:5px; "/>
@@ -198,7 +199,7 @@
                                         <amx:outputText value="#{row.mf4value}" id="ot12"
                                                         styleClass="xxRobotoFieldValue"/>
                                     </amx:cellFormat>
-                                    <amx:cellFormat id="cf15" width="4%"/>
+                                    <amx:cellFormat id="cf020" width="4%"/>
                                 </amx:rowLayout>
                             </amx:tableLayout>
                         </amx:listItem>

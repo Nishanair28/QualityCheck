@@ -102,12 +102,31 @@
     font-family: RobotoMedium !important;
     font-size: x-large !important;
     color: #000000 !important;
+    text-wrap: normal !important;
+    overflow: visible !important;
+    white-space: pre !important;
+    /* CSS 2.0 */
+
+    white-space: pre-wrap !important;
+    /* CSS 2.1 */
+
+    word-wrap: break-word !important;
 }
 
 .xxRobotoFieldValue {
     font-family: RobotoRegular !important;
     font-size: large !important;
     color: #000000 !important;
+    text-wrap: normal !important;
+    overflow: visible !important;
+    white-space: pre !important;
+    /* CSS 2.0 */
+
+    white-space: pre-wrap !important;
+    /* CSS 2.1 */
+
+    word-wrap: break-word !important;
+    /* IE 5.5-7 */
 }
 
 .xxRobotoMediumL {
@@ -127,7 +146,12 @@
     font-size: medium;
     vertical-align: middle;
 }
-
+.xxRobotoLightMBold {
+    font-family: RobotoLight;
+    font-size: medium;
+    font-weight: bold;
+    vertical-align: middle;
+}
 .ordAppStretchLyt .amx-panelStretchLayout_center {
     overflow: auto;
 }
@@ -161,7 +185,7 @@ html[dir=ltr] .amx-selectOneChoice .selectItemsContainer {
     font-family: RobotoMedium;
     background-color: White;
     vertical-align: middle;
-    position: relative;        
+    position: relative;
 }
 
 html[dir="ltr"] .amx-inputDate-trigger-dateTime {
@@ -212,14 +236,33 @@ html[dir=ltr] .amx-inputText-content {
     -webkit-border-image: none;
     border-image: none;
     position: static;
-    height: 40px;
     vertical-align: middle;
 }
-html[dir=ltr] .amx-inputText{
-    padding-bottom: 1px  !important;
-    padding-left: 1px  !important;
-    padding-right: 1px  !important;
-    padding-top: 1px  !important;
-    font-family: RobotoMedium;
-    
+
+html[dir=ltr] .amx-inputText.amx-simple {
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 0px !important;
+    font-family: RobotoMedium !important;
+    height: 30px !important;
+    vertical-align: middle !important;
+}
+
+html[dir=ltr] .amx-inputText .field-value {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+html[dir=ltr] .amx-inputText.amx-readOnly .field-value {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+a, .amx-goLink, .amx-commandLink{
+    font-size: 20px !important;
 }

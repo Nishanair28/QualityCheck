@@ -58,13 +58,18 @@ public class qualityResults {
 
     public void buttonClicked(ActionEvent actionEvent) {
 
-        if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}") == null ||
-            AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}").toString().isEmpty()) {
+        if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}") == null ) {
+            System.out.println("Date : is null");
             AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedDate}", "-999");
+            System.out.println("Date :"+AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}").toString());
         }
+        
 
         List pnames = new ArrayList();
+       
         List params = new ArrayList();
+     
+        
         List ptypes = new ArrayList();
         try {
             AdfmfJavaUtilities.invokeDataControlMethod("QualityResultsDBOutputService", null,
@@ -76,10 +81,12 @@ public class qualityResults {
             e.getMessage();
         }
         AdfmfJavaUtilities.setELValue("#{pageFlowScope.goClicked}", "true");
-        if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}") != null &&
+      /*  if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}") != null &&
             AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedDate}").toString().equals("-999")) {
+            System.out.println("Date : setting to null");
             AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedDate}", null);
         }
+*/
     }
 
     public void dateSelected(ValueChangeEvent valueChangeEvent) {

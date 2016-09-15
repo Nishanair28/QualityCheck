@@ -28,14 +28,14 @@
                                     inlineStyle="background-color:#EAEAEA; padding-bottom:10px; padding-top:10px;">
                         <amx:tableLayout id="tl3" width="100%">
                             <amx:rowLayout id="rl33">
-                                <amx:cellFormat id="cf68" width="20%" halign="end">
-                                    <amx:outputText value="Plan :" id="ot2"
-                                                    inlineStyle="font-family:RobotoLight; font-size:medium;"/>
+                                <amx:cellFormat id="cf68" width="15%" halign="end" valign="middle">
+                                    <amx:outputText value="Plan :" id="ot2" 
+                                                    styleClass="xxRobotoLightM"/>
                                 </amx:cellFormat>
-                                <amx:cellFormat id="cf67" halign="start">
+                                <amx:cellFormat id="cf67" halign="start" valign="middle">
                                     <amx:spacer width="3" id="s1"/>
                                     <amx:outputText value="#{bindings.planName.inputValue}" id="ot21"
-                                                    styleClass="xxRobotoMediumL"/>
+                                                    styleClass="xxRobotoLightMBold"/>
                                 </amx:cellFormat>
                             </amx:rowLayout>
                         </amx:tableLayout>
@@ -44,7 +44,8 @@
             </amx:tableLayout>
         </amx:panelGroupLayout>       
         <amx:panelGroupLayout id="pgl2" layout="vertical">
-            <amx:tableLayout id="t12" width="90%" halign="center"  inlineStyle="padding-bottom:5px; padding-top:5px;">
+            <amx:tableLayout id="t12" width="90%" halign="center"
+                             inlineStyle="padding-bottom:5px; padding-top:5px; table-layout:fixed;">
                 <amx:rowLayout id="rl3">
                     <amx:cellFormat id="cf37" width="5%"/>
                     <amx:cellFormat id="cf64" width="90%">
@@ -54,7 +55,7 @@
                 </amx:rowLayout>
                 <amx:rowLayout id="rl4" >
                     <amx:cellFormat id="cf63" width="5%"/>
-                    <amx:cellFormat id="cf8" width="90%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf8" width="90%">
                         <amx:inputText inputType="text" value="#{bindings.itemNumber.inputValue}" id="it1" readOnly="true" simple="true"
                                        styleClass="xxRobotoFieldValue"/>
                     </amx:cellFormat>
@@ -68,7 +69,7 @@
                 </amx:rowLayout>
                 <amx:rowLayout id="rl6" rendered="#{bindings.lotNumber.inputValue !=null &amp;&amp; bindings.lotNumber.inputValue != '0'}">
                     <amx:cellFormat id="cf61" width="5%"/>
-                    <amx:cellFormat id="cf10" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf10" width="100%" >
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.lotNumber.inputValue}"
                                        id="it2" readOnly="true" simple="true"/>
                     </amx:cellFormat>
@@ -82,7 +83,7 @@
                 </amx:rowLayout>
                 <amx:rowLayout id="rl8" rendered="#{bindings.poNumber.inputValue !=null &amp;&amp; bindings.poNumber.inputValue != '0'}">
                     <amx:cellFormat id="cf59" width="5%"/>
-                    <amx:cellFormat id="cf12" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf12" width="100%" >
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.poNumber.inputValue}"
                                        id="it3" readOnly="true" simple="true"/>
                     </amx:cellFormat>
@@ -97,160 +98,160 @@
                 <amx:rowLayout id="rl10"
                                rendered="#{bindings.soNumber.inputValue !=null &amp;&amp; bindings.soNumber.inputValue != '0'}">
                     <amx:cellFormat id="cf57" width="5%"/>
-                    <amx:cellFormat id="cf14" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf14" width="95%" >
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.soNumber.inputValue}"
                                        id="it4" readOnly="true" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl11">
                     <amx:cellFormat id="cf56" width="5%"/>
-                    <amx:cellFormat id="cf15" width="100%">
+                    <amx:cellFormat id="cf15" width="95%">
                         <amx:outputText value="Quantity" id="ot8"
                                          styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl12">
                     <amx:cellFormat id="cf55" width="5%"/>
-                    <amx:cellFormat id="cf16" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf16" width="95%">
                         <amx:inputText inputType="text" value="#{bindings.quantity.inputValue}" id="it5" simple="true" styleClass="xxRobotoFieldValue"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl13" rendered="#{bindings.prompt1.inputValue !=null}">
                     <amx:cellFormat id="cf54" width="5%"/>
-                    <amx:cellFormat id="cf17" width="100%">
+                    <amx:cellFormat id="cf17" width="95%">
                         <amx:outputText value="#{bindings.prompt1.inputValue}" id="ot9"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl14" rendered="#{bindings.prompt1.inputValue !=null}">
                     <amx:cellFormat id="cf53" width="5%"/>
-                    <amx:cellFormat id="cf18" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf18" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character1.inputValue}"
                                        id="it6" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl15" rendered="#{bindings.prompt2.inputValue !=null}">
                     <amx:cellFormat id="cf52" width="5%"/>
-                    <amx:cellFormat id="cf19" width="100%">
+                    <amx:cellFormat id="cf19" width="95%">
                         <amx:outputText value="#{bindings.prompt2.inputValue}" id="ot10"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl16" rendered="#{bindings.prompt2.inputValue !=null}">
                     <amx:cellFormat id="cf51" width="5%"/>
-                    <amx:cellFormat id="cf20" width="100%" styleClass="cell-border" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf20" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character2.inputValue}"
                                        id="it7" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl17" rendered="#{bindings.prompt3.inputValue !=null}">
                     <amx:cellFormat id="cf50" width="5%"/>
-                    <amx:cellFormat id="cf21" width="100%">
+                    <amx:cellFormat id="cf21" width="95%">
                         <amx:outputText value="#{bindings.prompt3.inputValue}" id="ot11"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl18" rendered="#{bindings.prompt3.inputValue !=null}">
                     <amx:cellFormat id="cf49" width="5%"/>
-                    <amx:cellFormat id="cf22" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf22" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character3.inputValue}"
                                        id="it8" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl19" rendered="#{bindings.prompt4.inputValue !=null}">
                     <amx:cellFormat id="cf48" width="5%"/>
-                    <amx:cellFormat id="cf23" width="100%">
+                    <amx:cellFormat id="cf23" width="95%">
                         <amx:outputText value="#{bindings.prompt4.inputValue}" id="ot12"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl20" rendered="#{bindings.prompt4.inputValue !=null}">
                     <amx:cellFormat id="cf47" width="5%"/>
-                    <amx:cellFormat id="cf24" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf24" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character4.inputValue}"
                                        id="it9" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl21" rendered="#{bindings.prompt5.inputValue !=null}">
                     <amx:cellFormat id="cf46" width="5%"/>
-                    <amx:cellFormat id="cf25" width="100%">
+                    <amx:cellFormat id="cf25" width="95%">
                         <amx:outputText value="#{bindings.prompt5.inputValue}" id="ot13"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl22" rendered="#{bindings.prompt5.inputValue !=null}">
                     <amx:cellFormat id="cf45" width="5%"/>
-                    <amx:cellFormat id="cf26" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf26" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character5.inputValue}"
                                        id="it10" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl23" rendered="#{bindings.prompt6.inputValue !=null}">
                     <amx:cellFormat id="cf44" width="5%"/>
-                    <amx:cellFormat id="cf27" width="100%">
+                    <amx:cellFormat id="cf27" width="95%">
                         <amx:outputText value="#{bindings.prompt6.inputValue}" id="ot14"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl24" rendered="#{bindings.prompt6.inputValue !=null}">
                     <amx:cellFormat id="cf43" width="5%"/>
-                    <amx:cellFormat id="cf28" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf28" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character6.inputValue}"
                                        id="it11" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl25" rendered="#{bindings.prompt7.inputValue !=null}">
                     <amx:cellFormat id="cf42" width="5%"/>
-                    <amx:cellFormat id="cf29" width="100%">
+                    <amx:cellFormat id="cf29" width="95%">
                         <amx:outputText value="#{bindings.prompt7.inputValue}" id="ot15"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl26" rendered="#{bindings.prompt7.inputValue !=null}">
                     <amx:cellFormat id="cf41" width="5%"/>
-                    <amx:cellFormat id="cf30" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf30" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character7.inputValue}"
                                        id="it12" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl27" rendered="#{bindings.prompt8.inputValue !=null}">
                     <amx:cellFormat id="cf40" width="5%"/>
-                    <amx:cellFormat id="cf31" width="100%">
+                    <amx:cellFormat id="cf31" width="95%">
                         <amx:outputText value="#{bindings.prompt8.inputValue}" id="ot16"
                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl28" rendered="#{bindings.prompt8.inputValue !=null}">
                     <amx:cellFormat id="cf39" width="5%"/>
-                    <amx:cellFormat id="cf32" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf32" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character8.inputValue}"
                                        id="it13" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl29" rendered="#{bindings.prompt9.inputValue !=null}">
                     <amx:cellFormat id="cf38" width="5%"/>
-                    <amx:cellFormat id="cf33" width="100%">
+                    <amx:cellFormat id="cf33" width="95%">
                         <amx:outputText value="#{bindings.prompt9.inputValue}" id="ot17"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl30" rendered="#{bindings.prompt9.inputValue !=null}">
                     <amx:cellFormat id="cf36" width="5%"/>
-                    <amx:cellFormat id="cf34" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf34" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character9.inputValue}"
                                        id="it14" simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl31" rendered="#{bindings.prompt10.inputValue !=null}">
                     <amx:cellFormat id="cf2" width="5%"/>
-                    <amx:cellFormat id="cf35" width="100%">
+                    <amx:cellFormat id="cf35" width="95%">
                         <amx:outputText value="#{bindings.prompt10.inputValue}" id="ot18"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl32" rendered="#{bindings.prompt10.inputValue !=null}">
                     <amx:cellFormat id="cf65" width="5%"/>
-                    <amx:cellFormat id="cf66" width="100%">
+                    <amx:cellFormat id="cf66" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character10.inputValue}"
                                        id="it15" simple="true"/>
                     </amx:cellFormat>
@@ -258,14 +259,14 @@
                 
                 <amx:rowLayout id="rl36" rendered="#{bindings.prompt11.inputValue !=null}">
                     <amx:cellFormat id="cf4" width="5%"/>
-                    <amx:cellFormat id="cf7" width="100%">
+                    <amx:cellFormat id="cf7" width="95%">
                         <amx:outputText value="#{bindings.prompt11.inputValue}" id="ot6"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl35" rendered="#{bindings.prompt11.inputValue !=null}">
                     <amx:cellFormat id="cf69" width="5%"/>
-                    <amx:cellFormat id="cf70" width="100%">
+                    <amx:cellFormat id="cf70" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character11.inputValue}"
                                        id="it16" simple="true"/>
                     </amx:cellFormat>
@@ -273,14 +274,14 @@
                 
                 <amx:rowLayout id="rl34" rendered="#{bindings.prompt12.inputValue !=null}">
                     <amx:cellFormat id="cf71" width="5%"/>
-                    <amx:cellFormat id="cf72" width="100%">
+                    <amx:cellFormat id="cf72" width="95%">
                         <amx:outputText value="#{bindings.prompt12.inputValue}" id="ot19"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl37" rendered="#{bindings.prompt12.inputValue !=null}">
                     <amx:cellFormat id="cf73" width="5%"/>
-                    <amx:cellFormat id="cf74" width="100%">
+                    <amx:cellFormat id="cf74" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character12.inputValue}"
                                        id="it17" simple="true"/>
                     </amx:cellFormat>
@@ -288,14 +289,14 @@
                 
                 <amx:rowLayout id="rl38" rendered="#{bindings.prompt13.inputValue !=null}">
                     <amx:cellFormat id="cf75" width="5%"/>
-                    <amx:cellFormat id="cf76" width="100%">
+                    <amx:cellFormat id="cf76" width="95%">
                         <amx:outputText value="#{bindings.prompt13.inputValue}" id="ot20"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl39" rendered="#{bindings.prompt13.inputValue !=null}">
                     <amx:cellFormat id="cf77" width="5%"/>
-                    <amx:cellFormat id="cf78" width="100%">
+                    <amx:cellFormat id="cf78" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character13.inputValue}"
                                        id="it18" simple="true"/>
                     </amx:cellFormat>
@@ -303,14 +304,14 @@
                 
                 <amx:rowLayout id="rl40" rendered="#{bindings.prompt14.inputValue !=null}">
                     <amx:cellFormat id="cf79" width="5%"/>
-                    <amx:cellFormat id="cf80" width="100%">
+                    <amx:cellFormat id="cf80" width="95%">
                         <amx:outputText value="#{bindings.prompt14.inputValue}" id="ot22"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl41" rendered="#{bindings.prompt14.inputValue !=null}">
                     <amx:cellFormat id="cf81" width="5%"/>
-                    <amx:cellFormat id="cf82" width="100%">
+                    <amx:cellFormat id="cf82" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character14.inputValue}"
                                        id="it19" simple="true"/>
                     </amx:cellFormat>
@@ -318,14 +319,14 @@
                 
                 <amx:rowLayout id="rl42" rendered="#{bindings.prompt15.inputValue !=null}">
                     <amx:cellFormat id="cf83" width="5%"/>
-                    <amx:cellFormat id="cf84" width="100%">
+                    <amx:cellFormat id="cf84" width="95%">
                         <amx:outputText value="#{bindings.prompt10.inputValue}" id="ot23"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl43" rendered="#{bindings.prompt15.inputValue !=null}">
                     <amx:cellFormat id="cf85" width="5%"/>
-                    <amx:cellFormat id="cf86" width="100%">
+                    <amx:cellFormat id="cf86" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character15.inputValue}"
                                        id="it20" simple="true"/>
                     </amx:cellFormat>
@@ -333,14 +334,14 @@
                 
                 <amx:rowLayout id="rl44" rendered="#{bindings.prompt16.inputValue !=null}">
                     <amx:cellFormat id="cf87" width="5%"/>
-                    <amx:cellFormat id="cf88" width="100%">
+                    <amx:cellFormat id="cf88" width="95%">
                         <amx:outputText value="#{bindings.prompt16.inputValue}" id="ot24"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl45" rendered="#{bindings.prompt16.inputValue !=null}">
                     <amx:cellFormat id="cf89" width="5%"/>
-                    <amx:cellFormat id="cf90" width="100%">
+                    <amx:cellFormat id="cf90" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character16.inputValue}"
                                        id="it21" simple="true"/>
                     </amx:cellFormat>
@@ -348,14 +349,14 @@
                 
                 <amx:rowLayout id="rl46" rendered="#{bindings.prompt17.inputValue !=null}">
                     <amx:cellFormat id="cf91" width="5%"/>
-                    <amx:cellFormat id="cf92" width="100%">
+                    <amx:cellFormat id="cf92" width="95%">
                         <amx:outputText value="#{bindings.prompt17.inputValue}" id="ot25"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl47" rendered="#{bindings.prompt17.inputValue !=null}">
                     <amx:cellFormat id="cf93" width="5%"/>
-                    <amx:cellFormat id="cf94" width="100%">
+                    <amx:cellFormat id="cf94" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character17.inputValue}"
                                        id="it22" simple="true"/>
                     </amx:cellFormat>
@@ -363,14 +364,14 @@
                 
                 <amx:rowLayout id="rl48" rendered="#{bindings.prompt18.inputValue !=null}">
                     <amx:cellFormat id="cf95" width="5%"/>
-                    <amx:cellFormat id="cf96" width="100%">
+                    <amx:cellFormat id="cf96" width="95%">
                         <amx:outputText value="#{bindings.prompt18.inputValue}" id="ot26"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl49" rendered="#{bindings.prompt18.inputValue !=null}">
                     <amx:cellFormat id="cf97" width="5%"/>
-                    <amx:cellFormat id="cf98" width="100%">
+                    <amx:cellFormat id="cf98" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character18.inputValue}"
                                        id="it23" simple="true"/>
                     </amx:cellFormat>
@@ -378,14 +379,14 @@
                 
                 <amx:rowLayout id="rl50" rendered="#{bindings.prompt19.inputValue !=null}">
                     <amx:cellFormat id="cf99" width="5%"/>
-                    <amx:cellFormat id="cf100" width="100%">
+                    <amx:cellFormat id="cf100" width="95%">
                         <amx:outputText value="#{bindings.prompt19.inputValue}" id="ot27"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl51" rendered="#{bindings.prompt19.inputValue !=null}">
                     <amx:cellFormat id="cf101" width="5%"/>
-                    <amx:cellFormat id="cf102" width="100%">
+                    <amx:cellFormat id="cf102" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character19.inputValue}"
                                        id="it24" simple="true"/>
                     </amx:cellFormat>
@@ -393,14 +394,14 @@
                 
                 <amx:rowLayout id="rl52" rendered="#{bindings.prompt20.inputValue !=null}">
                     <amx:cellFormat id="cf103" width="5%"/>
-                    <amx:cellFormat id="cf104" width="100%">
+                    <amx:cellFormat id="cf104" width="95%">
                         <amx:outputText value="#{bindings.prompt20.inputValue}" id="ot28"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl53" rendered="#{bindings.prompt20.inputValue !=null}">
                     <amx:cellFormat id="cf105" width="5%"/>
-                    <amx:cellFormat id="cf106" width="100%">
+                    <amx:cellFormat id="cf106" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character20.inputValue}"
                                        id="it25" simple="true"/>
                     </amx:cellFormat>
@@ -408,14 +409,14 @@
                 
                 <amx:rowLayout id="rl54" rendered="#{bindings.prompt21.inputValue !=null}">
                     <amx:cellFormat id="cf107" width="5%"/>
-                    <amx:cellFormat id="cf108" width="100%">
+                    <amx:cellFormat id="cf108" width="95%">
                         <amx:outputText value="#{bindings.prompt21.inputValue}" id="ot29"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl55" rendered="#{bindings.prompt21.inputValue !=null}">
                     <amx:cellFormat id="cf109" width="5%"/>
-                    <amx:cellFormat id="cf110" width="100%">
+                    <amx:cellFormat id="cf110" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character21.inputValue}"
                                        id="it26" simple="true"/>
                     </amx:cellFormat>
@@ -423,14 +424,14 @@
                 
                 <amx:rowLayout id="rl56" rendered="#{bindings.prompt22.inputValue !=null}">
                     <amx:cellFormat id="cf111" width="5%"/>
-                    <amx:cellFormat id="cf112" width="100%">
+                    <amx:cellFormat id="cf112" width="95%">
                         <amx:outputText value="#{bindings.prompt22.inputValue}" id="ot30"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl57" rendered="#{bindings.prompt22.inputValue !=null}">
                     <amx:cellFormat id="cf113" width="5%"/>
-                    <amx:cellFormat id="cf114" width="100%">
+                    <amx:cellFormat id="cf114" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character22.inputValue}"
                                        id="it27" simple="true"/>
                     </amx:cellFormat>
@@ -439,14 +440,14 @@
                  
                 <amx:rowLayout id="rl58" rendered="#{bindings.prompt23.inputValue !=null}">
                     <amx:cellFormat id="cf115" width="5%"/>
-                    <amx:cellFormat id="cf116" width="100%">
+                    <amx:cellFormat id="cf116" width="95%">
                         <amx:outputText value="#{bindings.prompt23.inputValue}" id="ot31"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl59" rendered="#{bindings.prompt23.inputValue !=null}">
                     <amx:cellFormat id="cf117" width="5%"/>
-                    <amx:cellFormat id="cf118" width="100%">
+                    <amx:cellFormat id="cf118" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character23.inputValue}"
                                        id="it28" simple="true"/>
                     </amx:cellFormat>
@@ -455,14 +456,14 @@
                  
                 <amx:rowLayout id="rl60" rendered="#{bindings.prompt24.inputValue !=null}">
                     <amx:cellFormat id="cf119" width="5%"/>
-                    <amx:cellFormat id="cf120" width="100%">
+                    <amx:cellFormat id="cf120" width="95%">
                         <amx:outputText value="#{bindings.prompt24.inputValue}" id="ot32"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl61" rendered="#{bindings.prompt24.inputValue !=null}">
                     <amx:cellFormat id="cf121" width="5%"/>
-                    <amx:cellFormat id="cf122" width="100%">
+                    <amx:cellFormat id="cf122" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character24.inputValue}"
                                        id="it29" simple="true"/>
                     </amx:cellFormat>
@@ -471,14 +472,14 @@
                  
                 <amx:rowLayout id="rl62" rendered="#{bindings.prompt25.inputValue !=null}">
                     <amx:cellFormat id="cf123" width="5%"/>
-                    <amx:cellFormat id="cf124" width="100%">
+                    <amx:cellFormat id="cf124" width="95%">
                         <amx:outputText value="#{bindings.prompt25.inputValue}" id="ot33"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl63" rendered="#{bindings.prompt25.inputValue !=null}">
                     <amx:cellFormat id="cf125" width="5%"/>
-                    <amx:cellFormat id="cf126" width="100%">
+                    <amx:cellFormat id="cf126" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character25.inputValue}"
                                        id="it30" simple="true"/>
                     </amx:cellFormat>
@@ -487,14 +488,14 @@
                  
                 <amx:rowLayout id="rl64" rendered="#{bindings.prompt26.inputValue !=null}">
                     <amx:cellFormat id="cf127" width="5%"/>
-                    <amx:cellFormat id="cf128" width="100%">
+                    <amx:cellFormat id="cf128" width="95%">
                         <amx:outputText value="#{bindings.prompt26.inputValue}" id="ot34"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl65" rendered="#{bindings.prompt26.inputValue !=null}">
                     <amx:cellFormat id="cf129" width="5%"/>
-                    <amx:cellFormat id="cf130" width="100%">
+                    <amx:cellFormat id="cf130" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character26.inputValue}"
                                        id="it31" simple="true"/>
                     </amx:cellFormat>
@@ -503,14 +504,14 @@
                  
                 <amx:rowLayout id="rl66" rendered="#{bindings.prompt27.inputValue !=null}">
                     <amx:cellFormat id="cf131" width="5%"/>
-                    <amx:cellFormat id="cf132" width="100%">
+                    <amx:cellFormat id="cf132" width="95%">
                         <amx:outputText value="#{bindings.prompt27.inputValue}" id="ot35"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl67" rendered="#{bindings.prompt27.inputValue !=null}">
                     <amx:cellFormat id="cf133" width="5%"/>
-                    <amx:cellFormat id="cf134" width="100%">
+                    <amx:cellFormat id="cf134" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character27.inputValue}"
                                        id="it32" simple="true"/>
                     </amx:cellFormat>
@@ -519,14 +520,14 @@
                  
                 <amx:rowLayout id="rl68" rendered="#{bindings.prompt28.inputValue !=null}">
                     <amx:cellFormat id="cf135" width="5%"/>
-                    <amx:cellFormat id="cf136" width="100%">
+                    <amx:cellFormat id="cf136" width="95%">
                         <amx:outputText value="#{bindings.prompt28.inputValue}" id="ot36"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl69" rendered="#{bindings.prompt28.inputValue !=null}">
                     <amx:cellFormat id="cf137" width="5%"/>
-                    <amx:cellFormat id="cf138" width="100%">
+                    <amx:cellFormat id="cf138" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character28.inputValue}"
                                        id="it33" simple="true"/>
                     </amx:cellFormat>
@@ -535,14 +536,14 @@
                  
                 <amx:rowLayout id="rl70" rendered="#{bindings.prompt29.inputValue !=null}">
                     <amx:cellFormat id="cf139" width="5%"/>
-                    <amx:cellFormat id="cf140" width="100%">
+                    <amx:cellFormat id="cf140" width="95%">
                         <amx:outputText value="#{bindings.prompt29.inputValue}" id="ot37"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl71" rendered="#{bindings.prompt29.inputValue !=null}">
                     <amx:cellFormat id="cf141" width="5%"/>
-                    <amx:cellFormat id="cf142" width="100%">
+                    <amx:cellFormat id="cf142" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character29.inputValue}"
                                        id="it34" simple="true"/>
                     </amx:cellFormat>
@@ -551,17 +552,17 @@
                  
                 <amx:rowLayout id="rl72" rendered="#{bindings.prompt30.inputValue !=null}">
                     <amx:cellFormat id="cf143" width="5%"/>
-                    <amx:cellFormat id="cf144" width="100%">
+                    <amx:cellFormat id="cf144" width="95%">
                         <amx:outputText value="#{bindings.prompt30.inputValue}" id="ot38"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl73" rendered="#{bindings.prompt30.inputValue !=null}">
                     <amx:cellFormat id="cf145" width="5%"/>
-                    <amx:cellFormat id="cf146" width="100%">
+                    <amx:cellFormat id="cf146" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue" value="#{bindings.character30.inputValue}"
                                        id="it35" simple="true"
-                                       inlineStyle="text-height:font-size; box-sizing:border-box;"/>
+                                       />
                     </amx:cellFormat>
                 </amx:rowLayout>
                 
