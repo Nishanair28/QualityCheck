@@ -46,7 +46,7 @@
          <directMapping attributeName="prompt7" payloadAttributeName="prompt7" columnName="PROMPT7" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt8" payloadAttributeName="prompt8" columnName="PROMPT8" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt9" payloadAttributeName="prompt9" columnName="PROMPT9" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="prompt10" payloadAttributeName="PROMPT10" columnName="PROMPT10" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="prompt10" payloadAttributeName="prompt10" columnName="PROMPT10" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="mf1prompt" payloadAttributeName="mf1_prompt" columnName="MF1PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="mf2prompt" payloadAttributeName="mf2_prompt" columnName="MF2PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="mf3prompt" payloadAttributeName="mf3_prompt" columnName="MF3PROMPT" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
@@ -54,7 +54,7 @@
          <directMapping attributeName="mf1value" payloadAttributeName="mf1_value" columnName="MF1VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="mf2value" payloadAttributeName="mf2_value" columnName="MF2VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="mf3value" payloadAttributeName="mf3_value" columnName="MF3VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
-         <directMapping attributeName="mf4value" payloadAttributeName="MF4_VALUE" columnName="MF4VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mf4value" payloadAttributeName="mf4_value" columnName="MF4VALUE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt11" payloadAttributeName="prompt11" columnName="PROMPT11" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt12" payloadAttributeName="prompt12" columnName="PROMPT12" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
          <directMapping attributeName="prompt13" payloadAttributeName="prompt13" columnName="PROMPT13" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>

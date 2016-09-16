@@ -85,25 +85,25 @@
                         <amx:rowLayout id="r14"
                                        rendered="#{pageFlowScope.selectedOrg!=null &amp;&amp; pageFlowScope.selectedLov!=null}">
                             <amx:cellFormat id="cf10" width="100%" halign="center" valign="middle" columnSpan="3">
-                                <amx:commandLink id="cl3" valign="middle" styleClass="fa fa-angle-down"
+                                <amx:commandLink id="cl3"  styleClass="fa fa-angle-down"
                                                  rendered="#{pageFlowScope.linkShow =='down'}"
                                                  actionListener="#{qualityBean.downLinkClicked}"
                                                  />
-                                <amx:commandLink id="cl4" valign="middle" styleClass="fa fa-angle-up"
+                                <amx:commandLink id="cl4"  styleClass="fa fa-angle-up"
                                                  actionListener="#{qualityBean.upLinkClicked}"
                                                  rendered="#{pageFlowScope.linkShow =='up' || pageFlowScope.linkShow ==null}"/>
                             </amx:cellFormat>
                         </amx:rowLayout>
                     </amx:tableLayout>
                 </amx:panelGroupLayout>
-                <amx:panelGroupLayout layout="wrap">
+                <amx:panelGroupLayout layout="wrap">                  
                     <amx:listView var="row" value="#{bindings.qualityResultsDBOutput.collectionModel}"
                                   fetchSize="#{bindings.qualityResultsDBOutput.rangeSize}"
                                   selectedRowKeys="#{bindings.qualityResultsDBOutput.collectionModel.selectedRow}"
                                   initialScrollRowKeys="#{bindings.qualityResultsDBOutput.collectionModel.selectedRow}"
                                   selectionListener="#{bindings.qualityResultsDBOutput.collectionModel.makeCurrent}"
                                   showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1"
-                                  rendered="#{pageFlowScope.goClicked!=null}">
+                                  rendered="#{pageFlowScope.goClicked != null}">
                         <amx:listItem id="li1" action="getDetails" showLinkIcon="true"
                                       inlineStyle="#{((row.rowKey)%2)==0?'background-color:#FFFFFF;':'background-color:#eaeaea;'};border-bottom-color:#86BC25;border-bottom-width:thin;border-bottom-style:solid">
                             <amx:tableLayout id="tl1" width="100%" inlineStyle="padding-bottom:10px; padding-top:10px;">
@@ -145,7 +145,7 @@
                                                                  type="date" pattern="dd-MMM-yyyy"/>
                                         </amx:outputText>
                                     </amx:cellFormat>
-                                    <amx:cellFormat id="cf021" width="4%"/>
+                                    <amx:cellFormat id="cf4" width="4%"/>
                                 </amx:rowLayout>
                                 <amx:rowLayout id="r0l5">
                                     <amx:cellFormat id="cf025" width="3%" inlineStyle="padding-top:10px;"/>
@@ -181,8 +181,8 @@
                                         <amx:outputText value="#{row.mf3prompt}" id="ot9"
                                                         styleClass="xxRobotoFieldTitle"/>
                                     </amx:cellFormat>
-                                    <amx:cellFormat id="cf025" width="3%" inlineStyle="padding-top:10px;"/>
-                                    <amx:cellFormat id="cf026" width="45%" inlineStyle="padding-top:10px;">
+                                    <amx:cellFormat id="cf7" width="3%" inlineStyle="padding-top:10px;"/>
+                                    <amx:cellFormat id="cf20" width="45%" inlineStyle="padding-top:10px;">
                                         <amx:outputText value="#{row.mf4prompt}" id="ot10"
                                                         styleClass="xxRobotoFieldTitle"/>
                                     </amx:cellFormat>
@@ -199,7 +199,7 @@
                                         <amx:outputText value="#{row.mf4value}" id="ot12"
                                                         styleClass="xxRobotoFieldValue"/>
                                     </amx:cellFormat>
-                                    <amx:cellFormat id="cf020" width="4%"/>
+                                    <amx:cellFormat id="cf21" width="4%"/>
                                 </amx:rowLayout>
                             </amx:tableLayout>
                         </amx:listItem>
