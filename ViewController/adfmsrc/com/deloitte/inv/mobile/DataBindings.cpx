@@ -4,14 +4,18 @@
   <pageMap>
     <page path="/QualitySummaryPG.amx" usageId="com_deloitte_inv_mobile_QualitySummaryPGPageDef"/>
     <page path="/QualityDetailsPG.amx" usageId="com_deloitte_inv_mobile_QualityDetailsPGPageDef"/>
+    <page path="/CreateResult.amx" usageId="com_deloitte_inv_mobile_CreateResultPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="com_deloitte_inv_mobile_QualitySummaryPGPageDef"
           path="com.deloitte.inv.mobile.pageDefs.QualitySummaryPGPageDef"/>
     <page id="com_deloitte_inv_mobile_QualityDetailsPGPageDef"
           path="com.deloitte.inv.mobile.pageDefs.QualityDetailsPGPageDef"/>
+    <page id="com_deloitte_inv_mobile_CreateResultPageDef" path="com.deloitte.inv.mobile.pageDefs.CreateResultPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
+    <dc id="PlanElementDbAdapterOutputService" path="com.deloitte.inv.application.PlanElementDbAdapterOutputService"/>
+    <dc id="CreateResultDC" path="com.deloitte.inv.mobile.CreateResultDC"/>
     <dc id="InventoryDetailBSOutputService" path="com.deloitte.inv.application.InventoryDetailBSOutputService"/>
     <dc id="QualityPlandetailsOutputService" path="com.deloitte.inv.application.QualityPlandetailsOutputService"/>
     <dc id="QualityResultsDBOutputService" path="com.deloitte.inv.application.QualityResultsDBOutputService"/>
