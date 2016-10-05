@@ -14,7 +14,7 @@
                         <amx:outputText value="Results Summary" id="ot7" styleClass="headertextwhite"/>
                     </amx:cellFormat>
                     <amx:cellFormat id="cf6" width="10%" halign="end" valign="middle">
-                        <amx:commandLink id="cl2">
+                        <amx:commandLink id="cl2" action="getCreate">
                             <amx:outputHtml id="oh2" styleClass="fa fa-edit fa-2x" inlineStyle="color:#ffffff;"/>
                         </amx:commandLink>
                     </amx:cellFormat>

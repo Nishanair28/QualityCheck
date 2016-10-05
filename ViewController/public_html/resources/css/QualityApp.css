@@ -266,3 +266,22 @@ html[dir=ltr] .amx-inputText.amx-readOnly .field-value {
 a, .amx-goLink, .amx-commandLink{
     font-size: 20px !important;
 }
+.springboard-cell-border {
+    border-bottom-color: #86bc25;
+    border-bottom-style: solid !important;
+    border-bottom-width: thin;
+}
+.cell-border {
+    background-color: White;
+    border-top-color: #808080;
+    border-top-style: solid !important;
+    border-top: #808080 ;
+    border-bottom: #808080;
+    border-bottom-style: solid !important;
+    border-right: #808080;
+    border-right-style: solid !important;
+    border-left: #808080;
+    border-left-style: solid !important;
+    border-width: thin;
+    margin-right: 10px;
+} 
