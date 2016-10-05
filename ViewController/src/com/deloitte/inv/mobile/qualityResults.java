@@ -126,4 +126,8 @@ public class qualityResults {
         AdfmfJavaUtilities.setELValue("#{pageFlowScope.linkShow}", "down");
         System.out.println("up clicked");
     }
+
+    public void ApplyLink(ActionEvent actionEvent) {
+        // Add event code here...
+    }
 }
