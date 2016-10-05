@@ -1,6 +1,6 @@
 <References xmlns="http://xmlns.oracle.com/adf/jndi">
-  <Reference name="QualityService" className="oracle.adf.model.connection.rest.RestConnection" xmlns=""
-             adfCredentialStoreKey="">
+  <Reference name="QualityService" className="oracle.adf.model.connection.rest.RestConnection" adfCredentialStoreKey=""
+             xmlns="">
     <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
     <RefAddresses>
       <XmlRefAddr addrType="QualityService">
@@ -10,8 +10,8 @@
       </XmlRefAddr>
     </RefAddresses>
   </Reference>
-  <Reference name="OrgService" className="oracle.adf.model.connection.rest.RestConnection" xmlns=""
-             adfCredentialStoreKey="">
+  <Reference name="OrgService" className="oracle.adf.model.connection.rest.RestConnection" adfCredentialStoreKey=""
+             xmlns="">
     <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
     <RefAddresses>
       <XmlRefAddr addrType="OrgService">
@@ -51,14 +51,23 @@
       </XmlRefAddr>
     </RefAddresses>
   </Reference>
-  <Reference name="OrgLovService" className="oracle.adf.model.connection.rest.RestConnection" xmlns=""
-             adfCredentialStoreKey="">
+  <Reference name="OrgLovService" className="oracle.adf.model.connection.rest.RestConnection" adfCredentialStoreKey=""
+             xmlns="">
     <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
     <RefAddresses>
       <XmlRefAddr addrType="OrgLovService">
         <Contents>
-          <restconnection name="OrgLovService"
-                          url="http://app101111.glbsnet.com"/>
+          <restconnection name="OrgLovService" url="http://app101111.glbsnet.com"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="QRConnection" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="QRConnection">
+        <Contents>
+          <restconnection name="QRConnection" url="http://10.118.37.123:7004/"/>
         </Contents>
       </XmlRefAddr>
     </RefAddresses>

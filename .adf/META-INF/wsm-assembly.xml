@@ -1,1 +1,14 @@
-<orawsp:wsm-assembly xmlns:orawsp="http://schemas.oracle.com/ws/2006/01/policy" orawsp:resource="APPLICATION[generic]"></orawsp:wsm-assembly>
+<orawsp:wsm-assembly xmlns:orawsp="http://schemas.oracle.com/ws/2006/01/policy" orawsp:resource="APPLICATION[generic]">
+  <sca11:policySet xmlns:sca11="http://docs.oasis-open.org/ns/opencsa/sca/200912" name="policySet"
+                   appliesTo="REST-CONNECTION()"
+                   attachTo="MODULE('GetResConnection') and PATH('http://ussltcsnl3432.solutions.glbsnet.com:7004/')"
+                   orawsp:highId="4"
+                   xml:id="REST-CONNECTION__MODULE__GetResConnection___and_PATH__http___ussltcsnl3432_solutions_glbsnet_com_7004___">
+    <wsp:PolicyReference xmlns:wsp="http://www.w3.org/ns/ws-policy"
+                         DigestAlgorithm="http://www.w3.org/ns/ws-policy/Sha1Exc"
+                         URI="oracle/http_basic_auth_over_ssl_client_policy" orawsp:status="enabled" orawsp:id="3"/>
+    <wsp:PolicyReference xmlns:wsp="http://www.w3.org/ns/ws-policy"
+                         DigestAlgorithm="http://www.w3.org/ns/ws-policy/Sha1Exc" URI="oracle/no_persistence_policy"
+                         orawsp:status="enabled" orawsp:id="4"/>
+  </sca11:policySet>
+</orawsp:wsm-assembly>
