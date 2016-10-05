@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.20" id="CreateResultPageDef"
+                Package="com.deloitte.inv.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="setCreateResults_itemNumber" IsQueriable="false"/>
+    </variableIterator>
+    <methodIterator Binds="QualityPlandetailsOutput.result" DataControl="QualityPlandetailsOutputService" RangeSize="25"
+                    BeanClass="com.deloitte.inv.application.model.QualityPlandetailsOutput"
+                    id="QualityPlandetailsOutputIterator"/>
+    <methodIterator Binds="QualityResultsDBOutput.result" DataControl="QualityResultsDBOutputService" RangeSize="25"
+                    BeanClass="com.deloitte.inv.application.model.QualityResultsDBOutput"
+                    id="QualityResultsDBOutputIterator"/>
+    <iterator Binds="root" RangeSize="25" DataControl="QualityPlandetailsOutputService"
+              id="QualityPlandetailsOutputServiceIterator"/>
+    <accessorIterator MasterBinding="QualityPlandetailsOutputServiceIterator" Binds="qualityPlandetailsOutput"
+                      RangeSize="25" DataControl="QualityPlandetailsOutputService"
+                      BeanClass="com.deloitte.inv.application.model.QualityPlandetailsOutput"
+                      id="qualityPlandetailsOutputIterator"/>
+    <iterator Binds="root" RangeSize="25" DataControl="QualityResultsDBOutputService"
+              id="QualityResultsDBOutputServiceIterator"/>
+    <accessorIterator MasterBinding="QualityResultsDBOutputServiceIterator" Binds="qualityResultsDBOutput"
+                      RangeSize="25" DataControl="QualityResultsDBOutputService"
+                      BeanClass="com.deloitte.inv.application.model.QualityResultsDBOutput"
+                      id="qualityResultsDBOutputIterator"/>
+    <iterator Binds="root" RangeSize="25" DataControl="PlanElementDbAdapterOutputService"
+              id="PlanElementDbAdapterOutputServiceIterator"/>
+    <accessorIterator MasterBinding="PlanElementDbAdapterOutputServiceIterator" Binds="planElementDbAdapterOutput"
+                      RangeSize="25" DataControl="PlanElementDbAdapterOutputService"
+                      BeanClass="com.deloitte.inv.application.model.PlanElementDbAdapterOutput"
+                      id="planElementDbAdapterOutputIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="QualityResultsDBOutput" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="QualityResultsDBOutput" IsViewObjectMethod="false"
+                  DataControl="QualityResultsDBOutputService"
+                  ClassName="com.deloitte.inv.application.model.QualityResultsDBOutput"
+                  ReturnName="data.QualityResultsDBOutputService.methodResults.QualityResultsDBOutput_QualityResultsDBOutputService_QualityResultsDBOutput_result"/>
+    <attributeValues IterBinding="variables" id="itemNumber1">
+      <AttrNames>
+        <Item Value="setCreateResults_itemNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="setCreateResults1" RequiresUpdateModel="true" Action="invokeMethod" MethodName="setCreateResults"
+                  IsViewObjectMethod="false" DataControl="CreateResultDC"
+                  InstanceName="data.CreateResultDC.dataProvider"/>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="name">
+      <AttrNames>
+        <Item Value="name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="itemNumberPrompt">
+      <AttrNames>
+        <Item Value="itemNumberPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="itemNumberMfFlag">
+      <AttrNames>
+        <Item Value="itemNumberMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="uomPrompt">
+      <AttrNames>
+        <Item Value="uomPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="uomMfFlag">
+      <AttrNames>
+        <Item Value="uomMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="subinventoryMfFlag">
+      <AttrNames>
+        <Item Value="subinventoryMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="subinventoryPrompt">
+      <AttrNames>
+        <Item Value="subinventoryPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="trxNumberMfFlag">
+      <AttrNames>
+        <Item Value="trxNumberMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="trxNumberPrompt">
+      <AttrNames>
+        <Item Value="trxNumberPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="lotNumberMfFlag">
+      <AttrNames>
+        <Item Value="lotNumberMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="lotNumberPrompt">
+      <AttrNames>
+        <Item Value="lotNumberPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="serialNumberMfFlag">
+      <AttrNames>
+        <Item Value="serialNumberMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="serialNumberPrompt">
+      <AttrNames>
+        <Item Value="serialNumberPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compUOMPrompt">
+      <AttrNames>
+        <Item Value="compUOMPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compUOMMfFlag">
+      <AttrNames>
+        <Item Value="compUOMMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compRevisionMfFlag">
+      <AttrNames>
+        <Item Value="compRevisionMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compRevisionPrompt">
+      <AttrNames>
+        <Item Value="compRevisionPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compSubinventoryPrompt">
+      <AttrNames>
+        <Item Value="compSubinventoryPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compSubinventoryMfFlag">
+      <AttrNames>
+        <Item Value="compSubinventoryMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="assetActivityIDMfFlag">
+      <AttrNames>
+        <Item Value="assetActivityIDMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="assetActivityIDPrompt">
+      <AttrNames>
+        <Item Value="assetActivityIDPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="assetGroupIDMfFlag">
+      <AttrNames>
+        <Item Value="assetGroupIDMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="assetGroupIDPrompt">
+      <AttrNames>
+        <Item Value="assetGroupIDPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="assetNumberMfFlag">
+      <AttrNames>
+        <Item Value="assetNumberMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character10MfFlag">
+      <AttrNames>
+        <Item Value="character10MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character10Prompt">
+      <AttrNames>
+        <Item Value="character10Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character11MfFlag">
+      <AttrNames>
+        <Item Value="character11MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character11Prompt">
+      <AttrNames>
+        <Item Value="character11Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character12MfFlag">
+      <AttrNames>
+        <Item Value="character12MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character12Prompt">
+      <AttrNames>
+        <Item Value="character12Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compLotNumberMfFlag">
+      <AttrNames>
+        <Item Value="compLotNumberMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compLotNumberPrompt">
+      <AttrNames>
+        <Item Value="compLotNumberPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compSerialNumberMfFlag">
+      <AttrNames>
+        <Item Value="compSerialNumberMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="compSerialNumberPrompt">
+      <AttrNames>
+        <Item Value="compSerialNumberPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="fromOpSeqNumMfFlag">
+      <AttrNames>
+        <Item Value="fromOpSeqNumMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="fromOpSeqNumPrompt">
+      <AttrNames>
+        <Item Value="fromOpSeqNumPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="receiptNumMfFlag">
+      <AttrNames>
+        <Item Value="receiptNumMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="receiptNumPrompt">
+      <AttrNames>
+        <Item Value="receiptNumPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="toOpSeqNumMfFlag">
+      <AttrNames>
+        <Item Value="toOpSeqNumMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="toOpSeqNumPrompt">
+      <AttrNames>
+        <Item Value="toOpSeqNumPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="poNumberMfFlag">
+      <AttrNames>
+        <Item Value="poNumberMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="poNumberPrompt">
+      <AttrNames>
+        <Item Value="poNumberPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="poLineNumberMfFlag">
+      <AttrNames>
+        <Item Value="poLineNumberMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="poLineNumberPrompt">
+      <AttrNames>
+        <Item Value="poLineNumberPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="poShipmentNumMfFlag">
+      <AttrNames>
+        <Item Value="poShipmentNumMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="poShipmentNumPrompt">
+      <AttrNames>
+        <Item Value="poShipmentNumPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="transactionDatePrompt">
+      <AttrNames>
+        <Item Value="transactionDatePrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="transactionDateMfFlag">
+      <AttrNames>
+        <Item Value="transactionDateMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="statusMfFlag">
+      <AttrNames>
+        <Item Value="statusMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="statusPrompt">
+      <AttrNames>
+        <Item Value="statusPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="quantityMfFlag">
+      <AttrNames>
+        <Item Value="quantityMfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="quantityPrompt">
+      <AttrNames>
+        <Item Value="quantityPrompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character1Prompt">
+      <AttrNames>
+        <Item Value="character1Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character1MfFlag">
+      <AttrNames>
+        <Item Value="character1MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character2MfFlag">
+      <AttrNames>
+        <Item Value="character2MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character2Prompt">
+      <AttrNames>
+        <Item Value="character2Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character3MfFlag">
+      <AttrNames>
+        <Item Value="character3MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character3Prompt">
+      <AttrNames>
+        <Item Value="character3Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character4MfFlag">
+      <AttrNames>
+        <Item Value="character4MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character4Prompt">
+      <AttrNames>
+        <Item Value="character4Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character5MfFlag">
+      <AttrNames>
+        <Item Value="character5MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character5Prompt">
+      <AttrNames>
+        <Item Value="character5Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character6MfFlag">
+      <AttrNames>
+        <Item Value="character6MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character6Prompt">
+      <AttrNames>
+        <Item Value="character6Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character7MfFlag">
+      <AttrNames>
+        <Item Value="character7MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character7Prompt">
+      <AttrNames>
+        <Item Value="character7Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character8MfFlag">
+      <AttrNames>
+        <Item Value="character8MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character8Prompt">
+      <AttrNames>
+        <Item Value="character8Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character9MfFlag">
+      <AttrNames>
+        <Item Value="character9MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character9Prompt">
+      <AttrNames>
+        <Item Value="character9Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character14MfFlag">
+      <AttrNames>
+        <Item Value="character14MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character13Prompt">
+      <AttrNames>
+        <Item Value="character13Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character13MfFlag">
+      <AttrNames>
+        <Item Value="character13MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character14Prompt">
+      <AttrNames>
+        <Item Value="character14Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character15MfFlag">
+      <AttrNames>
+        <Item Value="character15MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character15Prompt">
+      <AttrNames>
+        <Item Value="character15Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character16MfFlag">
+      <AttrNames>
+        <Item Value="character16MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character16Prompt">
+      <AttrNames>
+        <Item Value="character16Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character17MfFlag">
+      <AttrNames>
+        <Item Value="character17MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character17Prompt">
+      <AttrNames>
+        <Item Value="character17Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character18MfFlag">
+      <AttrNames>
+        <Item Value="character18MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character18Prompt">
+      <AttrNames>
+        <Item Value="character18Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character19MfFlag">
+      <AttrNames>
+        <Item Value="character19MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character19Prompt">
+      <AttrNames>
+        <Item Value="character19Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character20MfFlag">
+      <AttrNames>
+        <Item Value="character20MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character20Prompt">
+      <AttrNames>
+        <Item Value="character20Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character21MfFlag">
+      <AttrNames>
+        <Item Value="character21MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character21Prompt">
+      <AttrNames>
+        <Item Value="character21Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character22MfFlag">
+      <AttrNames>
+        <Item Value="character22MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character22Prompt">
+      <AttrNames>
+        <Item Value="character22Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character23MfFlag">
+      <AttrNames>
+        <Item Value="character23MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character23Prompt">
+      <AttrNames>
+        <Item Value="character23Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character24MfFlag">
+      <AttrNames>
+        <Item Value="character24MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character24Prompt">
+      <AttrNames>
+        <Item Value="character24Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character25MfFlag">
+      <AttrNames>
+        <Item Value="character25MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character25Prompt">
+      <AttrNames>
+        <Item Value="character25Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character26MfFlag">
+      <AttrNames>
+        <Item Value="character26MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character26Prompt">
+      <AttrNames>
+        <Item Value="character26Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character27MfFlag">
+      <AttrNames>
+        <Item Value="character27MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character27Prompt">
+      <AttrNames>
+        <Item Value="character27Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character28MfFlag">
+      <AttrNames>
+        <Item Value="character28MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character28Prompt">
+      <AttrNames>
+        <Item Value="character28Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character29MfFlag">
+      <AttrNames>
+        <Item Value="character29MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character29Prompt">
+      <AttrNames>
+        <Item Value="character29Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character30MfFlag">
+      <AttrNames>
+        <Item Value="character30MfFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="character30Prompt">
+      <AttrNames>
+        <Item Value="character30Prompt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="assetNumberPrompt">
+      <AttrNames>
+        <Item Value="assetNumberPrompt"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>
