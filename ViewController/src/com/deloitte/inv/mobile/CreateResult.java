@@ -102,6 +102,7 @@ public class CreateResult {
     private String character28;
     private String character29;
     private String character30;
+    private String methodCode;
 
     public void setCreateResults(){
 
@@ -410,6 +411,7 @@ public class CreateResult {
 			else{
               character30 = "-999";
             }
+            methodCode = "INSERT";
             ServiceManager sm = new  ServiceManager();
             String restURI = RestURIs.getCreateResultURI();
             
@@ -507,7 +509,8 @@ public class CreateResult {
                                 "\n" + "\"P_CHARACTER27\" : \"" + character27 + "\"," +
                                 "\n" + "\"P_CHARACTER28\" : \"" + character28 + "\"," +
                                 "\n" + "\"P_CHARACTER29\" : \"" + character29 + "\"," +
-                                "\n" + "\"P_CHARACTER30\" : \"" + character30 + "\"\n" + "}";
+                                "\n" + "\"P_CHARACTER30\" : \"" + character30 + "\"," +
+                                "\n" + "\"P_METHOD_CODE\" : \"" + methodCode + "\"\n" + "}";
             System.out.println("payload is " + payload);
              String jsonArrayAsString = sm.invokeUPDATE(restURI,payload).toString();
              System.out.println("jsonArrayAsString-->"+jsonArrayAsString);
