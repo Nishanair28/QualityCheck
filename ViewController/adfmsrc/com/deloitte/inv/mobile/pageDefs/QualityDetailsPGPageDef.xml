@@ -367,5 +367,40 @@
         <Item Value="character30"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="collectionId">
+      <AttrNames>
+        <Item Value="collectionId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="occurrence">
+      <AttrNames>
+        <Item Value="occurrence"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="txnHeaderId">
+      <AttrNames>
+        <Item Value="txnHeaderId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="organizationId">
+      <AttrNames>
+        <Item Value="organizationId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="planId">
+      <AttrNames>
+        <Item Value="planId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="specId">
+      <AttrNames>
+        <Item Value="specId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="itemId">
+      <AttrNames>
+        <Item Value="itemId"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

@@ -1,5 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <jws:workspace xmlns:jws="http://xmlns.oracle.com/ide/project">
+   <hash n="adrs-workspace-properties">
+      <value n="adrs-instance-binding" v="DefaultServer"/>
+      <value n="deploy-timeout" v="0"/>
+      <value n="runtime-application-name" v="QualityApp"/>
+   </hash>
    <value n="application-package-prefix" v="com.deloitte.inv"/>
    <value n="appTemplateId" v="mafAppTemplate"/>
    <hash n="component-versions">
@@ -32,6 +37,9 @@
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
          <hash n="Android1">
+            <hash n="android_options">
+               <value n="android_deploy_debug_mode" v="false"/>
+            </hash>
             <hash n="archiveOptions">
                <value n="hasManifest" v="true"/>
             </hash>

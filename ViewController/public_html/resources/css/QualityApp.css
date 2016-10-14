@@ -146,12 +146,14 @@
     font-size: medium;
     vertical-align: middle;
 }
+
 .xxRobotoLightMBold {
     font-family: RobotoLight;
     font-size: medium;
     font-weight: bold;
     vertical-align: middle;
 }
+
 .ordAppStretchLyt .amx-panelStretchLayout_center {
     overflow: auto;
 }
@@ -250,32 +252,40 @@ html[dir=ltr] .amx-inputText.amx-simple {
 }
 
 html[dir=ltr] .amx-inputText .field-value {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 15px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border: gray;
+    border-width: thin;
+    border-style: solid;
 }
 
 html[dir=ltr] .amx-inputText.amx-readOnly .field-value {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 15px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border: gray;
+    border-width: thin;
+    border-style: solid;
 }
 
-a, .amx-goLink, .amx-commandLink{
+a, .amx-goLink, .amx-commandLink {
     font-size: 20px !important;
 }
+
 .springboard-cell-border {
     border-bottom-color: #86bc25;
     border-bottom-style: solid !important;
     border-bottom-width: thin;
 }
+
 .cell-border {
     background-color: White;
     border-top-color: #808080;
     border-top-style: solid !important;
-    border-top: #808080 ;
+    border-top: #808080;
     border-bottom: #808080;
     border-bottom-style: solid !important;
     border-right: #808080;
@@ -284,4 +294,16 @@ a, .amx-goLink, .amx-commandLink{
     border-left-style: solid !important;
     border-width: thin;
     margin-right: 10px;
-} 
+}
+/*added by venkat on 14-oct*/
+.amx-inputText .field-value .wrap {
+    border-bottom: none !important;
+    margin-bottom: 0px !important;
+}
+
+.amx-inputText-content {
+    border: none !important;
+    outline: 0 !important;
+    font-family: RobotoRegular;
+    height: 30px;
+}

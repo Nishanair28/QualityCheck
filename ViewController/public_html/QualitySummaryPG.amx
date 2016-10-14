@@ -85,18 +85,17 @@
                         <amx:rowLayout id="r14"
                                        rendered="#{pageFlowScope.selectedOrg!=null &amp;&amp; pageFlowScope.selectedLov!=null}">
                             <amx:cellFormat id="cf10" width="100%" halign="center" valign="middle" columnSpan="3">
-                                <amx:commandLink id="cl3"  styleClass="fa fa-angle-down"
+                                <amx:commandLink id="cl3" styleClass="fa fa-angle-down"
                                                  rendered="#{pageFlowScope.linkShow =='down'}"
-                                                 actionListener="#{qualityBean.downLinkClicked}"
-                                                 />
-                                <amx:commandLink id="cl4"  styleClass="fa fa-angle-up"
+                                                 actionListener="#{qualityBean.downLinkClicked}"/>
+                                <amx:commandLink id="cl4" styleClass="fa fa-angle-up"
                                                  actionListener="#{qualityBean.upLinkClicked}"
                                                  rendered="#{pageFlowScope.linkShow =='up' || pageFlowScope.linkShow ==null}"/>
                             </amx:cellFormat>
                         </amx:rowLayout>
                     </amx:tableLayout>
                 </amx:panelGroupLayout>
-                <amx:panelGroupLayout layout="wrap">                  
+                <amx:panelGroupLayout layout="wrap">
                     <amx:listView var="row" value="#{bindings.qualityResultsDBOutput.collectionModel}"
                                   fetchSize="#{bindings.qualityResultsDBOutput.rangeSize}"
                                   selectedRowKeys="#{bindings.qualityResultsDBOutput.collectionModel.selectedRow}"
@@ -109,14 +108,14 @@
                             <amx:tableLayout id="tl1" width="100%" inlineStyle="padding-bottom:10px; padding-top:10px;">
                                 <amx:rowLayout id="r1l2">
                                     <amx:cellFormat id="cf15" width="3%"/>
-                                    <amx:cellFormat id="cf012" width="auto" >
+                                    <amx:cellFormat id="cf012" width="auto">
                                         <amx:outputText value="Item# #{row.itemNumber}" id="ot36"
                                                         styleClass="xxRobotoGroupHeader"/>
                                     </amx:cellFormat>
                                 </amx:rowLayout>
                             </amx:tableLayout>
                             <amx:tableLayout id="t12" width="100%"
-                                             inlineStyle="padding-bottom:10px; table-layout:fixed;" >
+                                             inlineStyle="padding-bottom:10px; table-layout:fixed;">
                                 <amx:rowLayout id="r1l4">
                                     <amx:cellFormat id="cf026" width="3%" inlineStyle="padding-top:10px;"/>
                                     <amx:cellFormat id="cf16" width="45%" height="10" inlineStyle="padding-top:10px;">
@@ -202,10 +201,10 @@
                                     <amx:cellFormat id="cf21" width="4%"/>
                                 </amx:rowLayout>
                             </amx:tableLayout>
+                            <amx:setPropertyListener id="spl6" from="N" to="#{pageFlowScope.showMessage}"/>
                         </amx:listItem>
                     </amx:listView>
                 </amx:panelGroupLayout>
-                <amx:facet name="bottom"/>
             </amx:facet>
         </amx:panelStretchLayout>
     </amx:panelPage>
