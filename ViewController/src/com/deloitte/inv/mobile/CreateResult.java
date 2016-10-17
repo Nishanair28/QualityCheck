@@ -14,7 +14,7 @@ import oracle.adfmf.json.JSONObject;
 
 public class CreateResult {
     private PropertyChangeSupport _propertyChangeSupport = new PropertyChangeSupport(this);
-    PlanElementDbAdapterOutput pd = new PlanElementDbAdapterOutput();
+  //  PlanElementDbAdapterOutput pd = new PlanElementDbAdapterOutput();
 
     public CreateResult() {
         super();
@@ -110,10 +110,10 @@ public class CreateResult {
     private String service_msg = null;
 
     public void setCreateResults() {
-        this.itemNumber = AdfmfJavaUtilities.getELValue("#{pageFlowScope.itemNumberCR}").toString();
+       /* this.itemNumber = AdfmfJavaUtilities.getELValue("#{pageFlowScope.itemNumberCR}").toString();
         if (this.itemNumber == null) {
             this.itemNumber = "-999";
-        }
+        }*/
         if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.transactionNumberCR}") != null) {
             this.transactionNumber = AdfmfJavaUtilities.getELValue("#{pageFlowScope.transactionNumberCR}").toString();
         } else {
@@ -128,11 +128,15 @@ public class CreateResult {
             this.userName = "SYSADMIN";
         }
         this.txnHeaderID = "-999";
-        this.organizationID = pd.getOrganizationId().toString();
+        if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.orgIDCR}") != null){
+        this.organizationID = AdfmfJavaUtilities.getELValue("#{pageFlowScope.orgIDCR}").toString();}
+        else{
+            this.organizationID = "-999";
+        }
         if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedLov}") != null) {
             this.planID = AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedLov}").toString();
         } else {
-            this.planID = "120";
+            this.planID = "-999";
         }
         this.specID = "-999";
         this.transactionID = "-999";
@@ -241,7 +245,10 @@ public class CreateResult {
         this.soHeaderID = "-999";
         this.rmaHeaderID = "-999";
         if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.transactionDateCR}") != null) {
-            this.transactionDate = AdfmfJavaUtilities.getELValue("#{pageFlowScope.transactionDateCR}").toString();
+            String truncDate;
+            truncDate = AdfmfJavaUtilities.getELValue("#{pageFlowScope.transactionDateCR}").toString();
+            truncDate = truncDate.substring(8,10) +"-" +truncDate.substring(4,7)+"-"+truncDate.substring(24);
+            this.transactionDate = truncDate;
         } else {
             this.transactionDate = "-999";
         }
