@@ -6,6 +6,11 @@ import com.deloitte.inv.mobile.rest.ServiceManager;
 
 import java.math.BigDecimal;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import java.util.Date;
+
 import oracle.adfmf.amx.event.ActionEvent;
 import oracle.adfmf.framework.api.AdfmfJavaUtilities;
 import oracle.adfmf.java.beans.PropertyChangeListener;
@@ -246,8 +251,18 @@ public class CreateResult {
         this.rmaHeaderID = "-999";
         if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.transactionDateCR}") != null) {
             String truncDate;
+            SimpleDateFormat sourceFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+            SimpleDateFormat destinationFormat = new SimpleDateFormat("dd-MMM-yyyy");
             truncDate = AdfmfJavaUtilities.getELValue("#{pageFlowScope.transactionDateCR}").toString();
-            truncDate = truncDate.substring(8,10) +"-" +truncDate.substring(4,7)+"-"+truncDate.substring(24);
+            try {
+                Date date = sourceFormat.parse(truncDate);
+                System.out.println(date);
+                System.out.println(destinationFormat.format(date));
+                truncDate = destinationFormat.format(date);
+
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
             this.transactionDate = truncDate;
         } else {
             this.transactionDate = "-999";
