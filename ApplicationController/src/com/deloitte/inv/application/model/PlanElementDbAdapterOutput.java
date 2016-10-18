@@ -7,6 +7,8 @@ import oracle.maf.api.cdm.persistence.model.Entity;
 
 import java.math.BigDecimal;
 
+import oracle.adfmf.framework.api.AdfmfJavaUtilities;
+
 
 public class PlanElementDbAdapterOutput extends Entity {
 
@@ -187,6 +189,9 @@ public class PlanElementDbAdapterOutput extends Entity {
 
     public void setOrganizationId(BigDecimal organizationId) {
         this.organizationId = organizationId;
+        String orgID;
+        orgID = organizationId.toString();
+        AdfmfJavaUtilities.setELValue("#{pageFlowScope.orgIDCR}",orgID) ;
     }
 
     public String getItemNumberPrompt() {
@@ -479,6 +484,7 @@ public class PlanElementDbAdapterOutput extends Entity {
 
     public String getTransactionDatePrompt() {
         return this.transactionDatePrompt;
+        
     }
 
     public void setTransactionDatePrompt(String transactionDatePrompt) {
