@@ -252,7 +252,7 @@ public class CreateResult {
         if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.transactionDateCR}") != null) {
             String truncDate;
             SimpleDateFormat sourceFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
-            SimpleDateFormat destinationFormat = new SimpleDateFormat("dd-MMM-yyyy");
+            SimpleDateFormat destinationFormat = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
             truncDate = AdfmfJavaUtilities.getELValue("#{pageFlowScope.transactionDateCR}").toString();
             try {
                 Date date = sourceFormat.parse(truncDate);
