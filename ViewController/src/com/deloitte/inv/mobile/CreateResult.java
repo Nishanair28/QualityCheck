@@ -628,13 +628,13 @@ public class CreateResult {
         System.out.println("Inside updateQualityData start");
         try {
             this.itemNumber = AdfmfJavaUtilities.getELValue("#{bindings.itemNumber.inputValue}").toString();
-            if (itemNumber == null || itemNumber.length() == 0)
+            if (this.itemNumber == null || this.itemNumber.length() == 0)
                 this.itemNumber = "-999";
 
             System.out.println("itemNumber" + itemNumber);
             this.collectionID = AdfmfJavaUtilities.getELValue("#{bindings.collectionId.inputValue}").toString();
-            if (collectionID == null || collectionID.length() == 0)
-                collectionID = "-999";
+            if (this.collectionID == null || this.collectionID.length() == 0)
+                this.collectionID = "-999";
 
             System.out.println("collectionID" + collectionID);
 
@@ -642,8 +642,8 @@ public class CreateResult {
             this.rowID = "-999";
 
             this.occurence = AdfmfJavaUtilities.getELValue("#{bindings.occurrence.inputValue}").toString();
-            if (occurence == null || occurence.length() == 0)
-                occurence = "-999";
+            if (this.occurence == null || this.occurence.length() == 0)
+                this.occurence = "-999";
 
             System.out.println("occurence" + occurence);
 
@@ -692,7 +692,7 @@ public class CreateResult {
             this.locatorID = "-999";
 
             this.lotNumber = AdfmfJavaUtilities.getELValue("#{bindings.lotNumber.inputValue}").toString();
-            if (lotNumber == null || lotNumber.length() == 0)
+            if (lotNumber == null || lotNumber.length() == 0 || lotNumber.equals("0"))
                 lotNumber = "-999";
             System.out.println("lotNumber" + lotNumber);
 
@@ -713,7 +713,7 @@ public class CreateResult {
             this.receiptNum = "-999";
 
             this.poNumber = AdfmfJavaUtilities.getELValue("#{bindings.poNumber.inputValue}").toString();
-            if (poNumber == null || poNumber.length() == 0)
+            if (poNumber == null || poNumber.length() == 0 || poNumber.equals("0"))
                 poNumber = "-999";
             System.out.println("poNumber" + poNumber);
 

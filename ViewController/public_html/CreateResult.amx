@@ -49,6 +49,17 @@
                 </amx:rowLayout>
             </amx:tableLayout>
         </amx:panelGroupLayout>
+        <amx:panelGroupLayout id="pgl4" layout="vertical" styleClass="xxRobotoSubHeader"
+                              rendered="#{pageFlowScope.showMessage == 'Y'}"
+                              inlineStyle="border-bottom-color:#86BC25;border-bottom-width:medium;border-bottom-style:solid">
+            <amx:tableLayout id="tl13" width="100%" inlineStyle="padding-top:5px; padding-bottom:5px;">
+                <amx:rowLayout id="rl12">
+                    <amx:cellFormat id="cf14" width="100%" halign="center" valign="middle">
+                        <amx:outputText value="#{pageFlowScope.message}" id="ot6" styleClass="xxRobotoFieldValue"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+            </amx:tableLayout>
+        </amx:panelGroupLayout>
          <amx:panelGroupLayout id="pgl2" layout="vertical">
             <amx:tableLayout id="t12" width="90%" halign="center"  inlineStyle="padding-bottom:5px; padding-top:5px;">
                 <amx:rowLayout id="rl3" rendered="#{bindings.itemNumberPrompt.inputValue != '0'}">

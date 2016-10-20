@@ -264,7 +264,7 @@ html[dir=ltr] .amx-inputText .field-value {
 html[dir=ltr] .amx-inputText.amx-readOnly .field-value {
     padding-left: 1px;
     padding-right: 1px;
-    padding-top: 1px;
+    padding-top: 3px;
     padding-bottom: 1px;
     border: gray;
     border-width: thin;
