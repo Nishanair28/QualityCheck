@@ -67,7 +67,14 @@
                     <amx:cellFormat id="cf63" width="5%"/>
                     <amx:cellFormat id="cf8" width="90%">
                         <amx:inputText inputType="text" value="#{bindings.itemNumber.inputValue}" id="it1"
-                                       readOnly="true" simple="true" styleClass="xxRobotoFieldValue"/>
+                                        simple="true" styleClass="xxRobotoFieldValue"
+                                       valueChangeListener="#{qualityBean.itemNumberChanged}" inlineStyle="#{pageFlowScope.itemValidationMessage!=null?'color:Red !important;'};"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                 <amx:rowLayout id="rl75" rendered="#{pageFlowScope.itemValidationMessage !=null}">
+                    <amx:cellFormat id="cf148" width="5%"/>
+                    <amx:cellFormat id="cf149" width="90%">
+                         <amx:outputText value="#{pageFlowScope.itemValidationMessage}" id="ot40" styleClass="errorMessage"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl5"
@@ -112,7 +119,7 @@
                     <amx:cellFormat id="cf57" width="5%"/>
                     <amx:cellFormat id="cf147" width="95%">
                         <amx:inputText inputType="text" styleClass="xxRobotoFieldValue"
-                                       value="#{bindings.soNumber.inputValue}" id="it4" readOnly="true" simple="true"/>
+                                       value="#{bindings.soNumber.inputValue}" id="it4"  simple="true"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl11">
@@ -553,7 +560,9 @@
         <amx:facet name="footer">
             <amx:panelGroupLayout layout="horizontal" id="pgl211" halign="end" inlineStyle="text-align:center;">
                 <amx:commandButton text="Update" id="cb111" inlineStyle="text-align:center;"
-                                   actionListener="#{CreateResult.updateQualityData}"/>
+                                   actionListener="#{CreateResult.updateQualityData}">
+                    <amx:validationBehavior id="vb1" group="pgl2"/>
+                </amx:commandButton>
             </amx:panelGroupLayout>
         </amx:facet>
     </amx:panelPage>

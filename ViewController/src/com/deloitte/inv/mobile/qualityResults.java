@@ -1,5 +1,8 @@
 package com.deloitte.inv.mobile;
 
+import com.deloitte.inv.mobile.rest.RestURIs;
+import com.deloitte.inv.mobile.rest.ServiceManager;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -13,6 +16,8 @@ import oracle.adfmf.framework.api.AdfmfJavaUtilities;
 import oracle.adfmf.framework.exception.AdfInvocationException;
 import oracle.adfmf.java.beans.ProviderChangeListener;
 import oracle.adfmf.java.beans.ProviderChangeSupport;
+import oracle.adfmf.json.JSONObject;
+import oracle.adfmf.json.JSONArray;
 
 public class qualityResults {
     public qualityResults() {
@@ -129,5 +134,38 @@ public class qualityResults {
 
     public void ApplyLink(ActionEvent actionEvent) {
         // Add event code here...
+    }
+
+    public void itemNumberChanged(ValueChangeEvent valueChangeEvent) {
+        // Add event code here...
+        ServiceManager sm = new ServiceManager();
+
+        String org_id = AdfmfJavaUtilities.getELValue("#{bindings.organizationId.inputValue}").toString();
+        String itemNumber = valueChangeEvent.getNewValue().toString();
+        String restURI = RestURIs.getItemLov(org_id, itemNumber);
+
+        String jsonArrayAsString = sm.invokeREAD(restURI).toString();
+        System.out.println("jsonArrayAsString-->" + jsonArrayAsString);
+
+        try {
+            JSONObject jsonObject = new JSONObject(jsonArrayAsString);
+            JSONArray nodeArray = jsonObject.getJSONArray("getIntemNumberDBAdapterOutput");
+            int size = nodeArray.length();
+            if (size > 1)
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.itemValidationMessage}",
+                                              "Mulitple Items found with same Number.");
+            else {
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.itemValidationMessage}", null);
+
+                for (int i = 0; i < size; i++) {
+                    JSONObject temp = nodeArray.getJSONObject(i);
+                    AdfmfJavaUtilities.setELValue("#{bindings.itemId.inputValue}", temp.getString("item_id"));
+                }
+            }
+
+        } catch (Exception ex) {
+            AdfmfJavaUtilities.setELValue("#{pageFlowScope.itemValidationMessage}", "Invalid Item Number");
+            System.out.println("Error:" + ex.getLocalizedMessage());
+        }
     }
 }

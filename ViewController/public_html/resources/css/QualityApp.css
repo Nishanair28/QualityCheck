@@ -98,6 +98,12 @@
     color: #999999 !important;
 }
 
+.errorMessage{
+    font-family: RobotoRegular !important;
+    font-size: small !important;
+    color: red !important;
+}
+
 .xxRobotoGroupHeader {
     font-family: RobotoMedium !important;
     font-size: x-large !important;
