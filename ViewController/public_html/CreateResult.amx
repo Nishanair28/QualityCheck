@@ -37,11 +37,11 @@
                             <amx:rowLayout id="rl33">
                                 <amx:cellFormat id="cf68" width="20%" halign="end">
                                     <amx:outputText value="Plan :" id="ot2"
-                                                    inlineStyle="font-family:RobotoLight; font-size:large; color:Gray;"/>
+                                                    styleClass="xxRobotoLightM"/>
                                 </amx:cellFormat>
                                 <amx:cellFormat id="cf67" halign="start">
                                     <amx:outputText value="#{bindings.name.inputValue}" id="ot1"
-                                    inlineStyle="font-size:large; font-weight:bold; font-family:RobotoMedium;"/>
+                                    styleClass="xxRobotoLightMBold"/>
                                 </amx:cellFormat>
                             </amx:rowLayout>
                         </amx:tableLayout>
@@ -65,294 +65,295 @@
                 <amx:rowLayout id="rl3" rendered="#{bindings.itemNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf37" width="5%"/>
                     <amx:cellFormat id="cf64" width="90%">
-                        <amx:outputText value="#{bindings.itemNumberPrompt.inputValue}" id="ot6" 
-                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                        <amx:outputText value="#{bindings.itemNumberPrompt.inputValue}" id="ot19" 
+                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl4" rendered="#{bindings.itemNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf63" width="5%"/>
                     <amx:cellFormat id="cf8" width="90%" halign="start" columnSpan="2">
-                        <amx:inputText value="#{pageFlowScope.itemNameCR}" inlineStyle="font-family:RobotoLight;" simple="true" id="it1"
-                                       styleClass="cell-border" showRequired="#{bindings.itemNumberMfFlag.inputValue !='N'}"/>
+                        <amx:inputText value="#{pageFlowScope.itemNameCR}" 
+                                       styleClass="xxRobotoFieldValue"
+                                       required="#{bindings.itemNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
 		<amx:rowLayout id="rl43" rendered="#{bindings.uomPrompt.inputValue != '0'}" >
                     <amx:cellFormat id="cf71" width="5%"/>
                     <amx:cellFormat id="cf72" width="90%">
                         <amx:outputText value="#{bindings.uomPrompt.inputValue}"  id="ot20"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl44" rendered="#{bindings.uomPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf73" width="5%"/>
                     <amx:cellFormat id="cf74" width="90%" halign="start" columnSpan="2">
-                        <amx:inputText value="#{pageFlowScope.uomCR}" inlineStyle="font-family:RobotoLight;" simple="true"
-                                       id="it17" styleClass="cell-border" showRequired="#{bindings.uomMfFlag.inputValue !='N'}"/>
+                        <amx:inputText value="#{pageFlowScope.uomCR}" 
+                                       id="it17" styleClass="xxRobotoFieldValue" required="#{bindings.uomMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
 		<amx:rowLayout id="rl45" rendered="#{bindings.subinventoryPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf75" width="5%"/>
                     <amx:cellFormat id="cf76" width="90%">
                         <amx:outputText value="#{bindings.subinventoryPrompt.inputValue}" id="ot21"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl46" rendered="#{bindings.subinventoryPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf77" width="5%"/>
                     <amx:cellFormat id="cf78" width="90%" halign="start" columnSpan="2">
-                        <amx:inputText value="#{pageFlowScope.subinventoryCR}" inlineStyle="font-family:RobotoLight;" simple="true"
-                                       styleClass="cell-border" id="it18" showRequired="#{bindings.subinventoryMfFlag.inputValue !='N'}"/>
+                        <amx:inputText value="#{pageFlowScope.subinventoryCR}" 
+                                       styleClass="xxRobotoFieldValue" id="it18" required="#{bindings.subinventoryMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
 		<amx:rowLayout id="rl31" rendered="#{bindings.trxNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf79" width="5%"/>
                     <amx:cellFormat id="cf80" width="90%">
                         <amx:outputText value="#{bindings.trxNumberPrompt.inputValue}" id="ot22"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl32" rendered="#{bindings.trxNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf81" width="5%"/>
                     <amx:cellFormat id="cf82" width="90%" halign="start" columnSpan="2">
-                        <amx:inputText value="#{pageFlowScope.transactionNumberCR}" inlineStyle="font-family:RobotoLight;" simple="true"
-                                       id="it19" styleClass="cell-border" showRequired="#{bindings.trxNumberMfFlag.inputValue !='N'}"/>
+                        <amx:inputText value="#{pageFlowScope.transactionNumberCR}"  
+                                       id="it19" styleClass="xxRobotoFieldValue" required="#{bindings.trxNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl5" rendered="#{bindings.lotNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf62" width="5%"/>
                     <amx:cellFormat id="cf9" width="90%">
                         <amx:outputText value="#{bindings.lotNumberPrompt.inputValue}" id="ot3"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl6" rendered="#{bindings.lotNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf61" width="5%"/>
                     <amx:cellFormat id="cf10" width="90%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.lotNumberCR}" simple="true"
-                                       id="it2"  styleClass="cell-border" showRequired="#{bindings.lotNumberMfFlag.inputValue !='N'}"/>
+                                       id="it2"  styleClass="xxRobotoFieldValue" required="#{bindings.lotNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
 		<amx:rowLayout id="rl35" rendered="#{bindings.serialNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf83" width="5%"/>
                     <amx:cellFormat id="cf84" width="90%">
                         <amx:outputText value="#{bindings.serialNumberPrompt.inputValue}" id="ot23"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl34" rendered="#{bindings.serialNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf85" width="5%"/>
                     <amx:cellFormat id="cf86" width="90%" halign="start" columnSpan="2">
-                        <amx:inputText value="#{pageFlowScope.serialNumberCR}" inlineStyle="font-family:RobotoLight;" simple="true"
-                                       id="it20" styleClass="cell-border" showRequired="#{bindings.serialNumberMfFlag.inputValue !='N'}"/>
+                        <amx:inputText value="#{pageFlowScope.serialNumberCR}"  
+                                       id="it20" styleClass="xxRobotoFieldValue" required="#{bindings.serialNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl36" rendered="#{bindings.compUOMPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf87" width="5%"/>
                     <amx:cellFormat id="cf88" width="90%" halign="start" columnSpan="2">
                         <amx:outputText value="#{bindings.compUOMPrompt.inputValue}"  id="ot24"
-                         inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl39" rendered="#{bindings.compUOMPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf89" width="5%"/>
                     <amx:cellFormat id="cf90" width="90%">
                    <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.compUOMCR}"
-                                       id="it3"  simple="true" styleClass="cell-border" showRequired="#{bindings.compUOMMfFlag.inputValue !='N'}"/>
+                                       id="it3"  simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.compUOMMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl40" rendered="#{bindings.compRevisionPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf91" width="5%"/>
                     <amx:cellFormat id="cf92" width="90%" halign="start" columnSpan="2">
                         <amx:outputText value="#{bindings.compRevisionPrompt.inputValue}" id="ot4"
-                         inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl47" rendered="#{bindings.compRevisionPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf93" width="5%"/>
                     <amx:cellFormat id="cf94" width="90%">
                    <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.compRevisionCR}"
-                                       id="it22" styleClass="cell-border" simple="true" showRequired="#{bindings.compRevisionMfFlag.inputValue !='N'}"/>
+                                       id="it22" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.compRevisionMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl48" rendered="#{bindings.compSubinventoryPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf95" width="5%"/>
                     <amx:cellFormat id="cf96" width="90%" halign="start" columnSpan="2">
                         <amx:outputText value="#{bindings.compSubinventoryPrompt.inputValue}" id="ot26"
-                         inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl49" rendered="#{bindings.compSubinventoryPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf97" width="5%"/>
                     <amx:cellFormat id="cf98" width="100%">
                    <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.compSubinventoryCR}"
-                                       id="it23" styleClass="cell-border" simple="true" showRequired="#{bindings.compSubinventoryMfFlag.inputValue !='N'}"/>
+                                       id="it23" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.compSubinventoryMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                  <amx:rowLayout id="rl50" rendered="#{bindings.compLotNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf99" width="5%"/>
                     <amx:cellFormat id="cf100" width="90%" halign="start" columnSpan="2">
                         <amx:outputText value="#{bindings.compLotNumberPrompt.inputValue}" id="ot27"
-                         inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl51" rendered="#{bindings.compLotNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf101" width="5%"/>
                     <amx:cellFormat id="cf102" width="100%">
                    <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.compLotNumberCR}"
-                                       id="it24" styleClass="cell-border" simple="true" showRequired="#{bindings.compLotNumberMfFlag.inputValue !='N'}"/>
+                                       id="it24" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.compLotNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                  <amx:rowLayout id="rl52" rendered="#{bindings.compSerialNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf103" width="5%"/>
                     <amx:cellFormat id="cf104" width="90%" halign="start" columnSpan="2">
                         <amx:outputText value="#{bindings.compSerialNumberPrompt.inputValue}" id="ot28"
-                         inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl53" rendered="#{bindings.compSerialNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf105" width="5%"/>
                     <amx:cellFormat id="cf106" width="100%">
                    <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.compSerialNumberCR}"
-                                       id="it25" styleClass="cell-border" simple="true" showRequired="#{bindings.compSerialNumberMfFlag.inputValue !='N'}"/>
+                                       id="it25" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.compSerialNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl56" rendered="#{bindings.fromOpSeqNumPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf111" width="5%"/>
                     <amx:cellFormat id="cf112" width="90%" halign="start" columnSpan="2">
                         <amx:outputText value="#{bindings.fromOpSeqNumPrompt.inputValue}" id="ot30"
-                         inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl57" rendered="#{bindings.fromOpSeqNumPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf113" width="5%"/>
                     <amx:cellFormat id="cf114" width="100%">
                    <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.fromOpSeqNumCR}"
-                                       id="it27" styleClass="cell-border" simple="true" showRequired="#{bindings.fromOpSeqNumMfFlag.inputValue !='N'}"/>
+                                       id="it27" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.fromOpSeqNumMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                  <amx:rowLayout id="rl54" rendered="#{bindings.toOpSeqNumPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf107" width="5%"/>
                     <amx:cellFormat id="cf108" width="90%" halign="start" columnSpan="2">
                         <amx:outputText value="#{bindings.toOpSeqNumPrompt.inputValue}" id="ot29"
-                         inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl55" rendered="#{bindings.toOpSeqNumPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf109" width="5%"/>
                     <amx:cellFormat id="cf110" width="100%">
                    <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.toOpSeqNumCR}"
-                                       id="it26" styleClass="cell-border" simple="true" showRequired="#{bindings.toOpSeqNumMfFlag.inputValue !='N'}"/>
+                                       id="it26" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.toOpSeqNumMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl58" rendered="#{bindings.receiptNumPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf115" width="5%"/>
                     <amx:cellFormat id="cf116" width="90%" halign="start" columnSpan="2">
                         <amx:outputText value="#{bindings.receiptNumPrompt.inputValue}" id="ot31"
-                         inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl59" rendered="#{bindings.receiptNumPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf117" width="5%"/>
                     <amx:cellFormat id="cf118" width="100%">
                    <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.receiptNumCR}"
-                                       id="it28"  styleClass="cell-border" simple="true" showRequired="#{bindings.receiptNumMfFlag.inputValue !='N'}"/>
+                                       id="it28"  styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.receiptNumMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl7" rendered="#{bindings.poNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf60" width="5%"/>
                     <amx:cellFormat id="cf11" width="100%">                       
                         <amx:outputText value="#{bindings.poNumberPrompt.inputValue}" id="ot25"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl8" rendered="#{bindings.poNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf59" width="5%"/>
                     <amx:cellFormat id="cf12" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.poNumberCR}"
-                                       id="it21" styleClass="cell-border" simple="true" showRequired="#{bindings.poNumberMfFlag.inputValue !='N'}"/>
+                                       id="it21" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.poNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl60" rendered="#{bindings.poLineNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf119" width="5%"/>
                     <amx:cellFormat id="cf120" width="100%">                       
                         <amx:outputText value="#{bindings.poLineNumberPrompt.inputValue}"  id="ot32"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl61" rendered="#{bindings.poLineNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf121" width="5%"/>
                     <amx:cellFormat id="cf122" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.poLineNumberCR}"
-                                       id="it29" styleClass="cell-border" simple="true" showRequired="#{bindings.poLineNumberMfFlag.inputValue !='N'}"/>
+                                       id="it29" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.poLineNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl62" rendered="#{bindings.poShipmentNumPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf123" width="5%"/>
                     <amx:cellFormat id="cf124" width="100%">                       
                         <amx:outputText value="#{bindings.poShipmentNumPrompt.inputValue}" id="ot33"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="r20" rendered="#{bindings.poShipmentNumPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf125" width="5%"/>
                     <amx:cellFormat id="cf126" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.poShipmentNumCR}"
-                                       id="it30" styleClass="cell-border" simple="true" showRequired="#{bindings.poShipmentNumMfFlag.inputValue !='N'}"/>
+                                       id="it30" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.poShipmentNumMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl9" rendered="#{bindings.transactionDatePrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf58" width="5%"/>
                     <amx:cellFormat id="cf13" width="100%">
                         <amx:outputText value="#{bindings.transactionDatePrompt.inputValue}" id="ot5"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl10" rendered="#{bindings.transactionDatePrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf57" width="5%"/>
-                    <amx:cellFormat id="cf14" width="100%" halign="start" columnSpan="2">
-                        <amx:inputDate id="id1" value="#{pageFlowScope.transactionDateCR}" simple="true" showRequired="#{bindings.transactionDateMfFlag.inputValue !='N'}"/>
+                    <amx:cellFormat id="cf195" width="100%" halign="start" columnSpan="2">
+                        <amx:inputDate id="id1" value="#{pageFlowScope.transactionDateCR}" simple="true" required="#{bindings.transactionDateMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl63" rendered="#{bindings.statusPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf127" width="5%"/>
                     <amx:cellFormat id="cf128" width="100%">
                         <amx:outputText value="#{bindings.statusPrompt.inputValue}" id="ot34"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl64" rendered="#{bindings.statusPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf129" width="5%"/>
                     <amx:cellFormat id="cf130" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.statusCR}"
-                                       id="it31" styleClass="cell-border" simple="true" showRequired="#{bindings.statusMfFlag.inputValue !='N'}"/>
+                                       id="it31" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.statusMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="r21" rendered="#{bindings.assetNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf131" width="5%"/>
                     <amx:cellFormat id="cf132" width="100%">
                         <amx:outputText value="#{bindings.assetNumberPrompt.inputValue}" id="ot35"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="r22" rendered="#{bindings.assetNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf133" width="5%"/>
                     <amx:cellFormat id="cf134" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.assetNumberCR}"
-                                       id="it32" styleClass="cell-border" simple="true" showRequired="#{bindings.assetNumberMfFlag.inputValue !='N'}"/>
+                                       id="it32" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.assetNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl11" rendered="#{bindings.quantityPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf56" width="5%"/>
                     <amx:cellFormat id="cf15" width="100%">
                         <amx:outputText value="#{bindings.quantityPrompt.inputValue}" id="ot81"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
-                <amx:rowLayout id="rl12" rendered="#{bindings.quantityPrompt.inputValue != '0'}">
+                <amx:rowLayout id="rl89" rendered="#{bindings.quantityPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf55" width="5%"/>
                     <amx:cellFormat id="cf16" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.quantityCR}"
-                                       id="it4" styleClass="cell-border" simple="true" showRequired="#{bindings.quantityMfFlag.inputValue !='N'}"/>
+                                       id="it4" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.quantityMfFlag.inputValue !='N'}"/>
 
                     </amx:cellFormat>
                 </amx:rowLayout>
@@ -360,21 +361,21 @@
                     <amx:cellFormat id="cf54" width="5%"/>
                     <amx:cellFormat id="cf17" width="100%">
                         <amx:outputText value="#{bindings.character1Prompt.inputValue}" id="ot9"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl14" rendered="#{bindings.character1Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf53" width="5%"/>
                     <amx:cellFormat id="cf18" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character1CR}"
-                                       id="it6" simple="true" styleClass="cell-border" showRequired="#{bindings.character1MfFlag.inputValue !='N'}"/>
+                                       id="it6" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character1MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl15" rendered="#{bindings.character2Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf52" width="5%"/>
                     <amx:cellFormat id="cf19" width="100%">
                         <amx:outputText value="#{bindings.character2Prompt.inputValue}" id="ot10"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
  
                     </amx:cellFormat>
                 </amx:rowLayout>
@@ -382,399 +383,399 @@
                     <amx:cellFormat id="cf51" width="5%"/>
                     <amx:cellFormat id="cf20" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character2CR}"
-                                       id="it7" simple="true" styleClass="cell-border" showRequired="#{bindings.character2MfFlag.inputValue !='N'}"/>
+                                       id="it7" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character2MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl17" rendered="#{bindings.character3Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf50" width="5%"/>
                     <amx:cellFormat id="cf21" width="100%">
                         <amx:outputText value="#{bindings.character3Prompt.inputValue}" id="ot11"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl18" rendered="#{bindings.character3Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf49" width="5%"/>
                     <amx:cellFormat id="cf22" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character3CR}"
-                                       id="it8" simple="true" styleClass="cell-border" showRequired="#{bindings.character3MfFlag.inputValue !='N'}"/>
+                                       id="it8" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character3MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl19" rendered="#{bindings.character4Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf48" width="5%"/>
                     <amx:cellFormat id="cf23" width="100%">
                         <amx:outputText value="#{bindings.character4Prompt.inputValue}" id="ot12"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl20" rendered="#{bindings.character4Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf47" width="5%"/>
                     <amx:cellFormat id="cf24" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character4CR}"
-                                       id="it9" simple="true" styleClass="cell-border" showRequired="#{bindings.character4MfFlag.inputValue !='N'}"/>
+                                       id="it9" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character4MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl21" rendered="#{bindings.character5Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf46" width="5%"/>
                     <amx:cellFormat id="cf25" width="100%">
                         <amx:outputText value="#{bindings.character5Prompt.inputValue}" id="ot13"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl22" rendered="#{bindings.character5Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf45" width="5%"/>
                     <amx:cellFormat id="cf26" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character5CR}"
-                                       id="it10" simple="true" styleClass="cell-border" showRequired="#{bindings.character5MfFlag.inputValue !='N'}"/>
+                                       id="it10" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character5MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl23" rendered="#{bindings.character6Prompt.inputValue != '0'}"> 
                     <amx:cellFormat id="cf44" width="5%"/>
                     <amx:cellFormat id="cf27" width="100%">
                         <amx:outputText value="#{bindings.character6Prompt.inputValue}" id="ot14"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl24" rendered="#{bindings.character6Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf43" width="5%"/>
                     <amx:cellFormat id="cf28" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character6CR}"
-                                       id="it11" simple="true" styleClass="cell-border" showRequired="#{bindings.character6MfFlag.inputValue !='N'}"/>
+                                       id="it11" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character6MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl25" rendered="#{bindings.character7Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf42" width="5%"/>
                     <amx:cellFormat id="cf29" width="100%">
                         <amx:outputText value="#{bindings.character7Prompt.inputValue}" id="ot15"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl26" rendered="#{bindings.character7Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf41" width="5%"/>
                     <amx:cellFormat id="cf30" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character7CR}"
-                                       id="it12" simple="true" styleClass="cell-border" showRequired="#{bindings.character7MfFlag.inputValue !='N'}"/>
+                                       id="it12" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character7MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl27" rendered="#{bindings.character8Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf40" width="5%"/>
                     <amx:cellFormat id="cf31" width="100%">
                         <amx:outputText value="#{bindings.character8Prompt.inputValue}" id="ot16"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl28" rendered="#{bindings.character8Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf39" width="5%"/>
                     <amx:cellFormat id="cf32" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character8CR}"
-                                       id="it13" simple="true" styleClass="cell-border" showRequired="#{bindings.character8MfFlag.inputValue !='N'}"/>
+                                       id="it13" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character8MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl29" rendered="#{bindings.character9Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf38" width="5%"/>
                     <amx:cellFormat id="cf33" width="100%">
                         <amx:outputText value="#{bindings.character9Prompt.inputValue}" id="ot17"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl30" rendered="#{bindings.character9Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf36" width="5%"/>
                     <amx:cellFormat id="cf34" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character9CR}"
-                                       id="it14" simple="true" styleClass="cell-border" showRequired="#{bindings.character9MfFlag.inputValue !='N'}"/>
+                                       id="it14" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character9MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl37" rendered="#{bindings.character10Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf2" width="5%"/>
                     <amx:cellFormat id="cf35" width="100%">
                         <amx:outputText value="#{bindings.character10Prompt.inputValue}" id="ot18"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl38" rendered="#{bindings.character10Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf65" width="5%"/>
                     <amx:cellFormat id="cf66" width="100%">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character10CR}"
-                                       id="it15" simple="true" styleClass="cell-border" showRequired="#{bindings.character10MfFlag.inputValue !='N'}"/>
+                                       id="it15" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character10MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                  <amx:rowLayout id="r23" rendered="#{bindings.character11Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf135" width="5%"/>
                     <amx:cellFormat id="cf136" width="100%">
                         <amx:outputText value="#{bindings.character11Prompt.inputValue}" id="ot36"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="r24" rendered="#{bindings.character11Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf137" width="5%"/>
                     <amx:cellFormat id="cf138" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character11CR}"
-                                       id="it33" simple="true" styleClass="cell-border" showRequired="#{bindings.character11MfFlag.inputValue !='N'}"/>
+                                       id="it33" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character11MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="r25" rendered="#{bindings.character12Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf139" width="5%"/>
                     <amx:cellFormat id="cf140" width="100%">
                         <amx:outputText value="#{bindings.character12Prompt.inputValue}" id="ot37"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="r26" rendered="#{bindings.character12Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf141" width="5%"/>
                     <amx:cellFormat id="cf142" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character12CR}"
-                                       id="it34" simple="true" styleClass="cell-border" showRequired="#{bindings.character12MfFlag.inputValue !='N'}"/>
+                                       id="it34" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character12MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl65" rendered="#{bindings.character13Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf143" width="5%"/>
                     <amx:cellFormat id="cf144" width="100%">
                         <amx:outputText value="#{bindings.character13Prompt.inputValue}" id="ot38"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl66" rendered="#{bindings.character13Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf145" width="5%"/>
                     <amx:cellFormat id="cf146" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character13CR}"
-                                       id="it35" simple="true" styleClass="cell-border" showRequired="#{bindings.character13MfFlag.inputValue !='N'}"/>
+                                       id="it35" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character13MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl67" rendered="#{bindings.character14Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf147" width="5%"/>
                     <amx:cellFormat id="cf148" width="100%">
                         <amx:outputText value="#{bindings.character14Prompt.inputValue}"  id="ot39"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl68" rendered="#{bindings.character14Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf150" width="5%"/>
                     <amx:cellFormat id="cf149" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character14CR}"
-                                       id="it36" simple="true"  styleClass="cell-border" showRequired="#{bindings.character14MfFlag.inputValue !='N'}"/>
+                                       id="it36" simple="true"  styleClass="xxRobotoFieldValue" required="#{bindings.character14MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl69" rendered="#{bindings.character15Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf151" width="5%"/>
                     <amx:cellFormat id="cf152" width="100%">
                         <amx:outputText value="#{bindings.character15Prompt.inputValue}"  id="ot40"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl70" rendered="#{bindings.character15Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf153" width="5%"/>
                     <amx:cellFormat id="cf154" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character15CR}"
-                                       id="it37" simple="true" styleClass="cell-border" showRequired="#{bindings.character15MfFlag.inputValue !='N'}"/>
+                                       id="it37" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character15MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl71" rendered="#{bindings.character16Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf155" width="5%"/>
                     <amx:cellFormat id="cf156" width="100%">
                         <amx:outputText value="#{bindings.character16Prompt.inputValue}"  id="ot41"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl72" rendered="#{bindings.character16Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf157" width="5%"/>
                     <amx:cellFormat id="cf158" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character16CR}"
-                                       id="it38" simple="true" styleClass="cell-border" showRequired="#{bindings.character17MfFlag.inputValue !='N'}"/>
+                                       id="it38" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character17MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl73" rendered="#{bindings.character17Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf159" width="5%"/>
                     <amx:cellFormat id="cf160" width="100%">
                         <amx:outputText value="#{bindings.character17Prompt.inputValue}"  id="ot42"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl74" rendered="#{bindings.character17Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf161" width="5%"/>
                     <amx:cellFormat id="cf163" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character17CR}"
-                                       id="it39" simple="true" styleClass="cell-border" showRequired="#{bindings.character17MfFlag.inputValue !='N'}"/>
+                                       id="it39" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character17MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="r27" rendered="#{bindings.character18Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf164" width="5%"/>
                     <amx:cellFormat id="cf162" width="100%">
                         <amx:outputText value="#{bindings.character18Prompt.inputValue}"  id="ot43"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="r28" rendered="#{bindings.character18Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf166" width="5%"/>
                     <amx:cellFormat id="cf168" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character18CR}"
-                                       id="it40" simple="true" styleClass="cell-border" showRequired="#{bindings.character18MfFlag.inputValue !='N'}"/>
+                                       id="it40" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character18MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl75" rendered="#{bindings.character19Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf167" width="5%"/>
                     <amx:cellFormat id="cf165" width="100%">
                         <amx:outputText value="#{bindings.character19Prompt.inputValue}"  id="ot44"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl76" rendered="#{bindings.character19Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf169" width="5%"/>
                     <amx:cellFormat id="cf170" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character19CR}"
-                                       id="it41" simple="true" styleClass="cell-border" showRequired="#{bindings.character19MfFlag.inputValue !='N'}"/>
+                                       id="it41" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character19MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl77" rendered="#{bindings.character20Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf171" width="5%"/>
                     <amx:cellFormat id="cf172" width="100%">
                         <amx:outputText value="#{bindings.character20Prompt.inputValue" id="ot45"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl78" rendered="#{bindings.character20Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf173" width="5%"/>
                     <amx:cellFormat id="cf174" width="100%">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character20CR}"
-                                       id="it42" simple="true" styleClass="cell-border" showRequired="#{bindings.character20MfFlag.inputValue !='N'}"/>
+                                       id="it42" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character20MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                  <amx:rowLayout id="rl79" rendered="#{bindings.character21Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf175" width="5%"/>
                     <amx:cellFormat id="cf176" width="100%">
                         <amx:outputText value="#{bindings.character21Prompt.inputValue}"  id="ot46"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl80" rendered="#{bindings.character21Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf177" width="5%"/>
                     <amx:cellFormat id="cf178" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character21CR}"
-                                       id="it43" simple="true" styleClass="cell-border" showRequired="#{bindings.character21MfFlag.inputValue !='N'}"/>
+                                       id="it43" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character21MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl81" rendered="#{bindings.character22Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf179" width="5%"/>
                     <amx:cellFormat id="cf180" width="100%">
                         <amx:outputText value="#{bindings.character22Prompt.inputValue}"  id="ot47"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl82" rendered="#{bindings.character22Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf181" width="5%"/>
                     <amx:cellFormat id="cf182" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character22CR}"
-                                       id="it44" simple="true" styleClass="cell-border" showRequired="#{bindings.character22MfFlag.inputValue !='N'}"/>
+                                       id="it44" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character22MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl83" rendered="#{bindings.character23Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf183" width="5%"/>
                     <amx:cellFormat id="cf184" width="100%">
                         <amx:outputText value="#{bindings.character23Prompt.inputValue}"  id="ot48"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl84" rendered="#{bindings.character23Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf185" width="5%"/>
                     <amx:cellFormat id="cf186" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character23CR}"
-                                       id="it45" simple="true" styleClass="cell-border" showRequired="#{bindings.character23MfFlag.inputValue !='N'}"/>
+                                       id="it45" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character23MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl85" rendered="#{bindings.character24Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf187" width="5%"/>
                     <amx:cellFormat id="cf188" width="100%">
                         <amx:outputText value="#{bindings.character24Prompt.inputValue}"  id="ot49"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl86" rendered="#{bindings.character24Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf189" width="5%"/>
                     <amx:cellFormat id="cf190" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character24CR}"
-                                       id="it46" simple="true" styleClass="cell-border" showRequired="#{bindings.character24MfFlag.inputValue !='N'}"/>
+                                       id="it46" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character24MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl87" rendered="#{bindings.character25Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf191" width="5%"/>
                     <amx:cellFormat id="cf192" width="100%">
                         <amx:outputText value="#{bindings.character25Prompt.inputValue}" id="ot50"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl88" rendered="#{bindings.character25Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf193" width="5%"/>
                     <amx:cellFormat id="cf194" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character25CR}"
-                                       id="it47" simple="true" styleClass="cell-border" showRequired="#{bindings.character25MfFlag.inputValue !='N'}"/>
+                                       id="it47" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character25MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl91" rendered="#{bindings.character26Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf199" width="5%"/>
                     <amx:cellFormat id="cf200" width="100%">
                         <amx:outputText value="#{bindings.character26Prompt.inputValue}" id="ot52"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl92" rendered="#{bindings.character26Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf201" width="5%"/>
                     <amx:cellFormat id="cf202" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character26CR}"
-                                       id="it49" simple="true" styleClass="cell-border" showRequired="#{bindings.character26MfFlag.inputValue !='N'}"/>
+                                       id="it49" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character26MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl93" rendered="#{bindings.character27Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf204" width="5%"/>
                     <amx:cellFormat id="cf203" width="100%">
                         <amx:outputText value="#{bindings.character27Prompt.inputValue}" id="ot53"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl94" rendered="#{bindings.character27Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf205" width="5%"/>
                     <amx:cellFormat id="cf206" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character27CR}"
-                                       id="it50" simple="true" styleClass="cell-border" showRequired="#{bindings.character27MfFlag.inputValue !='N'}"/>
+                                       id="it50" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character27MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl41" rendered="#{bindings.character28Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf4" width="5%"/>
                     <amx:cellFormat id="cf7" width="100%">
                         <amx:outputText value="#{bindings.character28Prompt.inputValue}" id="ot8"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl42" rendered="#{bindings.character28Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf69" width="5%"/>
                     <amx:cellFormat id="cf70" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character28CR}"
-                                       id="it5" simple="true" styleClass="cell-border" showRequired="#{bindings.character28MfFlag.inputValue !='N'}"/>
+                                       id="it5" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character28MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl95" rendered="#{bindings.character29Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf207" width="5%"/>
                     <amx:cellFormat id="cf208" width="100%">
                         <amx:outputText value="#{bindings.character29Prompt.inputValue}" id="ot54"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl96" rendered="#{bindings.character29Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf209" width="5%"/>
                     <amx:cellFormat id="cf210" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character29CR}"
-                                       id="it51" simple="true" styleClass="cell-border" showRequired="#{bindings.character29MfFlag.inputValue !='N'}"/>
+                                       id="it51" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character29MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl97" rendered="#{bindings.character30Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf212" width="5%"/>
                     <amx:cellFormat id="cf211" width="100%">
                         <amx:outputText value="#{bindings.character30Prompt.inputValue}" id="ot55"
-                                        inlineStyle="font-size:medium; font-weight:bold; font-family:RobotoMedium;"/>
+                                        styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl98" rendered="#{bindings.character30Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf213" width="5%"/>
                     <amx:cellFormat id="cf214" width="100%">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character30CR}"
-                                       id="it52" simple="true" styleClass="cell-border" showRequired="#{bindings.character30MfFlag.inputValue !='N'}"/>
+                                       id="it52" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character30MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
             </amx:tableLayout> 
