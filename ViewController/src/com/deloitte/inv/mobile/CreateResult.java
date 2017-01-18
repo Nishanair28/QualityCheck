@@ -9,12 +9,18 @@ import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import java.util.ArrayList;
 import java.util.Date;
 
+import java.util.List;
+
 import oracle.adfmf.amx.event.ActionEvent;
+import oracle.adfmf.amx.event.ValueChangeEvent;
 import oracle.adfmf.framework.api.AdfmfJavaUtilities;
 import oracle.adfmf.java.beans.PropertyChangeListener;
 import oracle.adfmf.java.beans.PropertyChangeSupport;
+import oracle.adfmf.json.JSONArray;
+import oracle.adfmf.json.JSONException;
 import oracle.adfmf.json.JSONObject;
 
 public class CreateResult {
@@ -111,10 +117,188 @@ public class CreateResult {
     private String character29;
     private String character30;
     private String methodCode;
-
+    private String POHeaderID;
+    private String POLineID;
+ 
     private String service_msg = null;
+    
+    public void initPlanDet(ActionEvent actionEvent) {
+        // Add event code here...
+        List pnames = new ArrayList();
+        List params = new ArrayList();
+        List ptypes = new ArrayList();
+        String planID = AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedLov}").toString();
+        System.out.println("Plan Id" + planID);
+        try {
+            AdfmfJavaUtilities.invokeDataControlMethod("PlanElementDbAdapterOutputService", null,
+                                                       "findAllPlanElementDbAdapterOutputRemote", pnames, params, ptypes);
+           // AdfmfJavaUtilities.flushDataChangeEvent();
+            //providerChangeSupport.fireProviderRefresh("qualityResultsDBOutput");
+        } catch (Exception e) {
+            e.getMessage();
+        }
+    }
 
-    public void setCreateResults() {
+    public void itemNumberChanged(ValueChangeEvent valueChangeEvent) {
+        // Add event code here...
+        ServiceManager sm = new ServiceManager();
+
+        String org_id = AdfmfJavaUtilities.getELValue("#{pageFlowScope.orgIDCR}").toString();
+        String itemNumber = valueChangeEvent.getNewValue().toString();
+        String restURI = RestURIs.getItemLov(org_id, itemNumber);
+
+        String jsonArrayAsString = sm.invokeREAD(restURI).toString();
+        System.out.println("jsonArrayAsString-->" + jsonArrayAsString);
+
+        try {
+            JSONObject jsonObject = new JSONObject(jsonArrayAsString);
+            JSONArray nodeArray = jsonObject.getJSONArray("getIntemNumberDBAdapterOutput");
+            int size = nodeArray.length();
+            if (size > 1)
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.itemValidationMessage}",
+                                              "Multiple Items found with same Number.");
+            else {
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.itemValidationMessage}", null);
+
+                for (int i = 0; i < size; i++) {
+                    JSONObject temp = nodeArray.getJSONObject(i);
+                    AdfmfJavaUtilities.setELValue("#{bindings.itemId.inputValue}", temp.getString("item_id"));
+                }
+            }
+
+        } catch (Exception ex) {
+            AdfmfJavaUtilities.setELValue("#{pageFlowScope.itemValidationMessage}", "Invalid Item Number");
+            System.out.println("Error:" + ex.getLocalizedMessage());
+        }
+    }
+    public void uomChanged(ValueChangeEvent valueChangeEvent) {
+        // Add event code here...
+        ServiceManager sm = new ServiceManager();
+
+        String uom = valueChangeEvent.getNewValue().toString();
+        String restURI = RestURIs.getUomLov();
+
+        String jsonArrayAsString = sm.invokeREAD(restURI).toString();
+        System.out.println("jsonArrayAsString-->" + jsonArrayAsString);
+
+        try {
+            JSONObject jsonObject = new JSONObject(jsonArrayAsString);
+            JSONArray nodeArray = jsonObject.getJSONArray("getUOMdbAdapterOutput");
+            int size = nodeArray.length();
+            if (size > 1)
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.uomValidationMessage}",
+                                              "Multiple uoms found.");
+            else {
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.uomValidationMessage}", null);
+
+                for (int i = 0; i < size; i++) {
+                    JSONObject temp = nodeArray.getJSONObject(i);
+                    AdfmfJavaUtilities.setELValue("#{bindings.uom.inputValue}", temp.getString("uom"));
+                }
+            }
+
+        } catch (Exception ex) {
+            AdfmfJavaUtilities.setELValue("#{pageFlowScope.uomValidationMessage}", "Invalid UOM");
+            System.out.println("Error:" + ex.getLocalizedMessage());
+        }
+    }
+    public void poNumberChanged(ValueChangeEvent valueChangeEvent) {
+        // Add event code here...
+        ServiceManager sm = new ServiceManager();
+        String orgId = AdfmfJavaUtilities.getELValue("#{pageFlowScope.orgIDCR}").toString();
+        String poNumber = valueChangeEvent.getNewValue().toString();
+        String restURI = RestURIs.getPOHeaderIDLov(orgId,poNumber);
+
+
+        String jsonArrayAsString = sm.invokeREAD(restURI).toString();
+        System.out.println("jsonArrayAsString-->" + jsonArrayAsString);
+
+        try {
+            JSONObject jsonObject = new JSONObject(jsonArrayAsString);
+            JSONArray nodeArray = jsonObject.getJSONArray("PoHeader");
+            int size = nodeArray.length();
+            if (size > 1)
+            System.out.println("Multiple PO Headers found.");
+            else {
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.poHeaderValidationMessage}", null);
+
+                for (int i = 0; i < size; i++) {
+                    JSONObject temp = nodeArray.getJSONObject(i);
+                    AdfmfJavaUtilities.setELValue(POHeaderID, temp.getString("HeaderId"));
+                }
+            }
+
+        } catch (Exception ex) {
+            AdfmfJavaUtilities.setELValue("#{pageFlowScope.poHeaderValidationMessage}", "Invalid PO Number");
+            System.out.println("Error:" + ex.getLocalizedMessage());
+        }
+    }    
+    
+    public void subinvChanged(ValueChangeEvent valueChangeEvent) {
+        // Add event code here...
+        ServiceManager sm = new ServiceManager();
+        String orgId = AdfmfJavaUtilities.getELValue("#{pageFlowScope.orgIDCR}").toString();
+        String subinventory = valueChangeEvent.getNewValue().toString();
+        String restURI = RestURIs.getSubinvLov(orgId,subinventory);
+
+
+        String jsonArrayAsString = sm.invokeREAD(restURI).toString();
+        System.out.println("jsonArrayAsString-->" + jsonArrayAsString);
+
+        try {
+            JSONObject jsonObject = new JSONObject(jsonArrayAsString);
+            JSONArray nodeArray = jsonObject.getJSONArray("SubInventory");
+            int size = nodeArray.length();
+            if (size > 1)
+            System.out.println("Multiple Subinventory found.");
+            else {
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.subinvValidationMessage}", null);
+
+                for (int i = 0; i < size; i++) {
+                    JSONObject temp = nodeArray.getJSONObject(i);
+                    AdfmfJavaUtilities.setELValue(POHeaderID, temp.getString("HeaderId"));
+                }
+            }
+
+        } catch (Exception ex) {
+            AdfmfJavaUtilities.setELValue("#{pageFlowScope.subinvValidationMessage}", "Invalid Subinventory");
+            System.out.println("Error:" + ex.getLocalizedMessage());
+        }
+    }    
+    
+    
+    public void poLineNumChanged(ValueChangeEvent valueChangeEvent) {
+        // Add event code here...
+        ServiceManager sm = new ServiceManager();
+        String orgId = AdfmfJavaUtilities.getELValue("#{pageFlowScope.orgIDCR}").toString();
+        String poNumber = valueChangeEvent.getNewValue().toString();
+        String restURI = RestURIs.getPOLineNumLov(POHeaderID);
+
+        String jsonArrayAsString = sm.invokeREAD(restURI).toString();
+        System.out.println("jsonArrayAsString-->" + jsonArrayAsString);
+
+        try {
+            JSONObject jsonObject = new JSONObject(jsonArrayAsString);
+            JSONArray nodeArray = jsonObject.getJSONArray("PoLine");
+            int size = nodeArray.length();
+            if (size > 1)
+            System.out.println("Multiple PO Headers found.");
+            else {
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.poLineValidationMessage}", null);
+
+                for (int i = 0; i < size; i++) {
+                    JSONObject temp = nodeArray.getJSONObject(i);
+                    AdfmfJavaUtilities.setELValue(POLineID, temp.getString("HeaderId"));
+                }
+            }
+
+        } catch (Exception ex) {
+            AdfmfJavaUtilities.setELValue("#{pageFlowScope.poLineValidationMessage}", "Invalid PO Number");
+            System.out.println("Error:" + ex.getLocalizedMessage());
+        }
+    }    
+    
+    public void setCreateResults() throws JSONException {
        /* this.itemNumber = AdfmfJavaUtilities.getELValue("#{pageFlowScope.itemNumberCR}").toString();
         if (this.itemNumber == null) {
             this.itemNumber = "-999";
@@ -146,6 +330,26 @@ public class CreateResult {
         this.specID = "-999";
         this.transactionID = "-999";
         this.departmentID = "-999";
+        ServiceManager sm = new ServiceManager();
+        String deptrestURI = RestURIs.getDeptLov(organizationID);
+
+        String jsonArrayAsString = sm.invokeREAD(deptrestURI).toString();
+        System.out.println("jsonArrayAsString-->" + jsonArrayAsString);
+
+        JSONObject jsonObject = new JSONObject(jsonArrayAsString);
+        JSONArray nodeArray = jsonObject.getJSONArray("getDeptdbAdapterOutput");
+            int size = nodeArray.length();
+            if (size > 1)
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.deptIDValidationMessage}",
+                                              "Multiple uoms found.");
+            else {
+                AdfmfJavaUtilities.setELValue("#{pageFlowScope.deptIDValidationMessage}", null);
+
+                for (int i = 0; i < size; i++) {
+                    JSONObject temp = nodeArray.getJSONObject(i);
+                    AdfmfJavaUtilities.setELValue(departmentID, temp.getString("departmentId"));
+                }
+            }
         this.toDepartmentID = "-999";
         this.resourceID = "-999";
         if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.quantityCR}") != null) {
@@ -617,11 +821,13 @@ public class CreateResult {
 
     }
 
-    public void create(ActionEvent actionEvent) {
+    public void create(ActionEvent actionEvent) throws JSONException {
         // Add event code here...
         System.out.println("Inside Create Result:");
         setCreateResults();
     }
+    
+    
 
     public void updateQualityData(ActionEvent actionEvent) {
         // Add event code here...
