@@ -3,11 +3,6 @@
           xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
   <amx:panelPage id="pp1">
         <amx:facet name="header">
-        <amx:listView var="row" 
-                              showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1"
-                              >
-                    <amx:listItem id="li1" action="getDetails" showLinkIcon="true"
-                                  inlineStyle="border-top-color:#86BC25;border-top-width:thin;border-top-style:solid;border-bottom-color:#86BC25;border-bottom-width:thin;border-bottom-style:solid">
             <amx:tableLayout id="tl2" width="100%" halign="center">
                 <amx:rowLayout id="rl2">
                     <amx:cellFormat id="cf3" width="10%" halign="end" valign="middle">
@@ -24,9 +19,7 @@
                         </amx:commandLink>
                     </amx:cellFormat>
                 </amx:rowLayout>
-            </amx:tableLayout>
-          </amx:listItem>
-        </amx:listView>      
+            </amx:tableLayout>     
         </amx:facet>
     <amx:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="border-bottom-color:#86BC25;border-bottom-width:medium;border-bottom-style:solid">
             <amx:tableLayout id="tl1" width="100%">
@@ -64,7 +57,7 @@
             <amx:tableLayout id="t12" width="90%" halign="center"  inlineStyle="padding-bottom:5px; padding-top:5px;">
                 <amx:rowLayout id="rl3" rendered="#{bindings.itemNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf37" width="5%"/>
-                    <amx:cellFormat id="cf64" width="90%">
+                    <amx:cellFormat id="cf64" width="90%" inlineStyle="padding-top:15px; ">
                         <amx:outputText value="#{bindings.itemNumberPrompt.inputValue}" id="ot19" 
                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
@@ -72,9 +65,16 @@
                 <amx:rowLayout id="rl4" rendered="#{bindings.itemNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf63" width="5%"/>
                     <amx:cellFormat id="cf8" width="90%" halign="start" columnSpan="2">
-                        <amx:inputText value="#{pageFlowScope.itemNameCR}" 
-                                       styleClass="xxRobotoFieldValue"
+                        <amx:inputText value="#{pageFlowScope.itemNameCR}"  id="it1"  simple="true"
+                                       styleClass="xxRobotoFieldValue" valueChangeListener="#{CreateResult.itemNumberChanged}"
+                                       inlineStyle="#{pageFlowScope.itemValidationMessage!=null?'color:Red !important;'};"
                                        required="#{bindings.itemNumberMfFlag.inputValue !='N'}"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                 <amx:rowLayout id="rl75" rendered="#{pageFlowScope.itemValidationMessage !=null}">
+                    <amx:cellFormat id="cf148" width="5%"/>
+                    <amx:cellFormat id="cf149" width="90%">
+                         <amx:outputText value="#{pageFlowScope.itemValidationMessage}" id="ot40" styleClass="errorMessage"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
 		<amx:rowLayout id="rl43" rendered="#{bindings.uomPrompt.inputValue != '0'}" >
@@ -88,7 +88,16 @@
                     <amx:cellFormat id="cf73" width="5%"/>
                     <amx:cellFormat id="cf74" width="90%" halign="start" columnSpan="2">
                         <amx:inputText value="#{pageFlowScope.uomCR}" 
-                                       id="it17" styleClass="xxRobotoFieldValue" required="#{bindings.uomMfFlag.inputValue !='N'}"/>
+                                       id="it17" styleClass="xxRobotoFieldValue" 
+                                       inlineStyle="#{pageFlowScope.uomValidationMessage!=null?'color:Red !important;'};"
+                                       required="#{bindings.uomMfFlag.inputValue !='N'}"
+                                       valueChangeListener="#{CreateResult.uomChanged}"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl99" rendered="#{pageFlowScope.uomValidationMessage !=null}">
+                    <amx:cellFormat id="cf198" width="5%"/>
+                    <amx:cellFormat id="cf215" width="90%">
+                         <amx:outputText value="#{pageFlowScope.uomValidationMessage}" id="ot56" styleClass="errorMessage"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
 		<amx:rowLayout id="rl45" rendered="#{bindings.subinventoryPrompt.inputValue != '0'}">
@@ -102,7 +111,16 @@
                     <amx:cellFormat id="cf77" width="5%"/>
                     <amx:cellFormat id="cf78" width="90%" halign="start" columnSpan="2">
                         <amx:inputText value="#{pageFlowScope.subinventoryCR}" 
-                                       styleClass="xxRobotoFieldValue" id="it18" required="#{bindings.subinventoryMfFlag.inputValue !='N'}"/>
+                                       styleClass="xxRobotoFieldValue" id="it18"
+                                       valueChangeListener="#{CreateResult.subinvChanged}"
+                                       inlineStyle="#{pageFlowScope.subinvValidationMessage!=null?'color:Red !important;'};"
+                                       required="#{bindings.subinventoryMfFlag.inputValue !='N'}"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl100" rendered="#{pageFlowScope.subinvValidationMessage !=null}">
+                    <amx:cellFormat id="cf216" width="5%"/>
+                    <amx:cellFormat id="cf217" width="90%">
+                         <amx:outputText value="#{pageFlowScope.subinvValidationMessage}" id="ot57" styleClass="errorMessage"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
 		<amx:rowLayout id="rl31" rendered="#{bindings.trxNumberPrompt.inputValue != '0'}">
@@ -129,7 +147,7 @@
                 <amx:rowLayout id="rl6" rendered="#{bindings.lotNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf61" width="5%"/>
                     <amx:cellFormat id="cf10" width="90%" halign="start" columnSpan="2">
-                        <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.lotNumberCR}" simple="true"
+                        <amx:inputText value="#{pageFlowScope.lotNumberCR}" simple="true"
                                        id="it2"  styleClass="xxRobotoFieldValue" required="#{bindings.lotNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
@@ -143,7 +161,7 @@
                 <amx:rowLayout id="rl34" rendered="#{bindings.serialNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf85" width="5%"/>
                     <amx:cellFormat id="cf86" width="90%" halign="start" columnSpan="2">
-                        <amx:inputText value="#{pageFlowScope.serialNumberCR}"  
+                        <amx:inputText value="#{pageFlowScope.serialNumberCR}"  simple="true"
                                        id="it20" styleClass="xxRobotoFieldValue" required="#{bindings.serialNumberMfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
@@ -269,8 +287,16 @@
                 <amx:rowLayout id="rl8" rendered="#{bindings.poNumberPrompt.inputValue != '0'}">
                     <amx:cellFormat id="cf59" width="5%"/>
                     <amx:cellFormat id="cf12" width="100%" halign="start" columnSpan="2">
-                        <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.poNumberCR}"
-                                       id="it21" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.poNumberMfFlag.inputValue !='N'}"/>
+                        <amx:inputText value="#{pageFlowScope.poNumberCR}"
+                                       inlineStyle="#{pageFlowScope.poHeaderValidationMessage!=null?'color:Red !important;'};"
+                                       id="it21" styleClass="xxRobotoFieldValue" simple="true" required="#{bindings.poNumberMfFlag.inputValue !='N'}"
+                                       valueChangeListener="#{CreateResult.poNumberChanged}"/>
+                    </amx:cellFormat>
+                </amx:rowLayout>
+                <amx:rowLayout id="rl101" rendered="#{pageFlowScope.poHeaderValidationMessage !=null}">
+                    <amx:cellFormat id="cf218" width="5%"/>
+                    <amx:cellFormat id="cf219" width="90%">
+                         <amx:outputText value="#{pageFlowScope.poHeaderValidationMessage}" id="ot58" styleClass="errorMessage"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl60" rendered="#{bindings.poLineNumberPrompt.inputValue != '0'}">
@@ -542,14 +568,14 @@
                 </amx:rowLayout>
                 <amx:rowLayout id="rl67" rendered="#{bindings.character14Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf147" width="5%"/>
-                    <amx:cellFormat id="cf148" width="100%">
+                    <amx:cellFormat id="cf196" width="100%">
                         <amx:outputText value="#{bindings.character14Prompt.inputValue}"  id="ot39"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
                 <amx:rowLayout id="rl68" rendered="#{bindings.character14Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf150" width="5%"/>
-                    <amx:cellFormat id="cf149" width="100%" halign="start" columnSpan="2">
+                    <amx:cellFormat id="cf197" width="100%" halign="start" columnSpan="2">
                         <amx:inputText inlineStyle="font-family:RobotoLight;" value="#{pageFlowScope.character14CR}"
                                        id="it36" simple="true"  styleClass="xxRobotoFieldValue" required="#{bindings.character14MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
@@ -557,7 +583,7 @@
                 <amx:rowLayout id="rl69" rendered="#{bindings.character15Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf151" width="5%"/>
                     <amx:cellFormat id="cf152" width="100%">
-                        <amx:outputText value="#{bindings.character15Prompt.inputValue}"  id="ot40"
+                        <amx:outputText value="#{bindings.character15Prompt.inputValue}"  id="ot51"
                                         styleClass="xxRobotoFieldTitle"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
@@ -610,7 +636,7 @@
                                        id="it40" simple="true" styleClass="xxRobotoFieldValue" required="#{bindings.character18MfFlag.inputValue !='N'}"/>
                     </amx:cellFormat>
                 </amx:rowLayout>
-                <amx:rowLayout id="rl75" rendered="#{bindings.character19Prompt.inputValue != '0'}">
+                <amx:rowLayout id="rl90" rendered="#{bindings.character19Prompt.inputValue != '0'}">
                     <amx:cellFormat id="cf167" width="5%"/>
                     <amx:cellFormat id="cf165" width="100%">
                         <amx:outputText value="#{bindings.character19Prompt.inputValue}"  id="ot44"
