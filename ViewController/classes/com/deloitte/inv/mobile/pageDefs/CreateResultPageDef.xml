@@ -580,5 +580,15 @@
         <Item Value="assetNumberPrompt"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="planElementDbAdapterOutputIterator" id="organizationId">
+      <AttrNames>
+        <Item Value="organizationId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="qualityResultsDBOutputIterator" id="itemNumber">
+      <AttrNames>
+        <Item Value="itemNumber"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

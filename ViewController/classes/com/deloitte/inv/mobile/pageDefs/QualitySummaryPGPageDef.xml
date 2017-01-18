@@ -170,5 +170,9 @@
         <Item Value="organizationCode"/>
       </ListDisplayAttrNames>
     </list>
+    <methodAction id="findAllPlanElementDbAdapterOutputRemote" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="findAllPlanElementDbAdapterOutputRemote" IsViewObjectMethod="false"
+                  DataControl="PlanElementDbAdapterOutputService"
+                  InstanceName="data.PlanElementDbAdapterOutputService.dataProvider"/>
   </bindings>
 </pageDefinition>
