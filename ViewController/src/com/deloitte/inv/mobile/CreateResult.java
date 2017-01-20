@@ -1,6 +1,5 @@
 package com.deloitte.inv.mobile;
 
-import com.deloitte.inv.application.model.PlanElementDbAdapterOutput;
 import com.deloitte.inv.mobile.rest.RestURIs;
 import com.deloitte.inv.mobile.rest.ServiceManager;
 

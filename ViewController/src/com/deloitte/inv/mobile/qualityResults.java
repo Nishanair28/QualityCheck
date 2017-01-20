@@ -46,10 +46,30 @@ public class qualityResults {
 
     public void lovSelected(ValueChangeEvent valueChangeEvent) {
 
-        valueChangeEvent.getNewValue();
-        AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedLov}", valueChangeEvent.getNewValue());
-        System.out.println("Plan 1234 : " + valueChangeEvent.getNewValue());
-        AdfmfJavaUtilities.setELValue("#{pageFlowScope.goClicked}", "false");
+      //  valueChangeEvent.getNewValue();
+      //  AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedLov}", valueChangeEvent.getNewValue());
+      //  AdfmfJavaUtilities.setELValue("#{pageFlowScope.goClicked}", "false");
+      List pnames = new ArrayList();
+      List params = new ArrayList();
+      List ptypes = new ArrayList();
+      AdfmfJavaUtilities.setELValue("#{pageFlowScope.selectedLov}", valueChangeEvent.getNewValue());
+      System.out.println("Plan 1234 : " + valueChangeEvent.getNewValue());
+      System.out.println("Plan Page Flow : " + AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedLov}"));
+      AdfmfJavaUtilities.setELValue("#{pageFlowScope.goClicked}", "false");
+      String planID = AdfmfJavaUtilities.getELValue("#{pageFlowScope.selectedLov}").toString();
+      System.out.println("Plan Id" + planID);
+      try {
+          AdfmfJavaUtilities.invokeDataControlMethod("PlanElementDbAdapterOutputService", null,
+                                                     "findAllPlanElementDbAdapterOutput", pnames, params, ptypes);
+         // AdfmfJavaUtilities.flushDataChangeEvent();
+          //providerChangeSupport.fireProviderRefresh("qualityResultsDBOutput");
+          Thread.sleep(3000);
+          AdfmfJavaUtilities.invokeDataControlMethod("PlanElementDbAdapterOutputService", null,
+                                                     "findAllPlanElementDbAdapterOutputRemote", pnames, params, ptypes);
+      } catch (Exception e) {
+          e.getMessage();
+      }
+
     }
     private transient ProviderChangeSupport providerChangeSupport = new ProviderChangeSupport(this);
 
