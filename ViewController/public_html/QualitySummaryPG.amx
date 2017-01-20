@@ -14,8 +14,7 @@
                         <amx:outputText value="Results Summary" id="ot7" styleClass="headertextwhite"/>
                     </amx:cellFormat>
                     <amx:cellFormat id="cf6" width="10%" halign="end" valign="middle">
-                        <amx:commandLink action="getCreate" actionListener="#{bindings.findAllPlanElementDbAdapterOutputRemote.execute}"
-                                         disabled="#{!bindings.findAllPlanElementDbAdapterOutputRemote.enabled}"
+                        <amx:commandLink action="getCreate" actionListener="#{CreateResult.initPlanDet}"
                                          id="cl5">
                             <amx:outputHtml id="oh2" styleClass="fa fa-edit fa-2x" inlineStyle="color:#ffffff;"/>
                         </amx:commandLink>
