@@ -144,6 +144,7 @@ public class CreateResult {
 
         String org_id = AdfmfJavaUtilities.getELValue("#{pageFlowScope.orgIDCR}").toString();
         String itemNumber = valueChangeEvent.getNewValue().toString();
+        System.out.println("itemNumber-->" + itemNumber);
         String restURI = RestURIs.getItemLov(org_id, itemNumber);
 
         String jsonArrayAsString = sm.invokeREAD(restURI).toString();
