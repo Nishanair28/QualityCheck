@@ -1,5 +1,7 @@
 package com.deloitte.inv.mobile;
 
+import com.asn1c.core.Null;
+
 import com.deloitte.inv.mobile.rest.RestURIs;
 import com.deloitte.inv.mobile.rest.ServiceManager;
 
@@ -146,6 +148,7 @@ public class CreateResult {
         String itemNumber = valueChangeEvent.getNewValue().toString();
         System.out.println("itemNumber-->" + itemNumber);
         String restURI = RestURIs.getItemLov(org_id, itemNumber);
+        String itemIdCheck;
 
         String jsonArrayAsString = sm.invokeREAD(restURI).toString();
         System.out.println("jsonArrayAsString-->" + jsonArrayAsString);
@@ -162,7 +165,8 @@ public class CreateResult {
 
                 for (int i = 0; i < size; i++) {
                     JSONObject temp = nodeArray.getJSONObject(i);
-                    AdfmfJavaUtilities.setELValue("#{bindings.itemId.inputValue}", temp.getString("item_id"));
+                    itemIdCheck = temp.getString("item_id");
+                   // AdfmfJavaUtilities.setELValue("#{bindings.itemId.inputValue}", temp.getString("item_id"));
                 }
             }
 
@@ -240,7 +244,7 @@ public class CreateResult {
         String orgId = AdfmfJavaUtilities.getELValue("#{pageFlowScope.orgIDCR}").toString();
         String subinventory = valueChangeEvent.getNewValue().toString();
         String restURI = RestURIs.getSubinvLov(orgId,subinventory);
-
+        String subInvCheck;
 
         String jsonArrayAsString = sm.invokeREAD(restURI).toString();
         System.out.println("jsonArrayAsString-->" + jsonArrayAsString);
@@ -256,7 +260,8 @@ public class CreateResult {
 
                 for (int i = 0; i < size; i++) {
                     JSONObject temp = nodeArray.getJSONObject(i);
-                    AdfmfJavaUtilities.setELValue(POHeaderID, temp.getString("HeaderId"));
+                    subInvCheck = temp.getString("Description");
+                    //AdfmfJavaUtilities.setELValue(POHeaderID, temp.getString("HeaderId"));
                 }
             }
 
@@ -330,7 +335,7 @@ public class CreateResult {
         this.specID = "-999";
         this.transactionID = "-999";
         this.departmentID = "-999";
-        ServiceManager sm = new ServiceManager();
+        /*ServiceManager sm = new ServiceManager();
         String deptrestURI = RestURIs.getDeptLov(organizationID);
 
         String jsonArrayAsString = sm.invokeREAD(deptrestURI).toString();
@@ -349,7 +354,7 @@ public class CreateResult {
                     JSONObject temp = nodeArray.getJSONObject(i);
                     AdfmfJavaUtilities.setELValue(departmentID, temp.getString("departmentId"));
                 }
-            }
+            }*/
         this.toDepartmentID = "-999";
         this.resourceID = "-999";
         if (AdfmfJavaUtilities.getELValue("#{pageFlowScope.quantityCR}") != null) {

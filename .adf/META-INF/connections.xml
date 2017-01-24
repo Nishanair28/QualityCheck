@@ -67,7 +67,8 @@
     <RefAddresses>
       <XmlRefAddr addrType="QRConnection">
         <Contents>
-          <restconnection name="QRConnection" url="http://10.118.37.123:7004/"/>
+          <!--<restconnection name="QRConnection" url="http://10.118.37.123:7004/"/>-->
+          <restconnection name="QRConnection" url="http://ussltcsnl3432.solutions.glbsnet.com:7004/"/>
         </Contents>
       </XmlRefAddr>
     </RefAddresses>
